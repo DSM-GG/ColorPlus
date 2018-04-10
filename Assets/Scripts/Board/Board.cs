@@ -21,20 +21,26 @@ public class Board : MonoBehaviour
 
 	// 인스펙터 비노출 변수
 	// 일반
+	LevelParser			levelParser;			// 레벨데이터 파싱객체	
 	private Tile[,]		existTiles;				// 존재하는 타일들
 
 
 	// 초기화
 	private void Awake()
 	{
-		instance   = this;
+		instance    = this;
 
-		existTiles = new Tile[height, width];
+		levelParser	= new LevelParser();
+		existTiles  = new Tile[height, width];
 	}
 
 	// 타일 배치
 	private void Start()
 	{
+		// 데이터 파싱
+		levelParser.Parse(1);
+
+		// 타일 배치
 		int colorTypeIndex = 0;
 
 		for (int i = 0; i < height; i++)

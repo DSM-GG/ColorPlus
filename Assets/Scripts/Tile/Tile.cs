@@ -63,6 +63,8 @@ public class Tile : MonoBehaviour
 			SetColorNum_unsafe(0);
 			tileClick.enabled = false;
 
+			thisImg.color = new Color(0, 0, 0, 0);
+
 			return true;
 		}
 		else

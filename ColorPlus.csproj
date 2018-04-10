@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{5FE44971-07A2-84AD-6F5C-0899B1DCB9CD}</ProjectGuid>
+    <ProjectGuid>{4733A8F0-7AA7-9644-FCCE-66EC1AF94AFD}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AssemblyName>Assembly-CSharp</AssemblyName>
     <FileAlignment>512</FileAlignment>
@@ -13,13 +13,11 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile>
-    </CompilerResponseFile>
+    <CompilerResponseFile></CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
     <UnityVersion>2017.3.0f3</UnityVersion>
-    <RootNamespace>
-    </RootNamespace>
+    <RootNamespace></RootNamespace>
     <LangVersion>4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -288,6 +286,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Board\Board.cs" />
+    <Compile Include="Assets\Scripts\Board\LevelParser.cs" />
     <Compile Include="Assets\Scripts\Tile\Tile.cs" />
     <Compile Include="Assets\Scripts\Tile\TileClick.cs" />
   </ItemGroup>
