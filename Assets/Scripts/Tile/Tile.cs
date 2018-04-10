@@ -55,10 +55,19 @@ public class Tile : MonoBehaviour
 	}
 
 	// 타일 비활성화
-	public void TileDisable()
+	public bool TileDisable()
 	{
-		isExist = false;
-		SetColorNum_unsafe(0);
-		tileClick.enabled = false;
+		if (isExist)
+		{
+			isExist = false;
+			SetColorNum_unsafe(0);
+			tileClick.enabled = false;
+
+			return true;
+		}
+		else
+		{
+			return false;
+		}
 	}
 }

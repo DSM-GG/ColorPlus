@@ -70,10 +70,29 @@ public class Board : MonoBehaviour
 	// 클릭시 타일 제거
 	public void CrossDel(int x, int y)
 	{
-		for (int i = 0; i < width; i++)
+		if (existTiles[y, x].TileDisable())
 		{
-			existTiles[y, i].TileDisable();
-			existTiles[i, x].TileDisable();
+			bool[] flag = new bool[4] { true, true, true, true };
+
+			for (int i = 1; flag[0] || flag[1] || flag[2] || flag[3]; i++)
+			{
+				if (flag[0])
+				{
+					flag[0] = existTiles[Mathf.Min(height - 1, y + i), x].TileDisable();
+				}
+				if (flag[1])
+				{
+					flag[1] = existTiles[Mathf.Max(0, y - i), x].TileDisable();
+				}
+				if (flag[2])
+				{
+					flag[2] = existTiles[y, Mathf.Min(width - 1, x + i)].TileDisable();
+				}
+				if (flag[3])
+				{
+					flag[3] = existTiles[y, Mathf.Max(0, x - i)].TileDisable();
+				}
+			}
 		}
 	}
 }
