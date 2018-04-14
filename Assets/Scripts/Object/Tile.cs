@@ -8,10 +8,10 @@ public class Tile : MonoBehaviour
 {
 	// 인스펙터 노출 변수
 	// 수치
-	public int			colorNum = 0;           // 색 번호
-	public bool			isExist = true;         // 존재 하는 타일인지
-	public int			posX;					// X좌표
-	public int			posY;					// Y좌표
+	public  int			colorNum = 0;           // 색 번호
+	public  bool		isExist = true;         // 존재 하는 타일인지
+	public  int			posX;					// X좌표
+	public  int			posY;					// Y좌표
 
 	// 인스펙터 비노출 변수
 	// 일반

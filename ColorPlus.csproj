@@ -285,10 +285,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Board\Board.cs" />
-    <Compile Include="Assets\Scripts\Board\LevelParser.cs" />
-    <Compile Include="Assets\Scripts\Tile\Tile.cs" />
-    <Compile Include="Assets\Scripts\Tile\TileClick.cs" />
+    <Compile Include="Assets\Scripts\Object\Tile.cs" />
+    <Compile Include="Assets\Scripts\Object\TileClick.cs" />
+    <Compile Include="Assets\Scripts\System\Board.cs" />
+    <Compile Include="Assets\Scripts\System\GameManager.cs" />
+    <Compile Include="Assets\Scripts\System\LevelParser.cs" />
+    <Compile Include="Assets\Scripts\System\TileChecker.cs" />
+    <Compile Include="Assets\Scripts\System\UIManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Resources\LevelData\1.txt" />

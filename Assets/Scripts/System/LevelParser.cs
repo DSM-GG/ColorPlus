@@ -12,22 +12,25 @@ public class LevelParser
 	// 데이터 파싱
 	public void Parse(int level)
 	{
-		string finalPath = dataPath + level.ToString() + ".txt";
+		// 경로 설정 및 데이터 파싱
+		string		 finalPath = dataPath + level.ToString() + ".txt";
 		
-		FileStream fs = new FileStream(finalPath, FileMode.Open);
-		StreamReader sr = new StreamReader(fs);
-
-		string source = sr.ReadLine();
+		FileStream	 fs	 	   = new FileStream(finalPath, FileMode.Open);
+		StreamReader sr	  	   = new StreamReader(fs);
 
 
-		// 가로 세로 초기화
-		int size = int.Parse(source);
-		Board.instance.width = size;
+		// 선행 데이터 초기화
+		string	 source    = sr.ReadLine();
+		string[] firstData = source.Split();
+		int		 size	   = int.Parse(firstData[1]);
+
+		GameManager.instance.turn = int.Parse(firstData[0]);
+		Board.instance.width  = size;
 		Board.instance.height = size;
+		
 
 		// 타일 초기화
 		List<int> resultData = new List<int>();
-
 
 		source = sr.ReadLine();
 		for (int i = 0; i < size; i++)

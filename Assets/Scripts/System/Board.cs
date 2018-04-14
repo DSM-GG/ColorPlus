@@ -10,6 +10,7 @@ public class Board : MonoBehaviour
 	// 인스펙터 노출 변수
 	// 일반
 	public	Sprite[]	tileSprites;            // 타일 스프라이트 모음
+	public  Tile[,]		existTiles;             // 존재하는 타일들
 
 	[SerializeField]
 	private Transform	tilePrefab;             // 슬롯 프리팹
@@ -19,26 +20,21 @@ public class Board : MonoBehaviour
 	public  int			height;                 // 세로 개수
 	public  int[]		tileColorType;          // 실제 타일 색 배치
 
-	// 인스펙터 비노출 변수
-	// 일반
-	LevelParser			levelParser;			// 레벨데이터 파싱객체	
-	private Tile[,]		existTiles;				// 존재하는 타일들
-
+	[SerializeField]
+	private float		interval = 0.1f;		// 타일 간격
+	
 
 	// 초기화
 	private void Awake()
 	{
 		instance    = this;
-
-		levelParser	= new LevelParser();
-		existTiles  = new Tile[height, width];
 	}
 
 	// 타일 배치
-	private void Start()
+	public void SetTile()
 	{
-		// 데이터 파싱
-		levelParser.Parse(1);
+		// 타일 생성
+		existTiles = new Tile[height, width];
 
 		// 타일 배치
 		int colorTypeIndex = 0;
@@ -57,8 +53,8 @@ public class Board : MonoBehaviour
 				// 타일 배치
 				RectTransform tileRect = newTile.GetComponent<RectTransform>();
 
-				tileRect.anchorMin = new Vector2((1f / width) * j, 1f - ((1f / height) * (i + 1f)));
-				tileRect.anchorMax = new Vector2((1f / width) * (j + 1f), 1f - ((1f / height) * i));
+				tileRect.anchorMax = new Vector2((1f / width) * (j + 1f) - interval, 1f - ((1f / height) * i) - interval);
+				tileRect.anchorMin = new Vector2((1f / width) * j + interval, 1f - ((1f / height) * (i + 1f)) + interval);
 				tileRect.offsetMin = Vector2.zero;
 				tileRect.offsetMax = Vector2.zero;
 
@@ -86,14 +82,17 @@ public class Board : MonoBehaviour
 				{
 					flag[0] = existTiles[Mathf.Min(height - 1, y + i), x].TileDisable();
 				}
+
 				if (flag[1])
 				{
 					flag[1] = existTiles[Mathf.Max(0, y - i), x].TileDisable();
 				}
+
 				if (flag[2])
 				{
 					flag[2] = existTiles[y, Mathf.Min(width - 1, x + i)].TileDisable();
 				}
+
 				if (flag[3])
 				{
 					flag[3] = existTiles[y, Mathf.Max(0, x - i)].TileDisable();
