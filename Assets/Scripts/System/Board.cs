@@ -21,13 +21,19 @@ public class Board : MonoBehaviour
 	public  int[]		tileColorType;          // 실제 타일 색 배치
 
 	[SerializeField]
-	private float		interval = 0.1f;		// 타일 간격
+	private float		interval = 0.1f;        // 타일 간격
+
+	// 인스펙터 비노출 변수
+	// 일반
+	private TileChecker	tileCheck;				// 타일 체커
 	
 
 	// 초기화
 	private void Awake()
 	{
 		instance    = this;
+
+		tileCheck = new TileChecker();
 	}
 
 	// 타일 배치
@@ -99,5 +105,7 @@ public class Board : MonoBehaviour
 				}
 			}
 		}
+
+		Debug.Log(tileCheck.CheckPuzzle());
 	}
 }
