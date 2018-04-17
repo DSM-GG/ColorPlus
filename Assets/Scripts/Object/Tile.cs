@@ -8,7 +8,7 @@ public class Tile : MonoBehaviour
 {
 	// 인스펙터 노출 변수
 	// 수치
-	public  int			colorNum = 0;           // 색 번호
+	public  int			colorNum;               // 실제 사용되는 색 번호
 	public  bool		isExist = true;         // 존재 하는 타일인지
 	public  int			posX;					// X좌표
 	public  int			posY;					// Y좌표
@@ -16,7 +16,10 @@ public class Tile : MonoBehaviour
 	// 인스펙터 비노출 변수
 	// 일반
 	private Image		thisImg;                // 해당 타일 이미지
-	private TileClick	tileClick;				// 타일 클릭객체
+	private TileClick	tileClick;              // 타일 클릭객체
+
+	// 수치
+	private int			originalColorNum;                // 실제 사용되는 색 번호
 
 
 	// 초기화
@@ -46,6 +49,17 @@ public class Tile : MonoBehaviour
 		}
 	}
 
+	// 타일 색 원시값 변경
+	public void SetOriginalColorNum(int index)
+	{
+		if (index > 0)
+		{
+			originalColorNum = index;
+
+			SetColorNum(index);
+		}
+	}
+
 	// 타일 색 변경
 	private void SetColorNum_unsafe (int index)
 	{
@@ -62,14 +76,23 @@ public class Tile : MonoBehaviour
 			isExist = false;
 			SetColorNum_unsafe(0);
 			tileClick.enabled = false;
-
-			thisImg.color = new Color(0, 0, 0, 0);
-
+			
 			return true;
 		}
 		else
 		{
 			return false;
+		}
+	}
+
+	// 타일 활성화
+	public void TileEnable()
+	{
+		if (!isExist)
+		{
+			isExist = true;
+			SetColorNum_unsafe(originalColorNum);
+			tileClick.enabled = true;
 		}
 	}
 }

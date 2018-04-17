@@ -40,6 +40,8 @@ public class GameManager : MonoBehaviour
 	// 타일 클릭
 	public bool TileClick()
 	{
+		return true;
+
 		// 클릭 가능
 		if (turn > 0)
 		{

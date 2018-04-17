@@ -25,8 +25,10 @@ public class Board : MonoBehaviour
 
 	// 인스펙터 비노출 변수
 	// 일반
-	private TileChecker	tileCheck;				// 타일 체커
-	
+	private TileChecker	tileCheck;              // 타일 체커
+	private Stack<int>	historyX;				// 클릭했던 X좌표 데이터
+	private Stack<int>	historyY;				// 클릭했던 Y좌표 데이터
+
 
 	// 초기화
 	private void Awake()
@@ -34,6 +36,8 @@ public class Board : MonoBehaviour
 		instance    = this;
 
 		tileCheck = new TileChecker();
+		historyX = new Stack<int>();
+		historyY = new Stack<int>();
 	}
 
 	// 타일 배치
@@ -68,7 +72,7 @@ public class Board : MonoBehaviour
 				// 타일 설정
 				Tile targetTile = newTile.GetComponent<Tile>();
 
-				targetTile.SetColorNum(tileColorType[colorTypeIndex++]);
+				targetTile.SetOriginalColorNum(tileColorType[colorTypeIndex++]);
 				targetTile.SetPosition(j, i);
 				existTiles[i, j] = targetTile;
 			}
@@ -78,6 +82,9 @@ public class Board : MonoBehaviour
 	// 클릭시 타일 제거
 	public void CrossDel(int x, int y)
 	{
+		historyX.Push(x);
+		historyY.Push(y);
+
 		if (existTiles[y, x].TileDisable())
 		{
 			bool[] flag = new bool[4] { true, true, true, true };
@@ -105,7 +112,56 @@ public class Board : MonoBehaviour
 				}
 			}
 		}
+	}
 
-		Debug.Log(tileCheck.CheckPuzzle());
+	// 되돌리기
+	public void Restore()
+	{
+		if (historyX.Count > 0)
+		{
+			Debug.Log("AA");
+			GameManager.instance.turn++;
+
+			int x = historyX.Pop();
+			int y = historyY.Pop();
+
+
+			existTiles[y, x].TileEnable();
+			
+			bool[] flag = new bool[4] { true, true, true, true };
+
+			for (int i = 1; flag[0] || flag[1] || flag[2] || flag[3]; i++)
+			{
+				int j = i + 2;
+
+				if (flag[0])
+				{
+					flag[0] = !existTiles[Mathf.Min(height - 1, y + j), x].isExist;
+
+					existTiles[Mathf.Min(height - 1, y + i), x].TileEnable();
+				}
+
+				if (flag[1])
+				{
+					flag[1] = !existTiles[Mathf.Max(0, y - j), x].isExist;
+
+					existTiles[Mathf.Max(0, y - i), x].TileEnable();
+				}
+
+				if (flag[2])
+				{
+					flag[2] = !existTiles[y, Mathf.Min(width - 1, x + j)].isExist;
+
+					existTiles[y, Mathf.Min(width - 1, x + i)].TileEnable();
+				}
+
+				if (flag[3])
+				{
+					flag[3] = !existTiles[y, Mathf.Max(0, x - j)].isExist;
+
+					existTiles[y, Mathf.Max(0, x - i)].TileEnable();
+				}
+			}
+		}
 	}
 }
