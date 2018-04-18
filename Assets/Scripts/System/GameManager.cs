@@ -45,7 +45,7 @@ public class GameManager : MonoBehaviour
 		// 클릭 가능
 		if (turn > 0)
 		{
-			DownTurn();
+			AddTurn(-1);
 
 			return true;
 		}
@@ -57,9 +57,9 @@ public class GameManager : MonoBehaviour
 	}
 
 	// 턴 감소
-	private void DownTurn()
+	public void AddTurn(int value)
 	{
-		turn--;
+		turn += value;
 
 		UIManager.instance.SetTurnText(turn);
 	}

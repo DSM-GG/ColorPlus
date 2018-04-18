@@ -5,29 +5,28 @@ using UnityEngine.UI;
 
 public class Board : MonoBehaviour
 {
-	public static Board	instance;
+	public static Board		instance;
 
 	// 인스펙터 노출 변수
 	// 일반
-	public	Sprite[]	tileSprites;            // 타일 스프라이트 모음
-	public  Tile[,]		existTiles;             // 존재하는 타일들
+	public	Sprite[]		tileSprites;            // 타일 스프라이트 모음
+	public  Tile[,]			existTiles;             // 존재하는 타일들
 
 	[SerializeField]
-	private Transform	tilePrefab;             // 슬롯 프리팹
+	private Transform		tilePrefab;             // 슬롯 프리팹
 
 	// 수치
-	public  int			width;					// 가로 개수
-	public  int			height;                 // 세로 개수
-	public  int[]		tileColorType;          // 실제 타일 색 배치
+	public  int				width;					// 가로 개수
+	public  int				height;                 // 세로 개수
+	public  int[]			tileColorType;          // 실제 타일 색 배치
 
 	[SerializeField]
-	private float		interval = 0.1f;        // 타일 간격
+	private float			interval = 0.1f;        // 타일 간격
 
 	// 인스펙터 비노출 변수
 	// 일반
-	private TileChecker	tileCheck;              // 타일 체커
-	private Stack<int>	historyX;				// 클릭했던 X좌표 데이터
-	private Stack<int>	historyY;				// 클릭했던 Y좌표 데이터
+	private TileChecker		tileCheck;              // 타일 체커
+	private Stack<bool[,]>	tileHistory;			// 타일 데이터 히스토리
 
 
 	// 초기화
@@ -36,8 +35,7 @@ public class Board : MonoBehaviour
 		instance    = this;
 
 		tileCheck = new TileChecker();
-		historyX = new Stack<int>();
-		historyY = new Stack<int>();
+		tileHistory = new Stack<bool[,]>();
 	}
 
 	// 타일 배치
@@ -82,8 +80,7 @@ public class Board : MonoBehaviour
 	// 클릭시 타일 제거
 	public void CrossDel(int x, int y)
 	{
-		historyX.Push(x);
-		historyY.Push(y);
+		SaveTileState();
 
 		if (existTiles[y, x].TileDisable())
 		{
@@ -114,54 +111,41 @@ public class Board : MonoBehaviour
 		}
 	}
 
+	// 타일 상태 저장
+	private void SaveTileState()
+	{
+		bool[,] result = new bool[height, width];
+
+		for (int i = 0; i < height; i++)
+		{
+			for (int j = 0; j < width; j++)
+			{
+				result[i, j] = existTiles[i, j].isExist;
+			}
+		}
+
+		tileHistory.Push(result);
+	}
+
 	// 되돌리기
 	public void Restore()
 	{
-		if (historyX.Count > 0)
+		if (tileHistory.Count > 0)
 		{
-			Debug.Log("AA");
-			GameManager.instance.turn++;
+			bool[,] history = tileHistory.Pop();
 
-			int x = historyX.Pop();
-			int y = historyY.Pop();
-
-
-			existTiles[y, x].TileEnable();
-			
-			bool[] flag = new bool[4] { true, true, true, true };
-
-			for (int i = 1; flag[0] || flag[1] || flag[2] || flag[3]; i++)
+			for (int i = 0; i < height; i++)
 			{
-				int j = i + 2;
-
-				if (flag[0])
+				for (int j = 0; j < width; j++)
 				{
-					flag[0] = !existTiles[Mathf.Min(height - 1, y + j), x].isExist;
-
-					existTiles[Mathf.Min(height - 1, y + i), x].TileEnable();
-				}
-
-				if (flag[1])
-				{
-					flag[1] = !existTiles[Mathf.Max(0, y - j), x].isExist;
-
-					existTiles[Mathf.Max(0, y - i), x].TileEnable();
-				}
-
-				if (flag[2])
-				{
-					flag[2] = !existTiles[y, Mathf.Min(width - 1, x + j)].isExist;
-
-					existTiles[y, Mathf.Min(width - 1, x + i)].TileEnable();
-				}
-
-				if (flag[3])
-				{
-					flag[3] = !existTiles[y, Mathf.Max(0, x - j)].isExist;
-
-					existTiles[y, Mathf.Max(0, x - i)].TileEnable();
+					if (history[i, j])
+					{
+						existTiles[i, j].TileEnable();
+					}
 				}
 			}
+
+			GameManager.instance.AddTurn(1);
 		}
 	}
 }

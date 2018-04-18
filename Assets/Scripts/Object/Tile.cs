@@ -19,7 +19,7 @@ public class Tile : MonoBehaviour
 	private TileClick	tileClick;              // 타일 클릭객체
 
 	// 수치
-	private int			originalColorNum;                // 실제 사용되는 색 번호
+	private int			originalColorNum;       // 실제 사용되는 색 번호
 
 
 	// 초기화
