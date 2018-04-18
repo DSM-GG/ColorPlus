@@ -7,13 +7,14 @@ public class GameManager : MonoBehaviour
 	public static GameManager instance;
 
 	// 인스펙터 노출 변수
-	// 일반
-	public  int				turn;                   // 남은 턴수
+	// 수치
+	public  int				originalTurn;           // 남은 턴수
 	public  int			    level = 1;				// 현재 레벨
 
 	// 인스펙터 비노출 변수
 	// 일반
 	private LevelParser		levelParser;            // 레벨데이터 파싱객체	
+	private int				turn;					// 실제 남은 턴수
 
 
 	// 초기화
@@ -29,12 +30,10 @@ public class GameManager : MonoBehaviour
 	{
 		// 데이터 파싱
 		levelParser.Parse(1);
+		ResetTurn();
 
 		// 타일 세팅
 		Board.instance.SetTile();
-
-		// UI 설정
-		UIManager.instance.SetTurnText(turn);
 	}
 
 	// 타일 클릭
@@ -54,6 +53,14 @@ public class GameManager : MonoBehaviour
 		{
 			return false;
 		}
+	}
+
+	// 턴 초기화
+	public void ResetTurn()
+	{
+		turn = originalTurn;
+
+		UIManager.instance.SetTurnText(turn);
 	}
 
 	// 턴 감소

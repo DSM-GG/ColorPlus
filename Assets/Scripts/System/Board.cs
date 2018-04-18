@@ -34,7 +34,7 @@ public class Board : MonoBehaviour
 	{
 		instance    = this;
 
-		tileCheck = new TileChecker();
+		tileCheck	= new TileChecker();
 		tileHistory = new Stack<bool[,]>();
 	}
 
@@ -147,5 +147,19 @@ public class Board : MonoBehaviour
 
 			GameManager.instance.AddTurn(1);
 		}
+	}
+
+	// 초기화 
+	public void ResetTile()
+	{
+		for (int i = 0; i < height; i++)
+		{
+			for (int j = 0; j < width; j++)
+			{
+				existTiles[i, j].TileEnable();
+			}
+		}
+
+		GameManager.instance.ResetTurn();
 	}
 }

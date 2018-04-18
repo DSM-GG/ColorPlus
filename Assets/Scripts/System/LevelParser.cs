@@ -24,7 +24,7 @@ public class LevelParser
 		string[] firstData = source.Split();
 		int		 size	   = int.Parse(firstData[1]);
 
-		GameManager.instance.turn = int.Parse(firstData[0]);
+		GameManager.instance.originalTurn = int.Parse(firstData[0]);
 		Board.instance.width  = size;
 		Board.instance.height = size;
 		
