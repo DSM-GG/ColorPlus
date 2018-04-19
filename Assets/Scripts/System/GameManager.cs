@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
 	// 인스펙터 노출 변수
 	// 수치
 	public  int				originalTurn;           // 남은 턴수
-	public  int			    level = 1;				// 현재 레벨
+	public  int			    level = 0;				// 현재 레벨
 
 	// 인스펙터 비노출 변수
 	// 일반
@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
 	private void Start()
 	{
 		// 데이터 파싱
-		levelParser.Parse(1);
+		levelParser.Parse(DataBase.nowLevel);
 		ResetTurn();
 
 		// 타일 세팅
@@ -39,8 +39,6 @@ public class GameManager : MonoBehaviour
 	// 타일 클릭
 	public bool TileClick()
 	{
-		return true;
-
 		// 클릭 가능
 		if (turn > 0)
 		{
