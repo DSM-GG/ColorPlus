@@ -286,6 +286,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\GameBoard\Board.cs" />
+    <Compile Include="Assets\Scripts\GameBoard\OtherLevelButton.cs" />
     <Compile Include="Assets\Scripts\GameBoard\Tile.cs" />
     <Compile Include="Assets\Scripts\GameBoard\TileChecker.cs" />
     <Compile Include="Assets\Scripts\GameBoard\TileClick.cs" />

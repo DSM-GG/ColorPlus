@@ -13,8 +13,11 @@ public class LevelButton : MonoBehaviour, IPointerClickHandler
 	// 마우스 클릭
 	public void OnPointerClick(PointerEventData pointerEventData)
 	{
-		DataBase.nowLevel = level;
+		if (level <= DataBase.lastLevel + 1)
+		{
+			DataBase.nowLevel = level;
 
-		SceneManager.LoadScene("MainScene");
+			SceneManager.LoadScene("MainScene");
+		}
 	}
 }

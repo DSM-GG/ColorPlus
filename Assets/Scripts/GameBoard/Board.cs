@@ -25,7 +25,6 @@ public class Board : MonoBehaviour
 
 	// 인스펙터 비노출 변수
 	// 일반
-	private TileChecker		tileCheck;              // 타일 체커
 	private Stack<bool[,]>	tileHistory;			// 타일 데이터 히스토리
 
 
@@ -33,8 +32,7 @@ public class Board : MonoBehaviour
 	private void Awake()
 	{
 		instance    = this;
-
-		tileCheck	= new TileChecker();
+		
 		tileHistory = new Stack<bool[,]>();
 	}
 

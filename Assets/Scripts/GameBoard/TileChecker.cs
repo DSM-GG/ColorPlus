@@ -16,7 +16,7 @@ public class TileChecker
 	{
 		m_existTiles = Board.instance.existTiles;
 		m_checkArray = new bool[Board.instance.height, Board.instance.width];
-
+		
 		for (int i = 0; i < Board.instance.height; i++)
 		{
 			for (int j = 0; j < Board.instance.width; j++)
