@@ -297,6 +297,7 @@
     <Compile Include="Assets\Scripts\System\UIManager.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Resources\LevelData\0.txt" />
     <None Include="Assets\Resources\LevelData\1.txt" />
     <None Include="Assets\Resources\LevelData\2.txt" />
     <None Include="Assets\Resources\LevelData\3.txt" />

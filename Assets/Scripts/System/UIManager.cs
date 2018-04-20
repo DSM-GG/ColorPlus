@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
@@ -9,7 +10,9 @@ public class UIManager : MonoBehaviour
 
 	// 인스펙터 노출 변수
 	[SerializeField]
-	private Text	turnText;					// 턴 텍스트
+	private Text	turnText;                   // 턴 텍스트
+	[SerializeField]
+	private Text	levelText;                  // 레벨 텍스트
 
 
 	// 초기화
@@ -22,5 +25,25 @@ public class UIManager : MonoBehaviour
 	public void SetTurnText(int value)
 	{
 		turnText.text = value.ToString();
+	}
+
+	// 레벨 텍스트 설정
+	public void SetLevelText(int level)
+	{
+		levelText.text = level.ToString();
+	}
+
+	// 씬 리로드
+	public void LoadScene(string target)
+	{
+		SceneManager.LoadScene(target);
+	}
+
+	// 다른 레벨로 이동
+	public void AnotherLevel(int level)
+	{
+		DataBase.nowLevel += level;
+
+		LoadScene("MainScene");
 	}
 }

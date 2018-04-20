@@ -31,6 +31,7 @@ public class GameManager : MonoBehaviour
 		// 데이터 파싱
 		levelParser.Parse(DataBase.nowLevel);
 		ResetTurn();
+		UIManager.instance.SetLevelText(DataBase.nowLevel);
 
 		// 타일 세팅
 		Board.instance.SetTile();
