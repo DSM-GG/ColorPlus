@@ -10,14 +10,26 @@ public class LevelButton : MonoBehaviour, IPointerClickHandler
 	public int level = 0;
 
 
+	// 시작
+	private void Start()
+	{
+		if (level > DataBase.lastLevel + 1)
+		{
+			DisableButton();
+		}
+	}
+
 	// 마우스 클릭
 	public void OnPointerClick(PointerEventData pointerEventData)
 	{
-		if (level <= DataBase.lastLevel + 1)
-		{
-			DataBase.nowLevel = level;
+		DataBase.nowLevel = level;
 
-			SceneManager.LoadScene("MainScene");
-		}
+		SceneManager.LoadScene("MainScene");
+	}
+
+	// 버튼 비활성화
+	private void DisableButton()
+	{
+		Destroy(gameObject);
 	}
 }

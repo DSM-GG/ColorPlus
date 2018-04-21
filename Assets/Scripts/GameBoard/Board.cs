@@ -26,6 +26,7 @@ public class Board : MonoBehaviour
 	// 인스펙터 비노출 변수
 	// 일반
 	private Stack<bool[,]>	tileHistory;			// 타일 데이터 히스토리
+	private TileChecker		tileChecker;			// 타일 체커
 
 
 	// 초기화
@@ -34,6 +35,7 @@ public class Board : MonoBehaviour
 		instance    = this;
 		
 		tileHistory = new Stack<bool[,]>();
+		tileChecker = new TileChecker();
 	}
 
 	// 타일 배치
@@ -106,6 +108,12 @@ public class Board : MonoBehaviour
 					flag[3] = existTiles[y, Mathf.Max(0, x - i)].TileDisable();
 				}
 			}
+		}
+
+		if (tileChecker.CheckPuzzle())
+		{
+			Debug.Log("ASDJL");
+			GameManager.instance.GameClear();
 		}
 	}
 

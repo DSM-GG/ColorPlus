@@ -12,9 +12,8 @@ public static class DataBase
 	// 클리어 레벨 초기화
 	public static void ResetLastLevel()
 	{
-		lastLevel = PlayerPrefs.GetInt("LastLevel");
+		lastLevel = PlayerPrefs.GetInt("LastLevel", 1);
 	}
-
 
 	// 클리어 레벨 갱신
 	public static void SetLastLevel(int level)

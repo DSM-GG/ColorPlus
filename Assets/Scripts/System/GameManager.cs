@@ -15,8 +15,7 @@ public class GameManager : MonoBehaviour
 	// 일반
 	private LevelParser		levelParser;            // 레벨데이터 파싱객체	
 	private int				turn;                   // 실제 남은 턴수
-	private TileChecker		tileChecker;			// 타일 체커
-
+	
 
 	// 초기화
 	private void Awake()
@@ -24,7 +23,6 @@ public class GameManager : MonoBehaviour
 		instance    = this;
 
 		levelParser = new LevelParser();
-		tileChecker = new TileChecker();
 	}
 
 	// 시작
@@ -75,17 +73,12 @@ public class GameManager : MonoBehaviour
 		turn += value;
 
 		UIManager.instance.SetTurnText(turn);
-
-		if (tileChecker.CheckPuzzle())
-		{
-			Debug.Log("ASDJL");
-			GameOver();
-		}
 	}
 
-	// 게임 종료
-	private void GameOver()
+	// 게임 클리어
+	public void GameClear()
 	{
+		UIManager.instance.AnotherLevel(1);
 		DataBase.SetLastLevel(DataBase.nowLevel);
 	}
 }

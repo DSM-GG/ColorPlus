@@ -14,7 +14,7 @@ public class OtherLevelButton : MonoBehaviour, IPointerClickHandler
 	// 시작
 	private void Start()
 	{
-		if (DataBase.nowLevel + levelValue <= 0 || DataBase.nowLevel + levelValue >= DataBase.lastLevel)
+		if (DataBase.nowLevel + levelValue <= 0 || DataBase.nowLevel + levelValue > DataBase.lastLevel + 1)
 		{
 			Destroy(gameObject);
 		}
