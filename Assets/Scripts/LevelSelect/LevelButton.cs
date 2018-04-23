@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 
@@ -30,6 +31,8 @@ public class LevelButton : MonoBehaviour, IPointerClickHandler
 	// 버튼 비활성화
 	private void DisableButton()
 	{
-		Destroy(gameObject);
+		GetComponent<Image>().color = new Color(1f, 1f, 1f, 0.3f);
+
+		Destroy(this);
 	}
 }

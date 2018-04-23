@@ -292,6 +292,7 @@
     <Compile Include="Assets\Scripts\GameBoard\TileClick.cs" />
     <Compile Include="Assets\Scripts\LevelSelect\LevelButton.cs" />
     <Compile Include="Assets\Scripts\LevelSelect\LevelList.cs" />
+    <Compile Include="Assets\Scripts\LevelSelect\Scroller.cs" />
     <Compile Include="Assets\Scripts\System\DataBase.cs" />
     <Compile Include="Assets\Scripts\System\GameManager.cs" />
     <Compile Include="Assets\Scripts\System\LevelParser.cs" />

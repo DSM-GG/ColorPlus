@@ -15,7 +15,9 @@ public class LevelList : MonoBehaviour
 	[SerializeField]
 	private int			width;                  // 가로
 	[SerializeField]
-	private float		interval = 0.1f;		// 간격
+	private float		intervalX = 0.02f;      // 가로 간격
+	[SerializeField]
+	private float		intervalY = 0.002f;     // 세로 간격
 
 
 	// 시작
@@ -30,15 +32,15 @@ public class LevelList : MonoBehaviour
 				// 타일 생성
 				Transform newTile = Instantiate(tilePrefab);
 
-				newTile.name = "Level " + (i + 1) + ":" + (j + 1);
+				newTile.name = "Level :" + levelCount;
 				newTile.SetParent(transform);
 
 
 				// 타일 배치
 				RectTransform tileRect = newTile.GetComponent<RectTransform>();
 
-				tileRect.anchorMax = new Vector2((1f / width) * (j + 1f) - interval, 1f - ((1f / height) * i) - interval);
-				tileRect.anchorMin = new Vector2((1f / width) * j + interval, 1f - ((1f / height) * (i + 1f)) + interval);
+				tileRect.anchorMin = new Vector2((1f / width) * j + intervalX, 1f - ((1f / height) * (i + 1f)) + intervalY);
+				tileRect.anchorMax = new Vector2((1f / width) * (j + 1f) - intervalX, 1f - ((1f / height) * i) - intervalY);
 				tileRect.offsetMin = Vector2.zero;
 				tileRect.offsetMax = Vector2.zero;
 
