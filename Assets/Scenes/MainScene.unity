@@ -307,6 +307,7 @@ GameObject:
   - component: {fileID: 479162051}
   - component: {fileID: 479162053}
   - component: {fileID: 479162052}
+  - component: {fileID: 479162054}
   m_Layer: 5
   m_Name: Board
   m_TagString: Untagged
@@ -354,6 +355,19 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 479162050}
+--- !u!114 &479162054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 479162050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfda099193e7a6348b87369bbdb71c81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  height: 5
+  width: 5
 --- !u!1 &1635763598
 GameObject:
   m_ObjectHideFlags: 0

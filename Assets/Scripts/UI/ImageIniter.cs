@@ -32,8 +32,15 @@ public class ImageIniter : MonoBehaviour
 		tileArray = new Object[height, width];
 	}
 
-	// 시작
-	private void Start()
+	// 가로 세로 설정
+	public void SetSize(int _height, int _width)
+	{
+		height	= _height;
+		width	= _width;
+	}
+
+	// 타일 초기화
+	public void TileInitialize()
 	{
 		for (int i = 0; i < height; i++)
 		{
@@ -53,6 +60,8 @@ public class ImageIniter : MonoBehaviour
 				tileRect.anchorMin = new Vector2((1f / width) * j + gap, 1f - ((1f / height) * (i + 1f)) + gap);
 				tileRect.offsetMin = Vector2.zero;
 				tileRect.offsetMax = Vector2.zero;
+
+				tileArray[i, j] = newTile;
 			}
 		}
 	}
