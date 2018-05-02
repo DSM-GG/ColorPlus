@@ -8,6 +8,8 @@ public class BoardManager : MonoBehaviour
 
 	// 인스펙터 노출 변수
 	// 수치
+	public	Sprite[]		tileSprites;			// 타일 스프라이트 모음
+
 	[SerializeField]
 	private int				height;					// 세로
 	[SerializeField]
@@ -16,7 +18,7 @@ public class BoardManager : MonoBehaviour
 	// 인스펙터 비노출 변수
 	// 일반
 	[HideInInspector]
-	public	Tile[,]			tileArray;				// 타일 집합
+	public	Tile[,]			tileArray;              // 타일 집합
 
 	private ImageIniter		imageIniter;			// 타일 초기화 스크립트
 
@@ -24,6 +26,8 @@ public class BoardManager : MonoBehaviour
 	// 초기화
 	private void Awake()
 	{
+		instance = this;
+
 		imageIniter = GetComponent<ImageIniter>();
 	}
 
@@ -34,14 +38,18 @@ public class BoardManager : MonoBehaviour
 		imageIniter.SetSize(height, width);
 		imageIniter.TileInitialize();
 
-		Transform[,] tempArray = imageIniter.tileArray as Transform[,];
-
+		tileArray = new Tile[height, width];
+		
 		for (int i = 0; i < height; i++)
 		{
 			for (int j = 0; j < width; j++)
 			{
 				Debug.Log(i + " " + j);
-				tileArray[i, j] = tempArray[i, j].GetComponent<Tile>();
+				Tile targetTile = (imageIniter.tileArray[i, j] as Transform).GetComponent<Tile>();
+
+
+				tileArray[i, j] = targetTile;
+				targetTile.Initialize(j, i, 0);
 			}
 		}
 	}

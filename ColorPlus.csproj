@@ -288,6 +288,8 @@
     <Compile Include="Assets\Scripts\System\BoardManager.cs" />
     <Compile Include="Assets\Scripts\UI\ImageIniter.cs" />
     <Compile Include="Assets\Scripts\UI\Tile.cs" />
+    <Compile Include="Assets\Scripts\UI\TileClick.cs" />
+    <Compile Include="Assets\Scripts\UI\TileColorManager.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

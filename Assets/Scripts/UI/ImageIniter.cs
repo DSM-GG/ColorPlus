@@ -24,13 +24,7 @@ public class ImageIniter : MonoBehaviour
 	// 일반
 	[HideInInspector]
 	public Object[,]	tileArray;               // 생성된 타일 집합
-
-
-	// 초기화
-	private void Awake()
-	{
-		tileArray = new Object[height, width];
-	}
+	
 
 	// 가로 세로 설정
 	public void SetSize(int _height, int _width)
@@ -42,6 +36,8 @@ public class ImageIniter : MonoBehaviour
 	// 타일 초기화
 	public void TileInitialize()
 	{
+		tileArray = new Object[height, width];
+
 		for (int i = 0; i < height; i++)
 		{
 			for (int j = 0; j < width; j++)
