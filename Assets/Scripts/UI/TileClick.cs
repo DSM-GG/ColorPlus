@@ -19,6 +19,6 @@ public class TileClick : MonoBehaviour, IPointerClickHandler
 	// 마우스 클릭
 	public void OnPointerClick(PointerEventData pointerEventData)
 	{
-
+		BoardManager.instance.CrossDel(tile.posX, tile.posY);
 	}
 }

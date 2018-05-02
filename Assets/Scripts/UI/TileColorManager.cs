@@ -19,6 +19,6 @@ public class TileColorManager : MonoBehaviour
 	// 색 설정
 	public void SetColor(int index)
 	{
-		image.sprite = BoardManager.instance.tileSprites[0];
+		image.sprite = BoardManager.instance.tileSprites[index];
 	}
 }

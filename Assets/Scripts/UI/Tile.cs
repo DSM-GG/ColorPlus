@@ -9,6 +9,7 @@ public class Tile : MonoBehaviour
 	public	bool				isExist = true;			// 존재 하는 타일인지
 	public	int					posX;					// X좌표
 	public	int					posY;                   // Y좌표
+	public	int					colorNum;				// 색 번호
 
 	// 인스펙터 비노출 변수
 	// 일반
@@ -27,10 +28,39 @@ public class Tile : MonoBehaviour
 	public void Initialize(int _posX, int _posY, int index)
 	{
 		// 색 설정
-		tileColorManager.SetColor(index);
+		colorNum = index;
+		tileColorManager.SetColor(colorNum);
 
 		// 위치 설정
 		posX = _posX;
 		posY = _posY;
+	}
+
+	// 타일 비활성화
+	public bool TileDisable()
+	{
+		if (isExist)
+		{
+			isExist = false;
+			tileColorManager.SetColor(0);
+			tileClick.enabled = false;
+
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+
+	// 타일 활성화
+	public void TileEnable()
+	{
+		if (!isExist)
+		{
+			isExist = true;
+			tileColorManager.SetColor(colorNum);
+			tileClick.enabled = true;
+		}
 	}
 }

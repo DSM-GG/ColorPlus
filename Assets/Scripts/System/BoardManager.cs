@@ -49,7 +49,39 @@ public class BoardManager : MonoBehaviour
 
 
 				tileArray[i, j] = targetTile;
-				targetTile.Initialize(j, i, 0);
+				targetTile.Initialize(j, i, 1);
+			}
+		}
+	}
+
+	// 타일 제거 루틴
+	public void CrossDel(int x, int y)
+	{
+		if (tileArray[y, x].TileDisable())
+		{
+			bool[] flag = new bool[4] { true, true, true, true };
+
+			for (int i = 1; flag[0] || flag[1] || flag[2] || flag[3]; i++)
+			{
+				if (flag[0])
+				{
+					flag[0] = tileArray[Mathf.Min(height - 1, y + i), x].TileDisable();
+				}
+
+				if (flag[1])
+				{
+					flag[1] = tileArray[Mathf.Max(0, y - i), x].TileDisable();
+				}
+
+				if (flag[2])
+				{
+					flag[2] = tileArray[y, Mathf.Min(width - 1, x + i)].TileDisable();
+				}
+
+				if (flag[3])
+				{
+					flag[3] = tileArray[y, Mathf.Max(0, x - i)].TileDisable();
+				}
 			}
 		}
 	}
