@@ -1,18 +1,51 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class GameManager : MonoBehaviour
+namespace System
 {
-	// 초기화
-	private void Awake()
+	public class GameManager : MonoBehaviour
 	{
-		new Parser();
-	}
+		public static GameManager instance;
+		
+		// 인스펙터 비노출 변수
+		// 수치
+		[HideInInspector]
+		public 	int originalTurnCount = 0;				// 원래의 턴 카운트
+		
+		private int turnCount = 0; 						// 턴 카운트
 
-	// 시작
-	private void Start()
-	{
-		Parser.instance.Parse(1);
+
+		// 초기화
+		private void Awake()
+		{
+			instance = this;
+			
+			new Parser();
+		}
+
+		// 시작
+		private void Start()
+		{
+			Parser.instance.Parse(1);
+
+			ResetTurn();
+		}
+
+		// 턴 조절
+		public void AddTurn(int val)
+		{
+			turnCount += val;
+		}
+		
+		// 턴 확인
+		public bool LeftTurn()
+		{
+			return turnCount > 0;
+		}
+		
+		// 턴 초기화
+		public void ResetTurn()
+		{
+			turnCount = originalTurnCount;
+		}
 	}
 }

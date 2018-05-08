@@ -1,66 +1,67 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class Tile : MonoBehaviour
+namespace UI
 {
-	// 인스펙터 노출 변수
-	// 수치
-	public	bool				isExist = true;			// 존재 하는 타일인지
-	public	int					posX;					// X좌표
-	public	int					posY;                   // Y좌표
-	public	int					colorNum;				// 색 번호
-
-	// 인스펙터 비노출 변수
-	// 일반
-	private TileClick			tileClick;				// 타일 클릭 확인 스크립트
-	private TileColorManager	tileColorManager;       // 타일 색 설정 스크립트
-
-
-	// 초기화
-	private void Awake()
+	public class Tile : MonoBehaviour
 	{
-		tileClick			= GetComponent<TileClick>();
-		tileColorManager	= GetComponent<TileColorManager>();
-	}
+		// 인스펙터 노출 변수
+		// 수치
+		public	bool				isExist = true;			// 존재 하는 타일인지
+		public	int					posX;					// X좌표
+		public	int					posY;                   // Y좌표
+		public	int					colorNum;				// 색 번호
 
-	// 타일 초기화
-	public void Initialize(int _posX, int _posY, int index)
-	{
-		// 색 설정
-		colorNum = index;
-		tileColorManager.SetColor(colorNum);
+		// 인스펙터 비노출 변수
+		// 일반
+		private TileClick			tileClick;				// 타일 클릭 확인 스크립트
+		private TileColorManager	tileColorManager;       // 타일 색 설정 스크립트
 
-		// 위치 설정
-		posX = _posX;
-		posY = _posY;
-	}
 
-	// 타일 비활성화
-	public bool TileDisable()
-	{
-		if (isExist)
+		// 초기화
+		private void Awake()
 		{
-			isExist = false;
-			tileColorManager.SetColor(0);
-			tileClick.enabled = false;
-
-			return true;
+			tileClick			= GetComponent<TileClick>();
+			tileColorManager	= GetComponent<TileColorManager>();
 		}
-		else
-		{
-			return false;
-		}
-	}
 
-	// 타일 활성화
-	public void TileEnable()
-	{
-		if (!isExist)
+		// 타일 초기화
+		public void Initialize(int _posX, int _posY, int index)
 		{
-			isExist = true;
+			// 색 설정
+			colorNum = index;
 			tileColorManager.SetColor(colorNum);
-			tileClick.enabled = true;
+
+			// 위치 설정
+			posX = _posX;
+			posY = _posY;
+		}
+
+		// 타일 비활성화
+		public bool TileDisable()
+		{
+			if (isExist)
+			{
+				isExist = false;
+				tileColorManager.SetColor(0);
+				tileClick.enabled = false;
+
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+		}
+
+		// 타일 활성화
+		public void TileEnable()
+		{
+			if (!isExist)
+			{
+				isExist = true;
+				tileColorManager.SetColor(colorNum);
+				tileClick.enabled = true;
+			}
 		}
 	}
 }
