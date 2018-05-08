@@ -286,10 +286,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\System\BoardManager.cs" />
+    <Compile Include="Assets\Scripts\System\GameManager.cs" />
+    <Compile Include="Assets\Scripts\System\Parser.cs" />
     <Compile Include="Assets\Scripts\UI\ImageIniter.cs" />
     <Compile Include="Assets\Scripts\UI\Tile.cs" />
     <Compile Include="Assets\Scripts\UI\TileClick.cs" />
     <Compile Include="Assets\Scripts\UI\TileColorManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Datas\0.txt" />
+    <None Include="Assets\Datas\1.txt" />
+    <None Include="Assets\Datas\2.txt" />
+    <None Include="Assets\Datas\3.txt" />
+    <None Include="Assets\Datas\4.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

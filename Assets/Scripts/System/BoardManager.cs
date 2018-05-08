@@ -8,7 +8,7 @@ public class BoardManager : MonoBehaviour
 
 	// 인스펙터 노출 변수
 	// 수치
-	public	Sprite[]		tileSprites;			// 타일 스프라이트 모음
+	public	Sprite[]		tileSprites;			// 타일 스프라이트 종류 모음
 
 	[SerializeField]
 	private int				height;					// 세로
@@ -19,8 +19,10 @@ public class BoardManager : MonoBehaviour
 	// 일반
 	[HideInInspector]
 	public	Tile[,]			tileArray;              // 타일 집합
+	[HideInInspector]
+	public	int[]			tileSpriteIndArr;		// 타일들의 스프라이트 인덱스 배열
 
-	private ImageIniter		imageIniter;			// 타일 초기화 스크립트
+	private ImageIniter		imageIniter;            // 타일 초기화 스크립트
 
 
 	// 초기화
@@ -39,7 +41,8 @@ public class BoardManager : MonoBehaviour
 		imageIniter.TileInitialize();
 
 		tileArray = new Tile[height, width];
-		
+
+		int ind = 0;
 		for (int i = 0; i < height; i++)
 		{
 			for (int j = 0; j < width; j++)
@@ -49,9 +52,16 @@ public class BoardManager : MonoBehaviour
 
 
 				tileArray[i, j] = targetTile;
-				targetTile.Initialize(j, i, 1);
+				targetTile.Initialize(j, i, tileSpriteIndArr[ind++]);
 			}
 		}
+	}
+
+	// 가로 세로 크기 설정
+	public void SetSize(int _height, int _width)
+	{
+		height	= _height;
+		width	= _width;
 	}
 
 	// 타일 제거 루틴
