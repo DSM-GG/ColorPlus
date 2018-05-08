@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace System
+namespace Systems
 {
 	public class GameManager : MonoBehaviour
 	{
@@ -9,9 +9,9 @@ namespace System
 		// 인스펙터 비노출 변수
 		// 수치
 		[HideInInspector]
-		public 	int originalTurnCount = 0;				// 원래의 턴 카운트
+		public 	int 	originalTurnCount = 0;				// 원래의 턴 카운트
 		
-		private int turnCount = 0; 						// 턴 카운트
+		private int 	turnCount = 0; 						// 턴 카운트
 
 
 		// 초기화
@@ -34,6 +34,8 @@ namespace System
 		public void AddTurn(int val)
 		{
 			turnCount += val;
+			
+			UIManager.instance.SetText(0, turnCount.ToString());
 		}
 		
 		// 턴 확인
@@ -46,6 +48,7 @@ namespace System
 		public void ResetTurn()
 		{
 			turnCount = originalTurnCount;
+			UIManager.instance.SetText(0, turnCount.ToString());
 		}
 	}
 }

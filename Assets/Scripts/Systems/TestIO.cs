@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace System
+namespace Systems
 {
 	public class TestIO : MonoBehaviour
 	{

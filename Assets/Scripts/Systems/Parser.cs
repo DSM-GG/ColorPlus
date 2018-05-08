@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.IO;
 
-namespace System
+namespace Systems
 {
 	public class Parser
 	{

@@ -12,7 +12,7 @@
         <e p="4.txt" t="Include" />
       </e>
       <e p="Assets\Scripts" t="Include">
-        <e p="System" t="Include">
+        <e p="Systems" t="Include">
           <e p="BoardManager.cs" t="Include" />
           <e p="GameManager.cs" t="Include" />
           <e p="Parser.cs" t="Include" />

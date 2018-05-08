@@ -2,7 +2,7 @@
 using UI;
 using UnityEngine;
 
-namespace System
+namespace Systems
 {
 	public class BoardManager : MonoBehaviour
 	{
