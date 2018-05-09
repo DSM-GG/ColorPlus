@@ -15,12 +15,17 @@
         <e p="Systems" t="Include">
           <e p="BoardManager.cs" t="Include" />
           <e p="GameManager.cs" t="Include" />
+          <e p="LevelInitializer.cs" t="Include" />
+          <e p="LevelManager.cs" t="Include" />
+          <e p="LevelStarter.cs" t="Include" />
           <e p="Parser.cs" t="Include" />
+          <e p="SceneManager.cs" t="Include" />
           <e p="TestIO.cs" t="Include" />
           <e p="UIManager.cs" t="Include" />
         </e>
         <e p="UI" t="Include">
           <e p="ImageIniter.cs" t="Include" />
+          <e p="LevelSelecter.cs" t="Include" />
           <e p="Tile.cs" t="Include" />
           <e p="TileClick.cs" t="Include" />
           <e p="TileColorManager.cs" t="Include" />

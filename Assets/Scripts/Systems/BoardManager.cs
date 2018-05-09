@@ -154,6 +154,7 @@ namespace Systems
 				}
 			}
 			
+			tileHistory.Clear();
 			GameManager.instance.ResetTurn();
 		}
 	}

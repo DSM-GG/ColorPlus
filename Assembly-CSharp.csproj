@@ -55,10 +55,14 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Systems\BoardManager.cs" />
     <Compile Include="Assets\Scripts\Systems\GameManager.cs" />
+    <Compile Include="Assets\Scripts\Systems\LevelManager.cs" />
+    <Compile Include="Assets\Scripts\Systems\LevelStarter.cs" />
     <Compile Include="Assets\Scripts\Systems\Parser.cs" />
+    <Compile Include="Assets\Scripts\Systems\SceneManager.cs" />
     <Compile Include="Assets\Scripts\Systems\TestIO.cs" />
     <Compile Include="Assets\Scripts\Systems\UIManager.cs" />
     <Compile Include="Assets\Scripts\UI\ImageIniter.cs" />
+    <Compile Include="Assets\Scripts\UI\LevelSelecter.cs" />
     <Compile Include="Assets\Scripts\UI\Tile.cs" />
     <Compile Include="Assets\Scripts\UI\TileClick.cs" />
     <Compile Include="Assets\Scripts\UI\TileColorManager.cs" />

@@ -11,10 +11,18 @@ namespace Systems
 		private const string DataPath = "Assets/Datas/";
 		
 		
-		// 생성자
-		public Parser()
+		// 싱글톤 초기화
+		public static void Init()
 		{
-			instance = this;
+			if (instance == null)
+			{
+				instance = new Parser();
+			}
+		}
+		
+		// 생성자
+		private Parser()
+		{
 		}
 
 		// 데이터 파싱

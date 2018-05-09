@@ -9,17 +9,17 @@ namespace Systems
 		// 인스펙터 비노출 변수
 		// 수치
 		[HideInInspector]
-		public 	int 	originalTurnCount = 0;				// 원래의 턴 카운트
+		public 	int 	originalTurnCount;				// 원래의 턴 카운트
 		
-		private int 	turnCount = 0; 						// 턴 카운트
+		private int 	turnCount; 						// 턴 카운트
 
 
 		// 초기화
 		private void Awake()
 		{
 			instance = this;
-			
-			new Parser();
+
+			Parser.Init();
 		}
 
 		// 시작
@@ -34,7 +34,6 @@ namespace Systems
 		public void AddTurn(int val)
 		{
 			turnCount += val;
-			
 			UIManager.instance.SetText(0, turnCount.ToString());
 		}
 		
