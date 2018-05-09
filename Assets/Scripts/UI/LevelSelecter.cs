@@ -19,7 +19,7 @@ namespace UI
         // 클릭
         public void OnPointerClick(PointerEventData eventData)
         {
-            LevelManager.instance.SetLevel(level);
+            LevelManager.instance.level = level;
         }
         
         // 레벨 설정

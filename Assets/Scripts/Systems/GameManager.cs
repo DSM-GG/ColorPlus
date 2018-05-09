@@ -25,7 +25,7 @@ namespace Systems
 		// 시작
 		private void Start()
 		{
-			Parser.instance.Parse(1);
+			Parser.instance.Parse(LevelManager.instance.level);
 
 			ResetTurn();
 		}

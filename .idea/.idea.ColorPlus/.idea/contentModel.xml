@@ -15,7 +15,6 @@
         <e p="Systems" t="Include">
           <e p="BoardManager.cs" t="Include" />
           <e p="GameManager.cs" t="Include" />
-          <e p="LevelInitializer.cs" t="Include" />
           <e p="LevelManager.cs" t="Include" />
           <e p="LevelStarter.cs" t="Include" />
           <e p="Parser.cs" t="Include" />
@@ -35,9 +34,7 @@
       <e p="Library" t="ExcludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />
       <e p="packages" t="ExcludeRecursive" />
-      <e p="Temp" t="ExcludeRecursive">
-        <e p="bin" t="ExcludeRecursive" />
-      </e>
+      <e p="Temp\bin" t="ExcludeRecursive" />
     </e>
   </component>
 </project>

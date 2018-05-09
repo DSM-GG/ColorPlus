@@ -11,7 +11,7 @@ namespace Systems
 		private ImageIniter 	imageIniter;			// 타일 초기화 스크립트
 		
 		// 수치
-		private int 			level;					// 레벨
+		public 	int 			level;					// 레벨
 		private int 			height = 10;			// 세로
 		private int 			width = 5;				// 가로
 		
@@ -53,12 +53,6 @@ namespace Systems
 					targetSelecter.SetLevel(lev++);
 				}
 			}
-		}
-		
-		// 레벨 설정
-		public void SetLevel(int value)
-		{
-			level = value;
 		}
 	}
 }
