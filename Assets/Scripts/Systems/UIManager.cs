@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 namespace Systems
 {
@@ -22,6 +23,24 @@ namespace Systems
         public void SetText(int index, string str)
         {
             texts[index].text = str;
+        }
+        
+        // 되돌리기 버튼
+        public void RestoreGame()
+        {
+            BoardManager.instance.Restore();
+        }
+
+        // 다시하기 버튼
+        public void ResetGame()
+        {
+            BoardManager.instance.ResetTile();
+        }
+        
+        // 레벨 선택화면으로 돌아가기
+        public void ReturnLevelList()
+        {
+            SceneManager.LoadScene("SeletScene");
         }
     }
 }

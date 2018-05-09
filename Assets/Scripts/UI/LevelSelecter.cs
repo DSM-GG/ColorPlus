@@ -1,6 +1,7 @@
 ﻿using Systems;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 namespace UI
 {
@@ -20,6 +21,8 @@ namespace UI
         public void OnPointerClick(PointerEventData eventData)
         {
             LevelManager.instance.level = level;
+            
+            SceneManager.LoadScene("MainScene");
         }
         
         // 레벨 설정

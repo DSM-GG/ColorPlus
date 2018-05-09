@@ -18,7 +18,6 @@
           <e p="LevelManager.cs" t="Include" />
           <e p="LevelStarter.cs" t="Include" />
           <e p="Parser.cs" t="Include" />
-          <e p="SceneManager.cs" t="Include" />
           <e p="TestIO.cs" t="Include" />
           <e p="UIManager.cs" t="Include" />
         </e>
