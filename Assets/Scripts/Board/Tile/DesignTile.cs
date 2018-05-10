@@ -3,7 +3,7 @@ using UnityEngine.EventSystems;
 
 namespace Board.Tile
 {
-    public class DesignTile : MonoBehaviour, IPointerClickHandler
+    public class DesignTile : MonoBehaviour, IPointerEnterHandler, IPointerDownHandler
     {
         // 인스펙터 비노출 변수
         // 일반
@@ -25,10 +25,25 @@ namespace Board.Tile
             tileTypeCount     = BoardManager.instance.tileSprites.Length;
         }
 
+        private void Update()
+        {
+            Debug.Log(Input.touchCount);
+        }
+
         // 마우스 클릭
-        public void OnPointerClick(PointerEventData eventData)
+        public void OnPointerDown(PointerEventData eventData)
         {
             tileColorManager.SetColor((++tile.colorNum) % tileTypeCount);
+        }
+        
+        // 마우스 클릭상태 드래그
+        public void OnPointerEnter(PointerEventData eventData)
+        {
+            Debug.Log(Input.touchCount);
+            if (Input.GetMouseButton(0))
+            {
+                tileColorManager.SetColor((++tile.colorNum) % tileTypeCount);
+            }
         }
     }
 }
