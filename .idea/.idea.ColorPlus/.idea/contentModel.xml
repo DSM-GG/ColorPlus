@@ -12,28 +12,37 @@
         <e p="4.txt" t="Include" />
       </e>
       <e p="Assets\Scripts" t="Include">
-        <e p="Systems" t="Include">
+        <e p="Board" t="Include">
           <e p="BoardManager.cs" t="Include" />
-          <e p="GameManager.cs" t="Include" />
+          <e p="Tile" t="Include">
+            <e p="DesignTile.cs" t="Include" />
+            <e p="Tile.cs" t="Include" />
+            <e p="TileClick.cs" t="Include" />
+            <e p="TileColorManager.cs" t="Include" />
+          </e>
+        </e>
+        <e p="LevelSelect" t="Include">
           <e p="LevelManager.cs" t="Include" />
+          <e p="LevelSelecter.cs" t="Include" />
           <e p="LevelStarter.cs" t="Include" />
+        </e>
+        <e p="Systems" t="Include">
+          <e p="GameManager.cs" t="Include" />
           <e p="Parser.cs" t="Include" />
           <e p="TestIO.cs" t="Include" />
           <e p="UIManager.cs" t="Include" />
         </e>
         <e p="UI" t="Include">
           <e p="ImageIniter.cs" t="Include" />
-          <e p="LevelSelecter.cs" t="Include" />
-          <e p="Tile.cs" t="Include" />
-          <e p="TileClick.cs" t="Include" />
-          <e p="TileColorManager.cs" t="Include" />
         </e>
       </e>
       <e p="ColorPlus.sln" t="IncludeFlat" />
       <e p="Library" t="ExcludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />
       <e p="packages" t="ExcludeRecursive" />
-      <e p="Temp\bin" t="ExcludeRecursive" />
+      <e p="Temp" t="ExcludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+      </e>
     </e>
   </component>
 </project>

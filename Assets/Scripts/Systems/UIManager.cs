@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Board;
+using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
