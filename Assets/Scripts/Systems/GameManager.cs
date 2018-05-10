@@ -1,4 +1,5 @@
-﻿using LevelSelect;
+﻿using Board;
+using LevelSelect;
 using UnityEngine;
 
 namespace Systems
@@ -6,6 +7,11 @@ namespace Systems
 	public class GameManager : MonoBehaviour
 	{
 		public static GameManager instance;
+		
+		// 인스펙터 노출 변수
+		// 수치
+		[SerializeField]
+		private bool 	useDefaultLevel = true;			// 디폴트 레벨 ( 0 )을 사용할지 여부
 		
 		// 인스펙터 비노출 변수
 		// 수치
@@ -28,14 +34,16 @@ namespace Systems
 		{
 			if (LevelManager.instance != null)
 			{
-				Parser.instance.Parse(LevelManager.instance.level);				
+				Parser.instance.Parse(LevelManager.instance.level);
+				
+				ResetTurn();
 			}
-			else
+			else if (useDefaultLevel)
 			{
 				Parser.instance.Parse(0);
+				
+				ResetTurn();
 			}
-			
-			ResetTurn();
 		}
 
 		// 턴 조절

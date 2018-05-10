@@ -27,6 +27,7 @@
           <e p="LevelStarter.cs" t="Include" />
         </e>
         <e p="Systems" t="Include">
+          <e p="DesignSetManager.cs" t="Include" />
           <e p="GameManager.cs" t="Include" />
           <e p="Parser.cs" t="Include" />
           <e p="TestIO.cs" t="Include" />

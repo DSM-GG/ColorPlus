@@ -11,7 +11,9 @@ namespace Systems
 		
         // 인스펙터 노출 변수
         [SerializeField]
-        private Text[] 		texts;				// 텍스트 집합
+        private Text[]             texts;				// 텍스트 집합
+        [SerializeField]
+        private GameObject[]       panels;             // ui 집합
 		
 		
         // 초기화
@@ -24,6 +26,12 @@ namespace Systems
         public void SetText(int index, string str)
         {
             texts[index].text = str;
+        }
+        
+        // UI 설정
+        public void SetUI(int index, bool enable)
+        {
+            panels[index].SetActive(enable);
         }
         
         // 되돌리기 버튼
