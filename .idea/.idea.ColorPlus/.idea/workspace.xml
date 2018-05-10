@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7c50dd38-9edd-464c-a4ef-a7faf004226e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ColorPlus/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ColorPlus/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Systems/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Systems/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Systems/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Systems/UIManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/Library/CurrentMaximizeLayout.dwlt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/InspectorExpandedItems.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Library/InspectorExpandedItems.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll.mdb" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll.mdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/assetDatabase3" beforeDir="false" afterPath="$PROJECT_DIR$/Library/assetDatabase3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/2e/2ecd5f444e1e3344fb6e8b35d8d2352b" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/2e/2ecd5f444e1e3344fb6e8b35d8d2352b" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/72/72d6810d92c4f2247952f1e4373c87a6" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/72/72d6810d92c4f2247952f1e4373c87a6" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/df/dfda099193e7a6348b87369bbdb71c81" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/df/dfda099193e7a6348b87369bbdb71c81" afterDir="false" />
-    </list>
+    <list default="true" id="7c50dd38-9edd-464c-a4ef-a7faf004226e" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -51,8 +39,8 @@
             <file leaf-file-name="DesignSetManager.cs" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/Assets/Scripts/Systems/DesignSetManager.cs">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="420">
-                    <caret line="28" column="47" lean-forward="true" selection-start-line="28" selection-start-column="47" selection-end-line="28" selection-end-column="47" />
+                  <state relative-caret-position="285">
+                    <caret line="19" column="12" lean-forward="true" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
                     <folding>
                       <marker date="1525946468956" expanded="true" signature="6:87" ph="..." />
                       <marker date="1525946468956" expanded="true" signature="106:826" ph="{...}" />
@@ -194,8 +182,8 @@
       <file leaf-file-name="UIManager.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Systems/UIManager.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="30" column="16" lean-forward="true" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
+            <state relative-caret-position="231">
+              <caret line="27" column="36" lean-forward="true" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
               <folding>
                 <marker date="1525946228977" expanded="false" signature="6:88" ph="..." />
                 <marker date="1525946228977" expanded="true" signature="107:1158" ph="{...}" />
@@ -288,7 +276,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="17" />
     <option name="y" value="42" />
     <option name="width" value="1943" />
@@ -453,7 +441,7 @@
       <workItem from="1525818981706" duration="1162000" />
       <workItem from="1525828749187" duration="7055000" />
       <workItem from="1525854342145" duration="3855000" />
-      <workItem from="1525905925548" duration="15074000" />
+      <workItem from="1525905925548" duration="15134000" />
     </task>
     <task id="LOCAL-00001" summary="Modify LevelSelecter">
       <created>1525854632513</created>
@@ -476,11 +464,18 @@
       <option name="project" value="LOCAL" />
       <updated>1525930469717</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Create tile level design system">
+      <created>1525946573860</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1525946573860</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40161000" />
+    <option name="totallyTimeSpent" value="40221000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -492,7 +487,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="14" y="34" width="1554" height="788" extended-state="0" />
+    <frame x="14" y="34" width="1554" height="788" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4986577" weight="0.32911393" />
@@ -532,7 +527,8 @@
     <MESSAGE value="Modify LevelSelecter" />
     <MESSAGE value="Add change scene system and shelf buttons" />
     <MESSAGE value="Create design tile" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create design tile" />
+    <MESSAGE value="Create tile level design system" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create tile level design system" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -911,25 +907,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Systems/DesignSetManager.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="47" lean-forward="true" selection-start-line="28" selection-start-column="47" selection-end-line="28" selection-end-column="47" />
-          <folding>
-            <marker date="1525946468956" expanded="true" signature="6:87" ph="..." />
-            <marker date="1525946468956" expanded="true" signature="106:826" ph="{...}" />
-            <marker date="1525946468956" expanded="true" signature="155:824" ph="{...}" />
-            <marker date="1525946468956" expanded="true" signature="214:821" ph="{...}" />
-            <marker date="1525946468956" expanded="true" signature="586:668" ph="{...}" />
-            <marker date="1525946468956" expanded="true" signature="627:663" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Systems/UIManager.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="30" column="16" lean-forward="true" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
+        <state relative-caret-position="231">
+          <caret line="27" column="36" lean-forward="true" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
           <folding>
             <marker date="1525946228977" expanded="false" signature="6:88" ph="..." />
             <marker date="1525946228977" expanded="true" signature="107:1158" ph="{...}" />
@@ -940,6 +921,21 @@
             <marker date="1525946228977" expanded="true" signature="823:888" ph="{...}" />
             <marker date="1525946228977" expanded="true" signature="940:1007" ph="{...}" />
             <marker date="1525946228977" expanded="true" signature="1080:1150" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Systems/DesignSetManager.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="12" lean-forward="true" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
+          <folding>
+            <marker date="1525946468956" expanded="true" signature="6:87" ph="..." />
+            <marker date="1525946468956" expanded="true" signature="106:826" ph="{...}" />
+            <marker date="1525946468956" expanded="true" signature="155:824" ph="{...}" />
+            <marker date="1525946468956" expanded="true" signature="214:821" ph="{...}" />
+            <marker date="1525946468956" expanded="true" signature="586:668" ph="{...}" />
+            <marker date="1525946468956" expanded="true" signature="627:663" ph="{...}" />
           </folding>
         </state>
       </provider>
