@@ -1,7 +1,8 @@
-﻿using UnityEngine;
+﻿using Board.Tile;
+using UnityEngine;
 using UnityEngine.EventSystems;
 
-namespace Board.Tile
+namespace Design
 {
     public class DesignTile : MonoBehaviour, IPointerEnterHandler, IPointerDownHandler
     {
@@ -9,9 +10,6 @@ namespace Board.Tile
         // 일반
         private Tile                tile;                        // 타일 스크립트
         private TileColorManager    tileColorManager;            // 타일 색 설정 스크립트
-        
-        // 수치
-        private int                 tileTypeCount;                // 타일 종류 갯수
         
         
         // 초기화
@@ -21,29 +19,27 @@ namespace Board.Tile
             
             tile              = GetComponent<Tile>();
             tileColorManager  = GetComponent<TileColorManager>();
-
-            tileTypeCount     = BoardManager.instance.tileSprites.Length;
         }
-
-        private void Update()
-        {
-            Debug.Log(Input.touchCount);
-        }
-
+        
         // 마우스 클릭
         public void OnPointerDown(PointerEventData eventData)
         {
-            tileColorManager.SetColor((++tile.colorNum) % tileTypeCount);
+            ChangeTile();
         }
         
         // 마우스 클릭상태 드래그
         public void OnPointerEnter(PointerEventData eventData)
         {
-            Debug.Log(Input.touchCount);
             if (Input.GetMouseButton(0))
             {
-                tileColorManager.SetColor((++tile.colorNum) % tileTypeCount);
+                ChangeTile();
             }
+        }
+        
+        // 타일 변경
+        private void ChangeTile()
+        {
+            tileColorManager.SetColor(BrushManager.instance.brushColor);
         }
     }
 }

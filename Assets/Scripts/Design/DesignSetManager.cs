@@ -1,9 +1,10 @@
 ﻿using System.Collections.Generic;
+using Systems;
 using Board;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Systems
+namespace Design
 {
 	public class DesignSetManager : MonoBehaviour
 	{
@@ -11,22 +12,21 @@ namespace Systems
 		public void SettingDesign(InputField inField)
 		{	
 			string[] splitStr = inField.text.Split();
-			int height 	= int.Parse(splitStr[0]);
-			int width 	= int.Parse(splitStr[1]);
+			int size 	= int.Parse(splitStr[0]);
 			
 			
 			UIManager.instance.SetUI(0, true);
 			UIManager.instance.SetUI(1, true);
 			
-			BoardManager.instance.SetSize(height, width);
+			BoardManager.instance.SetSize(size, size);
 			
 			// 타일 초기화
 			List<int> resultData = new List<int>();
 			
 			
-			for (int i = 0; i < height; i++)
+			for (int i = 0; i < size; i++)
 			{
-				for (int j = 0; j < width; j++)
+				for (int j = 0; j < size; j++)
 				{
 					resultData.Add(1);
 				}

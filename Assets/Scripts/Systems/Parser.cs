@@ -64,6 +64,8 @@ namespace Systems
 			}
 
 			BoardManager.instance.tileSpriteIndArr = resultData.ToArray();
+			
+			fs.Close();
 		}
 	}
 }

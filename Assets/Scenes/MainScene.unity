@@ -385,6 +385,7 @@ GameObject:
   - component: {fileID: 527919024}
   - component: {fileID: 527919025}
   - component: {fileID: 527919026}
+  - component: {fileID: 527919027}
   m_Layer: 5
   m_Name: GameManager
   m_TagString: Untagged
@@ -421,6 +422,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ecd5f444e1e3344fb6e8b35d8d2352b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  useDefaultLevel: 1
   originalTurnCount: 0
 --- !u!114 &527919026
 MonoBehaviour:
@@ -431,6 +433,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c00a7a03fa3bd634fbb8268398a0c5a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &527919027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 527919023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ca5c6f9b6faa5f469f88b3e8e0b677f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &824784548
@@ -893,3 +906,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   texts:
   - {fileID: 824784550}
+  panels: []

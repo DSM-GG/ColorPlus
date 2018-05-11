@@ -54,14 +54,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Board\BoardManager.cs" />
-    <Compile Include="Assets\Scripts\Board\Tile\DesignTile.cs" />
     <Compile Include="Assets\Scripts\Board\Tile\Tile.cs" />
     <Compile Include="Assets\Scripts\Board\Tile\TileClick.cs" />
     <Compile Include="Assets\Scripts\Board\Tile\TileColorManager.cs" />
+    <Compile Include="Assets\Scripts\Board\TileChecker.cs" />
+    <Compile Include="Assets\Scripts\Design\BrushManager.cs" />
+    <Compile Include="Assets\Scripts\Design\DesignSaveManager.cs" />
+    <Compile Include="Assets\Scripts\Design\DesignSetManager.cs" />
+    <Compile Include="Assets\Scripts\Design\DesignTile.cs" />
     <Compile Include="Assets\Scripts\LevelSelect\LevelManager.cs" />
     <Compile Include="Assets\Scripts\LevelSelect\LevelSelecter.cs" />
     <Compile Include="Assets\Scripts\LevelSelect\LevelStarter.cs" />
-    <Compile Include="Assets\Scripts\Systems\DesignSetManager.cs" />
     <Compile Include="Assets\Scripts\Systems\GameManager.cs" />
     <Compile Include="Assets\Scripts\Systems\Parser.cs" />
     <Compile Include="Assets\Scripts\Systems\TestIO.cs" />

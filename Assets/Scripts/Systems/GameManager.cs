@@ -11,22 +11,28 @@ namespace Systems
 		// 인스펙터 노출 변수
 		// 수치
 		[SerializeField]
-		private bool 	useDefaultLevel = true;			// 디폴트 레벨 ( 0 )을 사용할지 여부
+		private bool 			useDefaultLevel = true;			// 디폴트 레벨 ( 0 )을 사용할지 여부
 		
 		// 인스펙터 비노출 변수
 		// 수치
 		[HideInInspector]
-		public 	int 	originalTurnCount;				// 원래의 턴 카운트
+		public 	int 			originalTurnCount;				// 원래의 턴 카운트
 		
-		private int 	turnCount; 						// 턴 카운트
-
+		private int 			turnCount; 						// 턴 카운트
+		private TileChecker 	tileChecker;					// 타일 체커
+		
 
 		// 초기화
 		private void Awake()
 		{
-			instance = this;
-
+			if (instance == null)
+			{
+				instance = this;	
+			}
+			
 			Parser.Init();
+
+			tileChecker = GetComponent<TileChecker>();
 		}
 
 		// 시작
@@ -43,6 +49,15 @@ namespace Systems
 				Parser.instance.Parse(0);
 				
 				ResetTurn();
+			}
+		}
+		
+		// 타일 체크
+		public void CheckTile()
+		{
+			if (tileChecker.CheckPuzzle())
+			{
+				Debug.Log("SDF");
 			}
 		}
 

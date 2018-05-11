@@ -15,11 +15,16 @@
         <e p="Board" t="Include">
           <e p="BoardManager.cs" t="Include" />
           <e p="Tile" t="Include">
-            <e p="DesignTile.cs" t="Include" />
             <e p="Tile.cs" t="Include" />
             <e p="TileClick.cs" t="Include" />
             <e p="TileColorManager.cs" t="Include" />
           </e>
+        </e>
+        <e p="Design" t="Include">
+          <e p="BrushManager.cs" t="Include" />
+          <e p="DesignSaveManager.cs" t="Include" />
+          <e p="DesignSetManager.cs" t="Include" />
+          <e p="DesignTile.cs" t="Include" />
         </e>
         <e p="LevelSelect" t="Include">
           <e p="LevelManager.cs" t="Include" />
@@ -27,7 +32,6 @@
           <e p="LevelStarter.cs" t="Include" />
         </e>
         <e p="Systems" t="Include">
-          <e p="DesignSetManager.cs" t="Include" />
           <e p="GameManager.cs" t="Include" />
           <e p="Parser.cs" t="Include" />
           <e p="TestIO.cs" t="Include" />

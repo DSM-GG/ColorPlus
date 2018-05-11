@@ -19,7 +19,10 @@ namespace Systems
         // 초기화
         private void Awake()
         {
-            instance = this;
+            if (instance == null)
+            {
+                instance = this;
+            }
         }
 
         // 텍스트 설정

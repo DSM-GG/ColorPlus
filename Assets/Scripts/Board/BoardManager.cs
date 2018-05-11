@@ -13,12 +13,8 @@ namespace Board
 		// 수치
 		public	Sprite[]		tileSprites;			// 타일 스프라이트 종류 모음
 		
-		[SerializeField]
-		private int				height;					// 세로
-		[SerializeField]
-		private int				width;					// 가로
-		[SerializeField]
-		private bool 			isStartInit = true;		// 시작 초기화를 사용할지
+		public int				height;					// 세로
+		public int				width;					// 가로
 
 		// 인스펙터 비노출 변수
 		// 일반
@@ -43,10 +39,7 @@ namespace Board
 		// 시작
 		private void Start()
 		{
-			if (isStartInit)
-			{
-				Initialize();
-			}
+			Initialize();
 		}
 
 		// 가로 세로 크기 설정
@@ -111,6 +104,8 @@ namespace Board
 					}
 				}
 			}
+			
+			GameManager.instance.CheckTile();
 		}
 		
 		// 타일 상태를 히스토리에 저장
