@@ -19,6 +19,7 @@
             <e p="TileClick.cs" t="Include" />
             <e p="TileColorManager.cs" t="Include" />
           </e>
+          <e p="TileChecker.cs" t="Include" />
         </e>
         <e p="Design" t="Include">
           <e p="BrushManager.cs" t="Include" />
@@ -39,6 +40,7 @@
         </e>
         <e p="UI" t="Include">
           <e p="ImageIniter.cs" t="Include" />
+          <e p="LevelChangeButton.cs" t="Include" />
         </e>
       </e>
       <e p="ColorPlus.sln" t="IncludeFlat" />

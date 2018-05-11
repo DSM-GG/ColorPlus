@@ -1,6 +1,7 @@
 ﻿using Board;
 using LevelSelect;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Systems
 {
@@ -60,7 +61,15 @@ namespace Systems
 				Debug.Log("SDF");
 			}
 		}
+        
+		// 레벨 재설정
+		public void SetLevel(int levelOffset)
+		{
+			LevelManager.instance.level += levelOffset;
 
+			SceneManager.LoadScene("MainScene");
+		}
+		
 		// 턴 조절
 		public void AddTurn(int val)
 		{
