@@ -39,18 +39,16 @@ namespace Systems
 		// 시작
 		private void Start()
 		{
-			if (LevelManager.instance != null)
+			if (LevelManager.instance == null)
 			{
-				Parser.instance.Parse(LevelManager.instance.level);
-				
-				ResetTurn();
+				LevelManager.Init();
+				LevelManager.instance.level = 0;
 			}
-			else if (useDefaultLevel)
-			{
-				Parser.instance.Parse(0);
+			
+			Parser.instance.Parse(LevelManager.instance.level);
 				
-				ResetTurn();
-			}
+			ResetTurn();
+			UIManager.instance.SetText(1, "#" + LevelManager.instance.level);
 		}
 		
 		// 타일 체크
@@ -60,14 +58,6 @@ namespace Systems
 			{
 				Debug.Log("SDF");
 			}
-		}
-        
-		// 레벨 재설정
-		public void SetLevel(int levelOffset)
-		{
-			LevelManager.instance.level += levelOffset;
-
-			SceneManager.LoadScene("MainScene");
 		}
 		
 		// 턴 조절

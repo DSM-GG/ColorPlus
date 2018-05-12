@@ -12,6 +12,7 @@ namespace LevelSelect
 		
 		// 수치
 		public 	int 			level;					// 레벨
+		public  int 			finalLevel = 4;			// 마지막 레벨
 		
 		private int 			height = 10;			// 세로
 		private int 			width = 5;				// 가로

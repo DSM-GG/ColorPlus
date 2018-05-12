@@ -1,0 +1,25 @@
+fileFormatVersion: 2
+guid: c0e905f1dc4ca5040a6aa919de9ce3e4
+timeCreated: 1526101228
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Bahnschrift
+  fontNames:
+  - Bahnschrift
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 493f7034977922a419288e4861134de4, type: 3}
+  - {fileID: 12800000, guid: ad7bb6ddc41fae7468418abfe1b4f926, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
