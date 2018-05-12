@@ -17,27 +17,15 @@ namespace Design
 		
 		// 셋팅
 		public void SettingDesign(InputField inField)
-		{	
-			// 파레트 셋팅
-			for (int i = 0; i < paletteArray.Length; i++)
-			{
-				paletteArray[i].Initialize(-1, -1, i);
-			}
-			
-			
-			// 보드 셋팅
-			string[] splitStr = inField.text.Split();
-			int size 	= int.Parse(splitStr[0]);
-			
+		{
+			// 보드 셋팅		
+			List<int> resultData = new List<int>();
+			string[]  splitStr   = inField.text.Split();
+			int 	  size 	     = int.Parse(splitStr[0]);	
+
 			
 			UIManager.instance.SetUI(0, true);
 			UIManager.instance.SetUI(1, true);
-			
-			//BoardManager.instance.SetSize(size, size);
-			
-			// 타일 초기화
-			List<int> resultData = new List<int>();
-			
 			
 			for (int i = 0; i < size; i++)
 			{
@@ -46,10 +34,8 @@ namespace Design
 					resultData.Add(1);
 				}
 			}
-
-			//BoardManager.instance.tileSpriteIndArr = resultData.ToArray();
-			//BoardManager.instance.Initialize();
-
+			
+			// 후처리 루틴 실행
 			StartCoroutine(FinalInit(size, resultData));
 			
 			UIManager.instance.SetUI(2, false);
@@ -60,10 +46,17 @@ namespace Design
 		{
 			yield return new WaitForSeconds(0.01f);
 			
+			// 보드 셋팅
 			BoardManager.instance.SetSize(size, size);
 			
 			BoardManager.instance.tileSpriteIndArr = resultData.ToArray();
 			BoardManager.instance.Initialize();
+			
+			// 파레트 셋팅
+			for (int i = 0; i < paletteArray.Length; i++)
+			{
+				paletteArray[i].Initialize(-1, -1, i);
+			}
 		}
 	}
 }
