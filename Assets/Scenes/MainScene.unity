@@ -518,9 +518,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tile: {fileID: 224261601079561516, guid: 5bba44ea3957d0641a8d38f444dd69e3, type: 2}
-  tileName: Tile
   height: 3
   width: 3
+  tileName: Tile
   gap: 0
 --- !u!222 &479162053
 CanvasRenderer:
@@ -544,6 +544,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: bb373c2265e23e84c97c1042052e3eea, type: 3}
   - {fileID: 21300000, guid: cdd463b8d33d7b5458f8dfde0c4b023a, type: 3}
   - {fileID: 21300000, guid: f68a7988a91c7ce47a0c62bbecb0121b, type: 3}
+  useStartInit: 1
   height: 5
   width: 5
   tileSpriteIndArr: 

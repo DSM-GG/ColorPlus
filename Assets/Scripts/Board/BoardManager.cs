@@ -13,6 +13,9 @@ namespace Board
 		// 수치
 		public	Sprite[]		tileSprites;			// 타일 스프라이트 종류 모음
 
+		[SerializeField]
+		private bool 			useStartInit;			// 시작 초기화를 사용할지
+		
 		// 인스펙터 비노출 변수
 		// 일반
 		public int				height;					// 세로
@@ -22,7 +25,7 @@ namespace Board
 		public	Tile.Tile[,]	tileArray;             	// 타일 집합
 		[HideInInspector]
 		public	int[]			tileSpriteIndArr;		// 타일들의 스프라이트 인덱스 배열
-
+		
 		private ImageIniter		imageIniter;           	// 타일 초기화 스크립트
 		private Stack<bool[,]> 	tileHistory;			// 타일 히스토리
 
@@ -39,7 +42,10 @@ namespace Board
 		// 시작
 		private void Start()
 		{
-			Initialize();
+			if (useStartInit)
+			{
+				Initialize();
+			}
 		}
 
 		// 가로 세로 크기 설정

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using Systems;
 using Board;
 using UnityEngine;
@@ -34,8 +35,18 @@ namespace Design
 
 			BoardManager.instance.tileSpriteIndArr = resultData.ToArray();
 			BoardManager.instance.Initialize();
+
+			StartCoroutine(FinalInit(size));
 			
 			UIManager.instance.SetUI(2, false);
+		}
+		
+		// 나중 프레임에 처리해야할 루틴
+		private IEnumerator FinalInit(int size)
+		{
+			yield return new WaitForSeconds(0.01f);
+			
+			BoardManager.instance.SetSize(size, size);
 		}
 	}
 }
