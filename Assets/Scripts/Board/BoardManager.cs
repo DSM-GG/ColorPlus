@@ -12,12 +12,12 @@ namespace Board
 		// 인스펙터 노출 변수
 		// 수치
 		public	Sprite[]		tileSprites;			// 타일 스프라이트 종류 모음
-		
-		public int				height;					// 세로
-		public int				width;					// 가로
 
 		// 인스펙터 비노출 변수
 		// 일반
+		public int				height;					// 세로
+		public int				width;					// 가로
+		
 		[HideInInspector]
 		public	Tile.Tile[,]	tileArray;             	// 타일 집합
 		[HideInInspector]

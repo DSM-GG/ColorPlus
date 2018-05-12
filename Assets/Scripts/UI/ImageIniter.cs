@@ -10,12 +10,11 @@ namespace UI
 		private Transform 	tile;                   	// 배치될 타일
 
 		// 수치
+		public  int 		height = 1;             	// 세로
+		public  int 		width = 1;              	// 가로
+		
 		[SerializeField]
 		private string 		tileName = "Tile";       	// 타일 이름
-		[SerializeField]
-		private int 		height = 1;             	// 세로
-		[SerializeField]
-		private int 		width = 1;              	// 가로
 		[SerializeField]
 		private float 		gap = 0.1f;              	// 간격
 
