@@ -39,6 +39,7 @@ namespace Design
         // 타일 변경
         private void ChangeTile()
         {
+            tile.colorNum = BrushManager.instance.brushColor;
             tileColorManager.SetColor(BrushManager.instance.brushColor);
         }
     }

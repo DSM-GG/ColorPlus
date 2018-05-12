@@ -15,7 +15,7 @@ namespace Design
 			int 	 size = BoardManager.instance.height;
 			string[] stringDatas = new string[size + 1];
 
-			Debug.Log(size);
+			
 			stringDatas[0] = inField.text + " " + size;
 			for (int i = 0; i < size; i++)
 			{

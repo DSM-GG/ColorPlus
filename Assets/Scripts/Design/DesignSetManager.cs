@@ -19,7 +19,7 @@ namespace Design
 			UIManager.instance.SetUI(0, true);
 			UIManager.instance.SetUI(1, true);
 			
-			BoardManager.instance.SetSize(size, size);
+			//BoardManager.instance.SetSize(size, size);
 			
 			// 타일 초기화
 			List<int> resultData = new List<int>();
@@ -33,20 +33,23 @@ namespace Design
 				}
 			}
 
-			BoardManager.instance.tileSpriteIndArr = resultData.ToArray();
-			BoardManager.instance.Initialize();
+			//BoardManager.instance.tileSpriteIndArr = resultData.ToArray();
+			//BoardManager.instance.Initialize();
 
-			StartCoroutine(FinalInit(size));
+			StartCoroutine(FinalInit(size, resultData));
 			
 			UIManager.instance.SetUI(2, false);
 		}
 		
 		// 나중 프레임에 처리해야할 루틴
-		private IEnumerator FinalInit(int size)
+		private IEnumerator FinalInit(int size, List<int> resultData)
 		{
 			yield return new WaitForSeconds(0.01f);
 			
 			BoardManager.instance.SetSize(size, size);
+			
+			BoardManager.instance.tileSpriteIndArr = resultData.ToArray();
+			BoardManager.instance.Initialize();
 		}
 	}
 }
