@@ -25,13 +25,13 @@ namespace Design
         }
         
         // 색 변경
-        private void SetColor(int color)
+        public void SetColor(int color)
         {
             brushColor = color;
         }
         
         // 크기 변경
-        private void SetSize(int size)
+        public void SetSize(int size)
         {
             brushSize = size;
         }

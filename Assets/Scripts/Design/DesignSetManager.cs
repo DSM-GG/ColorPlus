@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Systems;
 using Board;
+using Board.Tile;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,9 +10,22 @@ namespace Design
 {
 	public class DesignSetManager : MonoBehaviour
 	{
+		// 인스펙터 노출 변수
+		[SerializeField]
+		private Tile[] 	paletteArray;				// 파레트 모음
+		
+		
 		// 셋팅
 		public void SettingDesign(InputField inField)
 		{	
+			// 파레트 셋팅
+			for (int i = 0; i < paletteArray.Length; i++)
+			{
+				paletteArray[i].Initialize(-1, -1, i);
+			}
+			
+			
+			// 보드 셋팅
 			string[] splitStr = inField.text.Split();
 			int size 	= int.Parse(splitStr[0]);
 			
