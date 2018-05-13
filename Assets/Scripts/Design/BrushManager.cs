@@ -29,11 +29,5 @@ namespace Design
         {
             brushColor = color;
         }
-        
-        // 크기 변경
-        public void SetSize(int size)
-        {
-            brushSize = size;
-        }
     }
 }
