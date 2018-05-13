@@ -41,6 +41,11 @@ namespace Board
         // 탐색
         private bool Dfs(int nowX, int nowY, int colorNum)
         {
+            if (colorNum != existTiles[nowY, nowX].colorNum)
+            {
+                return false;
+            }
+            
             checkArray[nowY, nowX] = true;
 
             for (int i = 0; i < 4; i++)
@@ -52,12 +57,10 @@ namespace Board
                 {
                     if (existTiles[nextY, nextX].isExist && !checkArray[nextY, nextX])
                     {
-                        if (colorNum != existTiles[nextY, nextX].colorNum)
+                        if (!Dfs(nextX, nextY, colorNum))
                         {
                             return false;
                         }
-
-                        Dfs(nextX, nextY, colorNum);
                     }
                 }
             }
