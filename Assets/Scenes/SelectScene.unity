@@ -445,9 +445,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tile: {fileID: 224398039548544086, guid: 09650178a30ce714aa05368ff816c05f, type: 2}
-  tileName: Tile
   height: 5
   width: 10
+  tileName: Tile
   gap: 0.01
 --- !u!114 &2006016830
 MonoBehaviour:
