@@ -1,5 +1,4 @@
-﻿using Board;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Systems
 {
@@ -10,12 +9,7 @@ namespace Systems
 		{
 			if (Input.GetKeyDown(KeyCode.E))
 			{
-				BoardManager.instance.Restore();
-			}
-			
-			if (Input.GetKeyDown(KeyCode.R))
-			{
-				BoardManager.instance.ResetTile();
+				PlayerPrefs.DeleteAll();
 			}
 		}
 	}

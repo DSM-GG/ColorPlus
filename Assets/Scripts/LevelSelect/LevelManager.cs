@@ -59,11 +59,13 @@ namespace LevelSelect
 		}
 		
 		// 마지막 레벨 재설정
-		public void SetLastLevel(int newLevel)
+		public void SetLastLevel()
 		{
-			PlayerPrefs.SetInt("LastLevel", newLevel);
+			level++;
+			
+			PlayerPrefs.SetInt("LastLevel", Mathf.Max(level, lastLevel));
 
-			lastLevel = newLevel;
+			lastLevel = level;
 		}
 	}
 }

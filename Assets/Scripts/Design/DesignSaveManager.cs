@@ -1,6 +1,5 @@
 ﻿using System.IO;
 using Board;
-using UI;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,7 +10,6 @@ namespace Design
 		// 현재 상태 저장
 		public void SaveTile(InputField inField)
 		{
-			int 	 ind = 0;
 			int 	 size = BoardManager.instance.height;
 			string[] stringDatas = new string[size + 1];
 

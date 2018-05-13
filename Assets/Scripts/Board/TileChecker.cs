@@ -9,8 +9,8 @@ namespace Board
         private bool[,]		    checkArray;	    					    // 체크용 배열
         private int            height;                                // 높이
         private int            width;                                 // 너비
-        private int[]		    moveX = new int[4] { 1, -1, 0, 0 }; 	// 이동용 배열 X
-        private int[]		    moveY = new int[4] { 0, 0, 1, -1 };    // 이동용 배열 Y
+        private readonly int[] moveX = { 1, -1, 0, 0 };               // 이동용 배열 X
+        private readonly int[] moveY = { 0, 0, 1, -1 };               // 이동용 배열 Y
 
 
         // 성공 여부 체크

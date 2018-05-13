@@ -1,4 +1,5 @@
-﻿using Board;
+﻿using System.Collections;
+using Board;
 using LevelSelect;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -8,11 +9,6 @@ namespace Systems
 	public class GameManager : MonoBehaviour
 	{
 		public static GameManager instance;
-		
-		// 인스펙터 노출 변수
-		// 수치
-		[SerializeField]
-		private bool 			useDefaultLevel = true;			// 디폴트 레벨 ( 0 )을 사용할지 여부
 		
 		// 인스펙터 비노출 변수
 		// 수치
@@ -56,8 +52,16 @@ namespace Systems
 		{
 			if (tileChecker.CheckPuzzle())
 			{
-				Debug.Log("SDF");
+				GameOver();
 			}
+		}
+		
+		// 게임 종료
+		private void GameOver()
+		{
+			LevelManager.instance.SetLastLevel();
+
+			StartCoroutine(GotoNextLevel());
 		}
 		
 		// 턴 조절
@@ -78,6 +82,14 @@ namespace Systems
 		{
 			turnCount = originalTurnCount;
 			UIManager.instance.SetText(0, turnCount.ToString());
+		}
+		
+		// 다음 레벨 루틴
+		private IEnumerator GotoNextLevel()
+		{
+			yield return new WaitForSeconds(1f);
+			
+			SceneManager.LoadScene("MainScene");
 		}
 	}
 }
