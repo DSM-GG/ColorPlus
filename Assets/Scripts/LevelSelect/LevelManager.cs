@@ -12,7 +12,7 @@ namespace LevelSelect
 		
 		// 수치
 		public 	int 			level;					// 레벨
-		public  int 			finalLevel = 4;			// 마지막 레벨
+		public  int 			lastLevel;				// 마지막 레벨
 		
 		private int 			height = 10;			// 세로
 		private int 			width = 5;				// 가로
@@ -36,6 +36,7 @@ namespace LevelSelect
 		public void InitLevelSelecter(ImageIniter targetIminiter)
 		{
 			imageIniter = targetIminiter;
+			lastLevel = PlayerPrefs.GetInt("LastLevel", 1);
 			level = 0;
 			
 			// 타일 초기화
@@ -55,6 +56,14 @@ namespace LevelSelect
 					targetSelecter.SetLevel(lev++);
 				}
 			}
+		}
+		
+		// 마지막 레벨 재설정
+		public void SetLastLevel(int newLevel)
+		{
+			PlayerPrefs.SetInt("LastLevel", newLevel);
+
+			lastLevel = newLevel;
 		}
 	}
 }

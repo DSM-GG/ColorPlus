@@ -40,7 +40,7 @@ namespace LevelSelect
             level = value;
             levelText.text = level.ToString();
 
-            if (LevelManager.instance.finalLevel < level)
+            if (LevelManager.instance.lastLevel < level)
             {
                 levelButton.interactable = false;
             }

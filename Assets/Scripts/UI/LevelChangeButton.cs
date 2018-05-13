@@ -23,7 +23,7 @@ namespace UI
             nextLevel = LevelManager.instance.level + leveloffset;
 
 
-            if (nextLevel > LevelManager.instance.finalLevel || nextLevel < 1)
+            if (nextLevel > LevelManager.instance.lastLevel || nextLevel < 1)
             {
                 Destroy(gameObject);
             }
