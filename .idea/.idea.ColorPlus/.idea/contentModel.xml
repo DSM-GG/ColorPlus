@@ -43,6 +43,7 @@
           <e p="ImageIniter.cs" t="Include" />
           <e p="LevelChangeButton.cs" t="Include" />
           <e p="OptionButton.cs" t="Include" />
+          <e p="Scroller.cs" t="Include" />
         </e>
       </e>
       <e p="ColorPlus.sln" t="IncludeFlat" />
