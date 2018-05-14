@@ -52,7 +52,7 @@ namespace Systems
         // 레벨 선택화면으로 돌아가기
         public void ReturnLevelList()
         {
-            SceneManager.LoadScene("SeletScene");
+            SceneManager.LoadScene("SelectScene");
         }
     }
 }
