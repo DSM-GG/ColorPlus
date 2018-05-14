@@ -31,6 +31,11 @@ namespace Board.Tile
 			colorNum = index;
 			tileColorManager.SetColor(colorNum);
 
+			if (colorNum == 0)
+			{
+				isExist = false;
+			}
+
 			// 위치 설정
 			posX = _posX;
 			posY = _posY;
@@ -56,11 +61,14 @@ namespace Board.Tile
 		// 타일 활성화
 		public void TileEnable()
 		{
-			if (!isExist)
+			if (colorNum != 0)
 			{
-				isExist = true;
-				tileColorManager.SetColor(colorNum);
-				tileClick.enabled = true;
+				if (!isExist)
+				{
+					isExist = true;
+					tileColorManager.SetColor(colorNum);
+					tileClick.enabled = true;
+				}
 			}
 		}
 	}

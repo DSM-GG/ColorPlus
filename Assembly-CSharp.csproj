@@ -74,10 +74,10 @@
     <Compile Include="Assets\Scripts\UI\OptionButton.cs" />
     <Compile Include="Assets\Scripts\UI\Scroller.cs" />
     <None Include="Assets\Datas\0.txt" />
-    <None Include="Assets\Datas\4.txt" />
+    <None Include="Assets\Datas\5.txt" />
     <None Include="Assets\Datas\3.txt" />
     <None Include="Assets\Datas\2.txt" />
-    <None Include="Assets\Datas\NewTiles.txt" />
+    <None Include="Assets\Datas\4.txt" />
     <None Include="Assets\Datas\1.txt" />
     <Reference Include="UnityEngine.UI">
       <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
