@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.EventSystems;
 
 namespace UI
@@ -38,13 +39,55 @@ namespace UI
 		// 드래그 시작
 		public void OnBeginDrag(PointerEventData pointerEventData)
 		{
+			StopCoroutine("DragInertia");
+			
 			previousPos = pointerEventData.position;
 		}
 	
 		// 드래그 종료
 		public void OnEndDrag(PointerEventData pointerEventData)
 		{
-
+			StartCoroutine(DragInertia(pointerEventData.position.y - previousPos.y));
+			Debug.Log(pointerEventData.position.y - previousPos.y);
+		}
+		
+		// 관성 적용
+		private IEnumerator DragInertia(float power)
+		{
+			if (power > 0)
+			{
+				while (power >= 0.1f)
+				{
+					Vector2 nextPos = new Vector2(0, rectTransform.anchoredPosition.y + power);
+				
+					
+					if (nextPos.y > startPos && nextPos.y < -startPos)
+					{
+						rectTransform.anchoredPosition = nextPos;					
+					}
+				
+					power -= 30f;
+				
+					yield return new WaitForSeconds(0.01f);
+				}	
+			}
+			else
+			{
+				while (power <= -0.1f)
+				{
+					Vector2 nextPos = new Vector2(0, rectTransform.anchoredPosition.y + power);
+				
+					
+					if (nextPos.y > startPos && nextPos.y < -startPos)
+					{
+						rectTransform.anchoredPosition = nextPos;					
+					}
+				
+					power += 10f;
+				
+					yield return new WaitForSeconds(0.004f);
+				}
+			}
 		}
 	}
 }
