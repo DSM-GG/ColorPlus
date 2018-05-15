@@ -50,8 +50,12 @@ namespace UI
 					// 타일 배치
 					RectTransform tileRect = newTile.GetComponent<RectTransform>();
 
-					tileRect.anchorMax = new Vector2((1f / width) * (j + 1f) - gap, 1f - ((1f / height) * i) - gap);
-					tileRect.anchorMin = new Vector2((1f / width) * j + gap, 1f - ((1f / height) * (i + 1f)) + gap);
+					float xGap = ((1f / width * (j + 1f)) - (1f / width * j)) * gap;
+					float yGap = ((1f - 1f / height * i) - (1f - 1f / height * (i + 1f))) * gap;
+					
+					
+					tileRect.anchorMax = new Vector2(1f / width * (j + 1f) - xGap, 1f - 1f / height * i - yGap);
+					tileRect.anchorMin = new Vector2(1f / width * j + xGap, 1f - 1f / height * (i + 1f) + yGap);
 					tileRect.offsetMin = Vector2.zero;
 					tileRect.offsetMax = Vector2.zero;
 
