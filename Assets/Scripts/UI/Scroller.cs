@@ -47,8 +47,7 @@ namespace UI
 		// 드래그 종료
 		public void OnEndDrag(PointerEventData pointerEventData)
 		{
-			StartCoroutine(DragInertia(pointerEventData.position.y - previousPos.y));
-			Debug.Log(pointerEventData.position.y - previousPos.y);
+			StartCoroutine("DragInertia", pointerEventData.position.y - previousPos.y);
 		}
 		
 		// 관성 적용
@@ -66,7 +65,7 @@ namespace UI
 						rectTransform.anchoredPosition = nextPos;					
 					}
 				
-					power -= 30f;
+					power -= 10f;
 				
 					yield return new WaitForSeconds(0.01f);
 				}	
