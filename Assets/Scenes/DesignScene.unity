@@ -573,10 +573,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tileSprites:
   - {fileID: 21300000, guid: 7a65b409d99e71d4e867159a0c584b3a, type: 3}
-  - {fileID: 21300000, guid: bb373c2265e23e84c97c1042052e3eea, type: 3}
-  - {fileID: 21300000, guid: cdd463b8d33d7b5458f8dfde0c4b023a, type: 3}
-  - {fileID: 21300000, guid: f68a7988a91c7ce47a0c62bbecb0121b, type: 3}
-  - {fileID: 21300000, guid: 122bce7f04d7643489ec7dfc572b325c, type: 3}
+  - {fileID: 21300000, guid: 499a83d0e4fb7824da650aa622da7160, type: 3}
+  - {fileID: 21300000, guid: d07364d0cbf4d5c46812c38c20c92843, type: 3}
+  - {fileID: 21300000, guid: 61302abe16bfcd148b4ddf40711ee852, type: 3}
+  - {fileID: 21300000, guid: 07adb44c8d058b04cbaff1c067b3de30, type: 3}
   useStartInit: 0
   height: 5
   width: 5
@@ -596,7 +596,7 @@ MonoBehaviour:
   height: 3
   width: 3
   tileName: Tile
-  gap: 0
+  gap: 0.05
 --- !u!222 &268417165
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1492,7 +1492,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ecd5f444e1e3344fb6e8b35d8d2352b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useDefaultLevel: 1
   originalTurnCount: 0
 --- !u!224 &1072876593
 RectTransform:
@@ -1524,7 +1523,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   brushColor: 0
-  brushSize: 0
 --- !u!1 &1090983747
 GameObject:
   m_ObjectHideFlags: 0

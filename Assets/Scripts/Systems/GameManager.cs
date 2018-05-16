@@ -14,6 +14,8 @@ namespace Systems
 		// 수치
 		[HideInInspector]
 		public 	int 			originalTurnCount;				// 원래의 턴 카운트
+		[HideInInspector]
+		public 	bool 			canClick;						// 현재 클릭 가능한지
 		
 		private int 			turnCount; 						// 턴 카운트
 		private TileChecker 	tileChecker;					// 타일 체커
@@ -29,6 +31,8 @@ namespace Systems
 			
 			Parser.Init();
 
+			canClick = true;
+			
 			tileChecker = GetComponent<TileChecker>();
 		}
 
@@ -59,9 +63,10 @@ namespace Systems
 		// 게임 종료
 		private void GameOver()
 		{
+			canClick = false;
 			LevelManager.instance.SetLastLevel();
-			Debug.Log("GOOG");
 			StartCoroutine(GotoNextLevel());
+			Debug.Log("GOOG");
 		}
 		
 		// 턴 조절

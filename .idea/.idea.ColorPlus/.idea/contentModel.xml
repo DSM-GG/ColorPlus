@@ -11,6 +11,7 @@
         <e p="3.txt" t="Include" />
         <e p="4.txt" t="Include" />
         <e p="5.txt" t="Include" />
+        <e p="6.txt" t="Include" />
       </e>
       <e p="Assets\Scripts" t="Include">
         <e p="Board" t="Include">

@@ -21,7 +21,7 @@ namespace Board.Tile
 		public void OnPointerClick(PointerEventData pointerEventData)
 		{
 			// 턴 확인 후 클릭 진행
-			if (GameManager.instance.LeftTurn())
+			if (GameManager.instance.LeftTurn() && GameManager.instance.canClick)
 			{
 				GameManager.instance.AddTurn(-1);
 				BoardManager.instance.CrossDel(tile.posX, tile.posY);
