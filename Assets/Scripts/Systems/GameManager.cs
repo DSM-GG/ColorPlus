@@ -59,9 +59,9 @@ namespace Systems
 		// 게임 종료
 		private void GameOver()
 		{
-			//LevelManager.instance.SetLastLevel();
+			LevelManager.instance.SetLastLevel();
 			Debug.Log("GOOG");
-			//StartCoroutine(GotoNextLevel());
+			StartCoroutine(GotoNextLevel());
 		}
 		
 		// 턴 조절

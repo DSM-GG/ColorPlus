@@ -62,10 +62,9 @@ namespace LevelSelect
 		public void SetLastLevel()
 		{
 			level++;
+			lastLevel = Mathf.Max(level, lastLevel);
 			
-			PlayerPrefs.SetInt("LastLevel", Mathf.Max(level, lastLevel));
-
-			lastLevel = level;
+			PlayerPrefs.SetInt("LastLevel", lastLevel);
 		}
 	}
 }

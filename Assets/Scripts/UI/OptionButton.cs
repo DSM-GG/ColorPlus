@@ -21,7 +21,7 @@ namespace UI
         public void OnPointerClick(PointerEventData eventData)
         {
             enalbed = !enalbed;
-            
+
             UIManager.instance.SetUI(0, enalbed);
         }
     }
