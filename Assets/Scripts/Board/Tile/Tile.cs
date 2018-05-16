@@ -34,6 +34,7 @@ namespace Board.Tile
 			if (colorNum == 0)
 			{
 				isExist = false;
+				tileClick.enabled = false;
 			}
 
 			// 위치 설정
