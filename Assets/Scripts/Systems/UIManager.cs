@@ -50,9 +50,9 @@ namespace Systems
         }
         
         // 레벨 선택화면으로 돌아가기
-        public void ReturnLevelList()
+        public void GotoScene(string sceneName)
         {
-            SceneManager.LoadScene("SelectScene");
+            SceneManager.LoadScene(sceneName);
         }
     }
 }
