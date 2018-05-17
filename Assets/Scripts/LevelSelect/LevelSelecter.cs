@@ -29,9 +29,12 @@ namespace LevelSelect
         // 클릭
         public void OnPointerClick(PointerEventData eventData)
         {
-            LevelManager.instance.level = level;
+            if (levelButton.interactable)
+            {
+                LevelManager.instance.level = level;
             
-            SceneManager.LoadScene("MainScene");
+                SceneManager.LoadScene("MainScene");
+            }
         }
         
         // 레벨 설정
