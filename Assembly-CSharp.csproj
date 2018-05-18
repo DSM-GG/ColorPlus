@@ -68,11 +68,12 @@
     <Compile Include="Assets\Scripts\Systems\GameManager.cs" />
     <Compile Include="Assets\Scripts\Systems\Parser.cs" />
     <Compile Include="Assets\Scripts\Systems\TestIO.cs" />
-    <Compile Include="Assets\Scripts\Systems\UIManager.cs" />
     <Compile Include="Assets\Scripts\UI\ImageIniter.cs" />
     <Compile Include="Assets\Scripts\UI\LevelChangeButton.cs" />
     <Compile Include="Assets\Scripts\UI\OptionButton.cs" />
     <Compile Include="Assets\Scripts\UI\Scroller.cs" />
+    <Compile Include="Assets\Scripts\UI\StartButton.cs" />
+    <Compile Include="Assets\Scripts\UI\UIManager.cs" />
     <None Include="Assets\Datas\0.txt" />
     <None Include="Assets\Datas\3.txt" />
     <None Include="Assets\Datas\5.txt" />

@@ -38,13 +38,14 @@
           <e p="GameManager.cs" t="Include" />
           <e p="Parser.cs" t="Include" />
           <e p="TestIO.cs" t="Include" />
-          <e p="UIManager.cs" t="Include" />
         </e>
         <e p="UI" t="Include">
           <e p="ImageIniter.cs" t="Include" />
           <e p="LevelChangeButton.cs" t="Include" />
           <e p="OptionButton.cs" t="Include" />
           <e p="Scroller.cs" t="Include" />
+          <e p="StartButton.cs" t="Include" />
+          <e p="UIManager.cs" t="Include" />
         </e>
       </e>
       <e p="ColorPlus.sln" t="IncludeFlat" />

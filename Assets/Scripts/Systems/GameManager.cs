@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using Board;
 using LevelSelect;
+using UI;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
