@@ -286,7 +286,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   texts: []
   panels:
-  - {fileID: 1397719370}
+  - {fileID: 1397719369}
+  - {fileID: 1697194180}
 --- !u!1 &782826485
 GameObject:
   m_ObjectHideFlags: 0
@@ -483,6 +484,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 778043c205542874ba61adab5e58920b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coverImage: {fileID: 1697194182}
 --- !u!114 &1005439165
 MonoBehaviour:
   m_ObjectHideFlags: 0
