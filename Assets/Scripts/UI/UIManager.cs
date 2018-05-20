@@ -133,6 +133,22 @@ namespace UI
                 yield return new WaitForSeconds(0.01f);
             }
         }
+        
+        // 크기 변경 효과
+        private IEnumerator FadeScale(RectTransform target, Vector2 goalScale, float time)
+        {
+            Vector2 originScale = target.localScale;
+            float originTime = time;
+            
+            
+            while (time > 0)
+            {
+                target.localScale = Vector2.Lerp(goalScale, originScale, (time / originTime));
+                
+                time -= 0.1f;
+                yield return new WaitForSeconds(0.01f);
+            }
+        }
     }
 }
 
