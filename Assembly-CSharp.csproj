@@ -69,6 +69,7 @@
     <Compile Include="Assets\Scripts\Systems\Parser.cs" />
     <Compile Include="Assets\Scripts\Systems\TestIO.cs" />
     <Compile Include="Assets\Scripts\UI\ImageIniter.cs" />
+    <Compile Include="Assets\Scripts\UI\ImageScaleFadeEffect.cs" />
     <Compile Include="Assets\Scripts\UI\LevelChangeButton.cs" />
     <Compile Include="Assets\Scripts\UI\OptionButton.cs" />
     <Compile Include="Assets\Scripts\UI\Scroller.cs" />

@@ -288,6 +288,7 @@ MonoBehaviour:
   panels:
   - {fileID: 1397719369}
   - {fileID: 1697194180}
+  - {fileID: 1025702794}
 --- !u!1 &782826485
 GameObject:
   m_ObjectHideFlags: 0

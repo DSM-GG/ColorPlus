@@ -89,10 +89,10 @@ namespace UI
         }
         
         // 이동 효과
-        private IEnumerator FadePosition(RectTransform target, Vector2 goalPos, float time)
+        public IEnumerator FadePosition(RectTransform target, Vector2 goalPos, float time)
         {
-            float originTime = time;
-            Vector2 startPos = target.position;
+            float   originTime = time;
+            Vector2 startPos   = target.position;
             
            
             while (time > 0)
@@ -105,17 +105,17 @@ namespace UI
         }
         
         // 알파 페이드 효과 ( 이미지 )
-        private IEnumerator FadeAlpha(Image target, float goalAlpha, float time)
+        public IEnumerator FadeAlpha(Image target, float goalAlpha, float time)
         {
-            float originTime = time;
+            float originTime  = time;
             Color originColor = target.color;
-            float startAlpha = target.color.a;
+            float startAlpha  = target.color.a;
             
             
             while (time > 0)
             {
                 originColor.a = Mathf.Lerp(goalAlpha, startAlpha, (time / originTime));
-                target.color = originColor;
+                target.color  = originColor;
                 
                 time -= 0.01f;
                 yield return new WaitForSeconds(0.01f);
@@ -123,17 +123,17 @@ namespace UI
         }
         
         // 알파 페이드 효과 ( 텍스트 )
-        private IEnumerator FadeAlpha(Text target, float goalAlpha, float time)
+        public IEnumerator FadeAlpha(Text target, float goalAlpha, float time)
         {
-            float originTime = time;
+            float originTime  = time;
             Color originColor = target.color;
-            float startAlpha = target.color.a;
+            float startAlpha  = target.color.a;
             
             
             while (time > 0)
             {
                 originColor.a = Mathf.Lerp(startAlpha, goalAlpha, (time / originTime));
-                target.color = originColor;
+                target.color  = originColor;
                 
                 time -= 0.01f;
                 yield return new WaitForSeconds(0.01f);
@@ -141,17 +141,17 @@ namespace UI
         }
         
         // 크기 변경 효과
-        private IEnumerator FadeScale(RectTransform target, Vector2 goalScale, float time)
+        public IEnumerator FadeScale(RectTransform target, Vector2 goalScale, float time)
         {
             Vector2 originScale = target.localScale;
-            float originTime = time;
+            float   originTime  = time;
             
             
             while (time > 0)
             {
                 target.localScale = Vector2.Lerp(goalScale, originScale, (time / originTime));
                 
-                time -= 0.1f;
+                time -= 0.01f;
                 yield return new WaitForSeconds(0.01f);
             }
         }

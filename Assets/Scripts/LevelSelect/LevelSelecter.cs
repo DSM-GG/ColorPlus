@@ -1,4 +1,7 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UI;
+using UnityEditor;
+using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -32,8 +35,8 @@ namespace LevelSelect
             if (levelButton.interactable)
             {
                 LevelManager.instance.level = level;
-            
-                SceneManager.LoadScene("MainScene");
+
+                StartCoroutine(ChangeScene());
             }
         }
         
@@ -47,6 +50,16 @@ namespace LevelSelect
             {
                 levelButton.interactable = false;
             }
+        }
+        
+        // 이펙트 루틴
+        private IEnumerator ChangeScene()
+        {
+            UIManager.instance.FadeScaleFunc(2, Vector2.zero, 1f);
+            
+            yield return new WaitForSeconds(5f);
+            
+            SceneManager.LoadScene("MainScene");
         }
     }
 }
