@@ -865,6 +865,7 @@ GameObject:
   - component: {fileID: 2006016829}
   - component: {fileID: 2006016830}
   - component: {fileID: 2006016827}
+  - component: {fileID: 2006016832}
   - component: {fileID: 2006016831}
   m_Layer: 5
   m_Name: LevelList
@@ -964,3 +965,14 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &2006016832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2006016825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28c3832914c8e504d91eba64dd9cc79b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

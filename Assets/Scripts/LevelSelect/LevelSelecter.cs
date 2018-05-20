@@ -55,7 +55,7 @@ namespace LevelSelect
         // 이펙트 루틴
         private IEnumerator ChangeScene()
         {
-            UIManager.instance.FadeScaleFunc(2, Vector2.zero, 1f);
+            transform.parent.GetComponent<ImageEffectControler>().DeleteAllImage();
             
             yield return new WaitForSeconds(5f);
             
