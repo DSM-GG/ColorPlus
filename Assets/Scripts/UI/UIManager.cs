@@ -45,22 +45,22 @@ namespace UI
         }
         
         // UI 이동
-        public void MoveUI(int index, Vector2 goalPos, float time)
+        public void FadePositionFunc(int index, Vector2 goalPos, float time)
         {
-            StartCoroutine(MoveTo(panels[index].GetComponent<RectTransform>(), goalPos, time));
+            StartCoroutine(FadePosition(panels[index].GetComponent<RectTransform>(), goalPos, time));
         }
         
-        // UI 페이드
-        public void FadeUI(int arrayOffset, int index, float goalAlpha, float time)
+        // UI 알파 변경
+        public void FadeAlphaFunc(int arrayOffset, int index, float goalAlpha, float time)
         {
             switch (arrayOffset)
             {
                 case 0:
-                    StartCoroutine(Fade(panels[index].GetComponent<Image>(), goalAlpha, time));
+                    StartCoroutine(FadeAlpha(panels[index].GetComponent<Image>(), goalAlpha, time));
                     
                     break;
                 case 1:
-                    StartCoroutine(Fade(texts[index], goalAlpha, time));
+                    StartCoroutine(FadeAlpha(texts[index], goalAlpha, time));
                     
                     break;
                 default:
@@ -68,6 +68,12 @@ namespace UI
                     
                     break;
             }
+        }
+        
+        // UI 크기 변경
+        public void FadeScaleFunc(int index, Vector2 goalScale, float time)
+        {
+            StartCoroutine(FadeScale(panels[index].GetComponent<RectTransform>(), goalScale, time));
         }
 
         // 다시하기 버튼
@@ -82,8 +88,8 @@ namespace UI
             SceneManager.LoadScene(sceneName);
         }
         
-        // 이동 코루틴
-        private IEnumerator MoveTo(RectTransform target, Vector2 goalPos, float time)
+        // 이동 효과
+        private IEnumerator FadePosition(RectTransform target, Vector2 goalPos, float time)
         {
             float originTime = time;
             Vector2 startPos = target.position;
@@ -98,8 +104,8 @@ namespace UI
             }
         }
         
-        // 페이드 효과 ( 이미지 )
-        private IEnumerator Fade(Image target, float goalAlpha, float time)
+        // 알파 페이드 효과 ( 이미지 )
+        private IEnumerator FadeAlpha(Image target, float goalAlpha, float time)
         {
             float originTime = time;
             Color originColor = target.color;
@@ -116,8 +122,8 @@ namespace UI
             }
         }
         
-        // 페이드 효과 ( 텍스트 )
-        private IEnumerator Fade(Text target, float goalAlpha, float time)
+        // 알파 페이드 효과 ( 텍스트 )
+        private IEnumerator FadeAlpha(Text target, float goalAlpha, float time)
         {
             float originTime = time;
             Color originColor = target.color;

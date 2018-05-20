@@ -20,7 +20,7 @@ namespace UI
         // 클릭
         public void OnPointerClick(PointerEventData eventData)
         {
-            UIManager.instance.MoveUI(0, new Vector2(-1280, 1280), timer);
+            UIManager.instance.FadePositionFunc(0, new Vector2(-1280, 1280), timer);
 
             StartCoroutine(SetSelectPanel());
         }
@@ -30,7 +30,7 @@ namespace UI
         {
             yield return new WaitForSeconds(timer);
             
-            UIManager.instance.FadeUI(0, 1, 0, 0.2f);
+            UIManager.instance.FadeAlphaFunc(0, 1, 0, 0.2f);
 
             coverImage.raycastTarget = false;
         }

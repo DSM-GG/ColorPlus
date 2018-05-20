@@ -2,7 +2,7 @@
 
 namespace Systems
 {
-	public class TestIO : MonoBehaviour
+	public class TestIo : MonoBehaviour
 	{
 		// 프레임
 		private void Update()

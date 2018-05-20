@@ -49,10 +49,10 @@ namespace Board
 		}
 
 		// 가로 세로 크기 설정
-		public void SetSize(int _height, int _width)
+		public void SetSize(int height, int width)
 		{
-			height	= _height;
-			width	= _width;
+			this.height	= height;
+			this.width	= width;
 		}
 		
 		// 초기화
