@@ -57,7 +57,7 @@ namespace LevelSelect
         {
             yield return new WaitForSeconds(0.5f);
             
-            transform.parent.GetComponent<ImageEffectControler>().DeleteAllImage();
+            transform.parent.GetComponent<ImageEffectControler>().DeleteAllImage(Vector2.zero);
             
             yield return new WaitForSeconds(5f);
             

@@ -25,14 +25,14 @@ namespace UI
             delay = Random.Range(min, max);
         }
         
-        // 타일 제거 이펙트
-        public void DeleteImage(float time)
+        // 크기 페이드 효과
+        public void FadeScaleImage(Vector2 goalScale, float time)
         {
-            StartCoroutine(DeleteImageCor(time));
+            StartCoroutine(FadeSacleImageCor(goalScale, time));
         }
         
-        // 타일 제거 이펙트 루틴
-        private IEnumerator DeleteImageCor(float time)
+        // 크기 페이드 효과 루틴
+        private IEnumerator FadeSacleImageCor(Vector2 goalScale, float time)
         {
             yield return new WaitForSeconds(delay);
             
@@ -42,7 +42,7 @@ namespace UI
             
             while (time > 0)
             {
-                thisRectTrans.localScale = Vector2.Lerp(Vector2.zero, originScale, (time / originTime));
+                thisRectTrans.localScale = Vector2.Lerp(goalScale, originScale, (time / originTime));
                 
                 time -= 0.01f;
                 yield return new WaitForSeconds(0.01f);

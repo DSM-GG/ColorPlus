@@ -10,6 +10,7 @@ namespace UI
         public ImageScaleFadeEffect[] imageArray;            // 이미지 모음
         public bool                   isStatDelete;          // 시작시 삭제 할거냐
         public float                  startDelay;            // 시작시 삭제할때 초반 딜레이
+        public float                  fadeTime;              // 페이드 진행 시간
         
         
         // 초기화
@@ -29,12 +30,12 @@ namespace UI
             }
         }
         
-        // 이미지 전체 삭제
-        public void DeleteAllImage()
+        // 이미지 전체 페이드
+        public void DeleteAllImage(Vector2 goalScale)
         {
             for (int i = 0; i < imageArray.Length; i++)
             {
-                imageArray[i].DeleteImage(0.1f);
+                imageArray[i].FadeScaleImage(goalScale, fadeTime);
             }
         }
         
