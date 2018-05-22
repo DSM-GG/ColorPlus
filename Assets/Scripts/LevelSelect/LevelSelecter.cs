@@ -55,6 +55,8 @@ namespace LevelSelect
         // 이펙트 루틴
         private IEnumerator ChangeScene()
         {
+            yield return new WaitForSeconds(0.5f);
+            
             transform.parent.GetComponent<ImageEffectControler>().DeleteAllImage();
             
             yield return new WaitForSeconds(5f);
