@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using Systems;
 using UI;
+using UI.Effect;
 using UnityEngine;
 
 namespace Board

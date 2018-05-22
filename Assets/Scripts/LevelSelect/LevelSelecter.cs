@@ -1,6 +1,5 @@
 ﻿using System.Collections;
-using UI;
-using UnityEditor;
+using UI.Effect;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
@@ -57,7 +56,10 @@ namespace LevelSelect
         {
             yield return new WaitForSeconds(0.5f);
             
-            transform.parent.GetComponent<ImageEffectControler>().DeleteAllImage(Vector2.zero);
+            ImageEffectControler imageEffectControler = transform.parent.GetComponent<ImageEffectControler>();
+
+            imageEffectControler.imageArray[imageEffectControler.imageArray.Length - 1] = GameObject.Find("STAGE").GetComponent<ImageScaleFadeEffect>();
+            imageEffectControler.FadeAllImage(Vector2.zero);
             
             yield return new WaitForSeconds(5f);
             

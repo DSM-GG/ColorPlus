@@ -789,6 +789,7 @@ GameObject:
   - component: {fileID: 1936061145}
   - component: {fileID: 1936061147}
   - component: {fileID: 1936061146}
+  - component: {fileID: 1936061148}
   m_Layer: 5
   m_Name: STAGE
   m_TagString: Untagged
@@ -853,6 +854,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1936061144}
+--- !u!114 &1936061148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1936061144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0eea80a2c7e624d4c8dde8e1be2debd3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2006016825
 GameObject:
   m_ObjectHideFlags: 0
@@ -976,3 +988,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28c3832914c8e504d91eba64dd9cc79b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  imageArray: []
+  isStatDelete: 0
+  startDelay: 0
+  fadeTime: 0.1

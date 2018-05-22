@@ -40,12 +40,14 @@
           <e p="TestIO.cs" t="Include" />
         </e>
         <e p="UI" t="Include">
-          <e p="ImageEffectControler.cs" t="Include" />
-          <e p="ImageIniter.cs" t="Include" />
-          <e p="ImageScaleFadeEffect.cs" t="Include" />
+          <e p="Effect" t="Include">
+            <e p="ImageEffectControler.cs" t="Include" />
+            <e p="ImageIniter.cs" t="Include" />
+            <e p="ImageScaleFadeEffect.cs" t="Include" />
+            <e p="Scroller.cs" t="Include" />
+          </e>
           <e p="LevelChangeButton.cs" t="Include" />
           <e p="OptionButton.cs" t="Include" />
-          <e p="Scroller.cs" t="Include" />
           <e p="StartButton.cs" t="Include" />
           <e p="UIManager.cs" t="Include" />
         </e>
