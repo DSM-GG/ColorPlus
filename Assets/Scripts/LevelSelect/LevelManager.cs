@@ -1,5 +1,4 @@
-﻿using UI;
-using UI.Effect;
+﻿using UI.Effect;
 using UnityEngine;
 
 namespace LevelSelect

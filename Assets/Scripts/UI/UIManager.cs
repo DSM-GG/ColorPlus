@@ -120,6 +120,9 @@ namespace UI
                 time -= 0.01f;
                 yield return new WaitForSeconds(0.01f);
             }
+
+            originColor.a = goalAlpha;
+            target.color = originColor;
         }
         
         // 알파 페이드 효과 ( 텍스트 )
@@ -138,6 +141,9 @@ namespace UI
                 time -= 0.01f;
                 yield return new WaitForSeconds(0.01f);
             }
+            
+            originColor.a = goalAlpha;
+            target.color = originColor;
         }
         
         // 크기 변경 효과
@@ -154,6 +160,8 @@ namespace UI
                 time -= 0.01f;
                 yield return new WaitForSeconds(0.01f);
             }
+            
+            target.localScale = goalScale;
         }
     }
 }

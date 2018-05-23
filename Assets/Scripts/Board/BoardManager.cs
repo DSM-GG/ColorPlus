@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using Systems;
-using UI;
 using UI.Effect;
 using UnityEngine;
 
@@ -50,10 +49,10 @@ namespace Board
 		}
 
 		// 가로 세로 크기 설정
-		public void SetSize(int height, int width)
+		public void SetSize(int newHeight, int newWidth)
 		{
-			this.height	= height;
-			this.width	= width;
+			height	= newHeight;
+			width	= newWidth;
 		}
 		
 		// 초기화

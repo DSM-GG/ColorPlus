@@ -10,7 +10,7 @@ namespace Systems
 	public class GameManager : MonoBehaviour
 	{
 		public static GameManager instance;
-		
+
 		// 인스펙터 비노출 변수
 		// 수치
 		[HideInInspector]
@@ -40,6 +40,8 @@ namespace Systems
 		// 시작
 		private void Start()
 		{
+			UIManager.instance.FadeAlphaFunc(0, 1, 0, 0.2f);
+		
 			if (LevelManager.instance == null)
 			{
 				LevelManager.Init();

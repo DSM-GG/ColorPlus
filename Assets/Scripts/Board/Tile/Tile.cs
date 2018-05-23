@@ -25,7 +25,7 @@ namespace Board.Tile
 		}
 
 		// 타일 초기화
-		public void Initialize(int posX, int posY, int index)
+		public void Initialize(int newPosX, int newPosY, int index)
 		{
 			// 색 설정
 			colorNum = index;
@@ -38,8 +38,8 @@ namespace Board.Tile
 			}
 
 			// 위치 설정
-			this.posX = posX;
-			this.posY = posY;
+			posX = newPosX;
+			posY = newPosY;
 		}
 
 		// 타일 비활성화

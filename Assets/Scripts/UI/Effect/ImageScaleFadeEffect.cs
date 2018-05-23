@@ -10,8 +10,6 @@ namespace UI.Effect
         [SerializeField]
         private bool          isStartFade = false;                  // 시작시 바로 페이드
         [SerializeField]
-        private float         startDelay = 0;                       // 시작시 페이드할 때 초반 딜레이
-        [SerializeField]
         private float         minDelay = 0;                         // 최소 딜레이
         [SerializeField]
         private float         maxDelay = 0.2f;                      // 최대 딜레이
@@ -61,7 +59,6 @@ namespace UI.Effect
         // 크기 페이드 효과 루틴
         private IEnumerator FadeSacleImageCor()
         {
-            yield return new WaitForSeconds(startDelay);
             yield return new WaitForSeconds(delay);
             
             Vector2 originScale = thisRectTrans.localScale;
