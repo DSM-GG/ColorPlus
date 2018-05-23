@@ -12,7 +12,6 @@ namespace UI.Effect
 		// 수치
 		public  int 		height = 1;             	// 세로
 		public  int 		width = 1;              	// 가로
-		public  Vector2 	scale = Vector2.one;		// 크기
 		
 		[SerializeField]
 		private string 		tileName = "Tile";       	// 타일 이름
@@ -59,8 +58,7 @@ namespace UI.Effect
 					tileRect.anchorMin = new Vector2(1f / width * j + xGap, 1f - 1f / height * (i + 1f) + yGap);
 					tileRect.offsetMin = Vector2.zero;
 					tileRect.offsetMax = Vector2.zero;
-					tileRect.localScale = scale;
-
+					
 					tileArray[i, j] = newTile;
 				}
 			}

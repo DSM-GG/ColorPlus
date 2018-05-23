@@ -865,6 +865,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0eea80a2c7e624d4c8dde8e1be2debd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isStartFade: 0
+  startDelay: 0
+  minDelay: 0
+  maxDelay: 0.2
+  scale: {x: 1, y: 1}
+  goalScale: {x: 0, y: 0}
+  fadeTime: 0.1
 --- !u!1 &2006016825
 GameObject:
   m_ObjectHideFlags: 0
@@ -988,7 +995,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28c3832914c8e504d91eba64dd9cc79b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imageArray: []
-  isStatDelete: 0
+  imageList: []
+  isStatCreate: 0
   startDelay: 0
   fadeTime: 0.1

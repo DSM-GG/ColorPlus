@@ -8,23 +8,25 @@ namespace UI.Effect
         // 인스펙터 노출 변수
         // 수치
         [SerializeField]
-        private bool          isStartFade;          // 시작시 바로 페이드
+        private bool          isStartFade = false;                  // 시작시 바로 페이드
         [SerializeField]
-        private float         startDelay;           // 시작시 페이드할 때 초반 딜레이
+        private float         startDelay = 0;                       // 시작시 페이드할 때 초반 딜레이
         [SerializeField]
-        private float         minDelay;             // 최소 딜레이
+        private float         minDelay = 0;                         // 최소 딜레이
         [SerializeField]
-        private float         maxDelay;             // 최대 딜레이
+        private float         maxDelay = 0.2f;                      // 최대 딜레이
+        [SerializeField]
+        private Vector2       scale = Vector2.one;                  // 시작시 크기
         
-        public  Vector2       goalScale;            // 목표 스케일
-        public  float         fadeTime;             // 페이드 시간
+        public  Vector2       goalScale = Vector2.zero;             // 목표 스케일
+        public  float         fadeTime = 0.1f;                      // 페이드 시간
         
         // 인스펙터 비노출 변수
         // 일반
-        private RectTransform thisRectTrans;        // 이 오브젝트의 사각 트랜스폼
+        private RectTransform thisRectTrans;                        // 이 오브젝트의 사각 트랜스폼
         
         // 수치
-        private float         delay;                // 딜레이
+        private float         delay;                                // 딜레이
 
         
         // 초기화
@@ -33,8 +35,10 @@ namespace UI.Effect
             thisRectTrans = GetComponent<RectTransform>();
         }
 
-        private void Start()
+        private void OnEnable()
         {
+            thisRectTrans.localScale = scale;
+            
             if (isStartFade)
             {
                 Initilize(minDelay, maxDelay);
@@ -57,17 +61,19 @@ namespace UI.Effect
         // 크기 페이드 효과 루틴
         private IEnumerator FadeSacleImageCor()
         {
+            yield return new WaitForSeconds(startDelay);
             yield return new WaitForSeconds(delay);
             
             Vector2 originScale = thisRectTrans.localScale;
             float   originTime  = fadeTime;
+            float   time = fadeTime;
             
             
-            while (fadeTime > 0)
+            while (time > 0)
             {
-                thisRectTrans.localScale = Vector2.Lerp(goalScale, originScale, (fadeTime / originTime));
+                thisRectTrans.localScale = Vector2.Lerp(goalScale, originScale, (time / originTime));
                 
-                fadeTime -= 0.01f;
+                time -= 0.01f;
                 yield return new WaitForSeconds(0.01f);
             }
         }
