@@ -54,6 +54,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0eea80a2c7e624d4c8dde8e1be2debd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isStartFade: 1
+  startDelay: 1
+  minDelay: 0.1
+  maxDelay: 0.3
+  goalScale: {x: 1, y: 1}
+  fadeTime: 0.1
 --- !u!114 &114637949325922584
 MonoBehaviour:
   m_ObjectHideFlags: 1

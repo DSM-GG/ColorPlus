@@ -397,7 +397,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -815,7 +815,6 @@ GameObject:
   - component: {fileID: 479162053}
   - component: {fileID: 479162052}
   - component: {fileID: 479162054}
-  - component: {fileID: 479162055}
   m_Layer: 5
   m_Name: Board
   m_TagString: Untagged
@@ -885,21 +884,6 @@ MonoBehaviour:
   height: 5
   width: 5
   tileSpriteIndArr: 
---- !u!114 &479162055
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 479162050}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28c3832914c8e504d91eba64dd9cc79b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  imageList: []
-  isStatCreate: 1
-  startDelay: 2
-  fadeTime: 0.1
 --- !u!1 &509783125
 GameObject:
   m_ObjectHideFlags: 0
@@ -910,6 +894,7 @@ GameObject:
   - component: {fileID: 509783126}
   - component: {fileID: 509783129}
   - component: {fileID: 509783128}
+  - component: {fileID: 509783130}
   - component: {fileID: 509783127}
   m_Layer: 5
   m_Name: RESTART
@@ -1022,6 +1007,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 509783125}
+--- !u!114 &509783130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 509783125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90d4937ff6fc8b649a7f8a02f2b61adc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &511243094
 GameObject:
   m_ObjectHideFlags: 0
@@ -1504,7 +1500,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -2313,7 +2309,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -2683,7 +2679,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []

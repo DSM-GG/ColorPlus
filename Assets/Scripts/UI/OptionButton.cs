@@ -7,15 +7,9 @@ namespace UI
     {
         // 인스펙터 비노출 변수 
         // 수치
-        private static bool enalbed;            // 활성화 여부
+        private static bool enalbed = false;            // 활성화 여부
 
         
-        // 초기화
-        private void Awake()
-        {
-            enalbed = false;
-        }
-
         // 클릭
         public void OnPointerClick(PointerEventData eventData)
         {
