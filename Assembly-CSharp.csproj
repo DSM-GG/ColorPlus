@@ -68,7 +68,7 @@
     <Compile Include="Assets\Scripts\Systems\GameManager.cs" />
     <Compile Include="Assets\Scripts\Systems\Parser.cs" />
     <Compile Include="Assets\Scripts\Systems\TestIO.cs" />
-    <Compile Include="Assets\Scripts\UI\Effect\ImageEffectControler.cs" />
+    <Compile Include="Assets\Scripts\UI\Effect\ImageEffectController.cs" />
     <Compile Include="Assets\Scripts\UI\Effect\ImageIniter.cs" />
     <Compile Include="Assets\Scripts\UI\Effect\ImageScaleFadeEffect.cs" />
     <Compile Include="Assets\Scripts\UI\Effect\Scroller.cs" />

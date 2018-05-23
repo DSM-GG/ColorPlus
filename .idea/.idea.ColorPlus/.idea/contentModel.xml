@@ -41,7 +41,7 @@
         </e>
         <e p="UI" t="Include">
           <e p="Effect" t="Include">
-            <e p="ImageEffectControler.cs" t="Include" />
+            <e p="ImageEffectController.cs" t="Include" />
             <e p="ImageIniter.cs" t="Include" />
             <e p="ImageScaleFadeEffect.cs" t="Include" />
             <e p="Scroller.cs" t="Include" />

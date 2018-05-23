@@ -56,9 +56,9 @@ namespace LevelSelect
         {
             yield return new WaitForSeconds(0.5f);
             
-            ImageEffectControler imageEffectControler = transform.parent.GetComponent<ImageEffectControler>();
+            ImageEffectController imageEffectControler = transform.parent.GetComponent<ImageEffectController>();
 
-            imageEffectControler.imageArray[imageEffectControler.imageArray.Length - 1] = GameObject.Find("STAGE").GetComponent<ImageScaleFadeEffect>();
+            imageEffectControler.imageList.Add(GameObject.Find("STAGE").GetComponent<ImageScaleFadeEffect>());
             imageEffectControler.FadeAllImage(Vector2.zero);
             
             yield return new WaitForSeconds(5f);
