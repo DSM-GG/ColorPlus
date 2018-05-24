@@ -159,6 +159,8 @@ namespace Board
 		// 초기화 
 		public void ResetTile()
 		{
+			Debug.Log("ASD");
+			
 			for (int i = 0; i < height; i++)
 			{
 				for (int j = 0; j < width; j++)

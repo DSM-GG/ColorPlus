@@ -80,6 +80,9 @@ namespace UI
         public void ResetGame()
         {
             BoardManager.instance.ResetTile();
+
+            panels[2].SetActive(false);
+            panels[2].SetActive(true);
         }
         
         // 레벨 선택화면으로 돌아가기

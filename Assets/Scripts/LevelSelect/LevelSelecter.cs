@@ -61,7 +61,7 @@ namespace LevelSelect
             imageEffectControler.imageList.Add(GameObject.Find("STAGE").GetComponent<ImageScaleFadeEffect>());
             imageEffectControler.FadeAllImage(Vector2.zero);
             
-            yield return new WaitForSeconds(5f);
+            yield return new WaitForSeconds(2f);
             
             SceneManager.LoadScene("MainScene");
         }
