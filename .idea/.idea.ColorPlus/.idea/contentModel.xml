@@ -40,6 +40,7 @@
           <e p="TestIO.cs" t="Include" />
         </e>
         <e p="UI" t="Include">
+          <e p="ClickCover.cs" t="Include" />
           <e p="Effect" t="Include">
             <e p="ImageEffectController.cs" t="Include" />
             <e p="ImageIniter.cs" t="Include" />

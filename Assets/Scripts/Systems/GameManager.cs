@@ -11,6 +11,10 @@ namespace Systems
 	{
 		public static GameManager instance;
 
+		// 인스펙터 노출 변수
+		// 일반
+		public ClickCover 		clickCover;						// 클릭 커버
+		
 		// 인스펙터 비노출 변수
 		// 수치
 		[HideInInspector]

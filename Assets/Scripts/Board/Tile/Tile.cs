@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using Systems;
 using UI;
 using UnityEngine;
 
@@ -71,6 +72,7 @@ namespace Board.Tile
 			{
 				if (!isExist)
 				{
+					thisRect.localScale = Vector2.one;
 					isExist = true;
 					tileColorManager.SetColor(colorNum);
 					tileClick.enabled = true;
@@ -81,13 +83,17 @@ namespace Board.Tile
 		// 비활성화 이펙트
 		private IEnumerator DisableEffect(int time)
 		{
+			GameManager.instance.clickCover.AddCoverCount(1);
+			
 			yield return new WaitForSeconds(time * 0.1f);
 			StartCoroutine(UIManager.instance.FadeScale(thisRect, Vector2.zero, fadeTime));
 			
-			yield return new WaitForSeconds(fadeTime + 0.1f);
+			yield return new WaitForSeconds(fadeTime);
 			
 			tileColorManager.SetColor(0);
 			thisRect.localScale = Vector2.one;
+			
+			GameManager.instance.clickCover.AddCoverCount(-1);
 		}
 	}
 }
