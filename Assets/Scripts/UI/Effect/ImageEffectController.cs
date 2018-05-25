@@ -9,9 +9,12 @@ namespace UI.Effect
         // 인스펙터 노출 변수
         // 일반
         public List<ImageScaleFadeEffect> imageList;             // 이미지 모음
+        
+        // 수치
         public bool                       isStatCreate;          // 시작시 삭제 할거냐
         public float                      startDelay;            // 시작시 삭제할때 초반 딜레이
         public float                      fadeTime;              // 페이드 진행 시간
+        public bool                       isStartInit;           // 시작 초기화 사용?
         
         
         // 초기화
@@ -19,8 +22,18 @@ namespace UI.Effect
         {
             for (int i = 0; i < transform.childCount; i++)
             {
-                imageList.Add(transform.GetChild(i).GetComponent<ImageScaleFadeEffect>());
-                imageList[i].Initilize(0.1f, 0.3f);
+                ImageScaleFadeEffect target = transform.GetChild(i).GetComponent<ImageScaleFadeEffect>();
+
+
+                if (target != null)
+                {
+                    imageList.Add(target);
+
+                    if (isStartInit)
+                    {
+                        imageList[i].Initilize(0.1f, 0.3f);
+                    }
+                }
             }
 
             if (isStatCreate)

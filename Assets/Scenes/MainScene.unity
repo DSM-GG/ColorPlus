@@ -777,6 +777,7 @@ GameObject:
   - component: {fileID: 479162053}
   - component: {fileID: 479162054}
   - component: {fileID: 479162052}
+  - component: {fileID: 479162055}
   m_Layer: 5
   m_Name: Board
   m_TagString: Untagged
@@ -845,6 +846,21 @@ MonoBehaviour:
   height: 5
   width: 5
   tileSpriteIndArr: 
+--- !u!114 &479162055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 479162050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28c3832914c8e504d91eba64dd9cc79b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imageList: []
+  isStatCreate: 0
+  startDelay: 0
+  fadeTime: 0.05
 --- !u!1 &509783125
 GameObject:
   m_ObjectHideFlags: 0
@@ -1138,6 +1154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clickCover: {fileID: 1281923280}
+  imageEffectController: {fileID: 479162055}
   originalTurnCount: 0
   canClick: 0
 --- !u!114 &527919027
@@ -1223,10 +1240,10 @@ RectTransform:
   m_Father: {fileID: 1915932505}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -1144.5}
-  m_SizeDelta: {x: 1321.6, y: 228.8}
+  m_AnchorMin: {x: 0.041, y: 0.008781251}
+  m_AnchorMax: {x: 0.959389, y: 0.098000005}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &754059506
 MonoBehaviour:
@@ -1291,10 +1308,10 @@ RectTransform:
   m_Father: {fileID: 239827587}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 1057}
-  m_SizeDelta: {x: 1321.6, y: 347.5}
+  m_AnchorMin: {x: 0.040444445, y: 0.84400004}
+  m_AnchorMax: {x: 0.95761114, y: 0.98185945}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &780574347
 MonoBehaviour:
@@ -2032,7 +2049,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1362470942
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -2,6 +2,7 @@
 using Board;
 using LevelSelect;
 using UI;
+using UI.Effect;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -13,17 +14,18 @@ namespace Systems
 
 		// 인스펙터 노출 변수
 		// 일반
-		public ClickCover 		clickCover;						// 클릭 커버
+		public ClickCover 				clickCover;						// 클릭 커버
+		public ImageEffectController 	imageEffectController;			// 이미지 이펙트 컨트롤러
 		
 		// 인스펙터 비노출 변수
 		// 수치
 		[HideInInspector]
-		public 	int 			originalTurnCount;				// 원래의 턴 카운트
+		public 	int 					originalTurnCount;				// 원래의 턴 카운트
 		[HideInInspector]
-		public 	bool 			canClick;						// 현재 클릭 가능한지
+		public 	bool 					canClick;						// 현재 클릭 가능한지
 		
-		private int 			turnCount; 						// 턴 카운트
-		private TileChecker 	tileChecker;					// 타일 체커
+		private int 					turnCount; 						// 턴 카운트
+		private TileChecker 			tileChecker;					// 타일 체커
 		
 
 		// 초기화
@@ -99,7 +101,12 @@ namespace Systems
 		// 다음 레벨 루틴
 		private IEnumerator GotoNextLevel()
 		{
-			yield return new WaitForSeconds(1f);
+			yield return new WaitForSeconds(1.4f);
+			
+			imageEffectController.FadeAllImage(Vector2.zero);
+			
+			yield return  new WaitForSeconds(1f);
+			
 			
 			SceneManager.LoadScene("MainScene");
 		}
