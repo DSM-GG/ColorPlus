@@ -113,6 +113,7 @@ MonoBehaviour:
   posX: 0
   posY: 0
   colorNum: 0
+  fadeTime: 0.1
 --- !u!222 &222210034235451166
 CanvasRenderer:
   m_ObjectHideFlags: 1

@@ -81,9 +81,12 @@ namespace Board
 		// 타일 제거 루틴
 		public void CrossDel(int x, int y)
 		{
+			int timeIndex = 1;
+
+			
 			SaveTileState();
 			
-			if (tileArray[y, x].TileDisable())
+			if (tileArray[y, x].TileDisable(0))
 			{
 				bool[] flag = { true, true, true, true };
 
@@ -91,23 +94,25 @@ namespace Board
 				{
 					if (flag[0])
 					{
-						flag[0] = tileArray[Mathf.Min(height - 1, y + i), x].TileDisable();
+						flag[0] = tileArray[Mathf.Min(height - 1, y + i), x].TileDisable(timeIndex);
 					}
 
 					if (flag[1])
 					{
-						flag[1] = tileArray[Mathf.Max(0, y - i), x].TileDisable();
+						flag[1] = tileArray[Mathf.Max(0, y - i), x].TileDisable(timeIndex);
 					}
 
 					if (flag[2])
 					{
-						flag[2] = tileArray[y, Mathf.Min(width - 1, x + i)].TileDisable();
+						flag[2] = tileArray[y, Mathf.Min(width - 1, x + i)].TileDisable(timeIndex);
 					}
 
 					if (flag[3])
 					{
-						flag[3] = tileArray[y, Mathf.Max(0, x - i)].TileDisable();
+						flag[3] = tileArray[y, Mathf.Max(0, x - i)].TileDisable(timeIndex);
 					}
+
+					timeIndex++;
 				}
 			}
 			

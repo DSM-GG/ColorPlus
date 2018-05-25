@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UI;
+using UnityEngine;
 
 namespace Board.Tile
 {
@@ -10,11 +12,13 @@ namespace Board.Tile
 		public	int					posX;					// X좌표
 		public	int					posY;                   // Y좌표
 		public	int					colorNum;				// 색 번호
+		public 	float 				fadeTime;				// 페이드 시간
 
 		// 인스펙터 비노출 변수
 		// 일반
 		private TileClick			tileClick;				// 타일 클릭 확인 스크립트
 		private TileColorManager	tileColorManager;       // 타일 색 설정 스크립트
+		private RectTransform 		thisRect;				// 타일 이미지 렉트트랜스폼
 
 
 		// 초기화
@@ -22,6 +26,7 @@ namespace Board.Tile
 		{
 			tileClick			= GetComponent<TileClick>();
 			tileColorManager	= GetComponent<TileColorManager>();
+			thisRect 			= GetComponent<RectTransform>();
 		}
 
 		// 타일 초기화
@@ -43,12 +48,12 @@ namespace Board.Tile
 		}
 
 		// 타일 비활성화
-		public bool TileDisable()
+		public bool TileDisable(int time)
 		{
 			if (isExist)
 			{
 				isExist = false;
-				tileColorManager.SetColor(0);
+				StartCoroutine("DisableEffect", time);
 				tileClick.enabled = false;
 
 				return true;
@@ -71,6 +76,18 @@ namespace Board.Tile
 					tileClick.enabled = true;
 				}
 			}
+		}
+		
+		// 비활성화 이펙트
+		private IEnumerator DisableEffect(int time)
+		{
+			yield return new WaitForSeconds(time * 0.1f);
+			StartCoroutine(UIManager.instance.FadeScale(thisRect, Vector2.zero, fadeTime));
+			
+			yield return new WaitForSeconds(fadeTime + 0.1f);
+			
+			tileColorManager.SetColor(0);
+			thisRect.localScale = Vector2.one;
 		}
 	}
 }
