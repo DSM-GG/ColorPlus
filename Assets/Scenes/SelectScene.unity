@@ -681,6 +681,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isStartFade: 0
+  isStartInit: 0
   minDelay: 0
   maxDelay: 0.2
   scale: {x: 1, y: 1}
@@ -1130,6 +1131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isStartFade: 0
+  isStartInit: 0
   minDelay: 0
   maxDelay: 0.2
   scale: {x: 1, y: 1}
@@ -1225,6 +1227,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isStartFade: 0
+  isStartInit: 0
   minDelay: 0
   maxDelay: 0.2
   scale: {x: 1, y: 1}
@@ -1438,6 +1441,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isStartFade: 0
+  isStartInit: 0
   minDelay: 0
   maxDelay: 0.2
   scale: {x: 1, y: 1}
@@ -1754,6 +1758,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isStartFade: 0
+  isStartInit: 0
   minDelay: 0
   maxDelay: 0.2
   scale: {x: 1, y: 1}
@@ -1886,8 +1891,8 @@ MonoBehaviour:
   imageList: []
   isStatFade: 0
   startDelay: 0
-  fadeTime: 0.2
-  isStartInit: 0
+  fadeTime: 0.1
+  isStartInit: 1
   minDelay: 0
   maxDelay: 0.2
 --- !u!1 &2025022670

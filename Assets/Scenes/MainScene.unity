@@ -858,10 +858,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   imageList: []
-  isStatCreate: 0
+  isStatFade: 0
   startDelay: 0
-  fadeTime: 0.05
+  fadeTime: 0.1
   isStartInit: 0
+  minDelay: 0
+  maxDelay: 0.2
 --- !u!1 &509783125
 GameObject:
   m_ObjectHideFlags: 0

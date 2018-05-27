@@ -36,17 +36,26 @@ namespace UI.Effect
                 if (target != null)
                 {
                     imageList.Add(target);
-
-                    if (isStartInit)
-                    {
-                        imageList[i].Initilize(minDelay, maxDelay);
-                    }
                 }
+            }
+            
+            if (isStartInit)
+            {
+                Initilize();
             }
 
             if (isStatFade)
             {
                 StartCoroutine(StartCreate());
+            }
+        }
+        
+        // 이미지 딜레이 초기화 
+        public void Initilize()
+        {
+            for (int i = 0; i < imageList.Count; i++)
+            {
+                imageList[i].Initilize(minDelay, maxDelay);
             }
         }
         

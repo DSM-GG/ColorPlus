@@ -75,7 +75,7 @@ namespace Systems
 			canClick = false;
 			LevelManager.instance.SetLastLevel();
 			StartCoroutine(GotoNextLevel());
-			Debug.Log("GOOG");
+			Debug.Log("CLEAR");
 		}
 		
 		// 턴 조절
@@ -103,6 +103,7 @@ namespace Systems
 		{
 			yield return new WaitForSeconds(1.4f);
 			
+			imageEffectController.Initilize();
 			imageEffectController.FadeAllImage(Vector2.zero);
 			
 			yield return  new WaitForSeconds(1f);

@@ -10,6 +10,8 @@ namespace UI.Effect
         [SerializeField]
         private bool          isStartFade = false;                  // 시작시 바로 페이드
         [SerializeField]
+        private bool          isStartInit = false;                  // 시작시 초기화
+        [SerializeField]
         private float         minDelay = 0;                         // 최소 딜레이
         [SerializeField]
         private float         maxDelay = 0.2f;                      // 최대 딜레이
@@ -38,8 +40,12 @@ namespace UI.Effect
         // 오브젝트 켜짐
         private void OnEnable()
         {
-            Initilize(minDelay, maxDelay);
             thisRectTrans.localScale = scale;
+            
+            if (isStartInit)
+            {
+                Initilize(minDelay, maxDelay);                
+            }
             
             if (isStartFade)
             {

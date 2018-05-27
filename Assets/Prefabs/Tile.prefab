@@ -55,12 +55,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isStartFade: 1
+  isStartInit: 1
   minDelay: 1
   maxDelay: 1.4
   scale: {x: 0, y: 0}
   fadeGap: 0.01
   goalScale: {x: 1, y: 1}
-  fadeTime: 0.1
+  fadeTime: 0.17
 --- !u!114 &114637949325922584
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -73,7 +74,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.547}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
