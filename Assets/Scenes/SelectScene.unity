@@ -563,6 +563,7 @@ MonoBehaviour:
   - {fileID: 1697194180}
   - {fileID: 1025702794}
   - {fileID: 529816497}
+  fadeGap: 0.01
 --- !u!1 &782826485
 GameObject:
   m_ObjectHideFlags: 0
@@ -683,6 +684,7 @@ MonoBehaviour:
   minDelay: 0
   maxDelay: 0.2
   scale: {x: 1, y: 1}
+  fadeGap: 0.01
   goalScale: {x: 0, y: 0}
   fadeTime: 0.1
 --- !u!114 &788994142
@@ -1131,6 +1133,7 @@ MonoBehaviour:
   minDelay: 0
   maxDelay: 0.2
   scale: {x: 1, y: 1}
+  fadeGap: 0.01
   goalScale: {x: 0, y: 0}
   fadeTime: 0.1
 --- !u!114 &1484660283
@@ -1225,6 +1228,7 @@ MonoBehaviour:
   minDelay: 0
   maxDelay: 0.2
   scale: {x: 1, y: 1}
+  fadeGap: 0.01
   goalScale: {x: 0, y: 0}
   fadeTime: 0.1
 --- !u!114 &1517660860
@@ -1437,6 +1441,7 @@ MonoBehaviour:
   minDelay: 0
   maxDelay: 0.2
   scale: {x: 1, y: 1}
+  fadeGap: 0.01
   goalScale: {x: 0, y: 0}
   fadeTime: 0.1
 --- !u!1 &1670759872
@@ -1752,6 +1757,7 @@ MonoBehaviour:
   minDelay: 0
   maxDelay: 0.2
   scale: {x: 1, y: 1}
+  fadeGap: 0.01
   goalScale: {x: 0, y: 0}
   fadeTime: 0.1
 --- !u!1 &2006016825
@@ -1878,9 +1884,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   imageList: []
-  isStatCreate: 0
+  isStatFade: 0
   startDelay: 0
-  fadeTime: 0.1
+  fadeTime: 0.2
+  isStartInit: 0
+  minDelay: 0
+  maxDelay: 0.2
 --- !u!1 &2025022670
 GameObject:
   m_ObjectHideFlags: 0

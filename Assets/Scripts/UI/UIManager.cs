@@ -11,11 +11,16 @@ namespace UI
         public static UIManager instance;
 		
         // 인스펙터 노출 변수
+        // 일반
         [SerializeField]
-        private Text[]             texts;				// 텍스트 집합
+        private Text[]             texts;				 // 텍스트 집합
         [SerializeField]
         private GameObject[]       panels;              // ui 집합
 		
+        // 수치
+        [SerializeField]
+        private float              fadeGap;             // 페이드 효과 간격
+        
 		
         // 초기화
         private void Awake()
@@ -94,34 +99,36 @@ namespace UI
         // 이동 효과
         public IEnumerator FadePosition(RectTransform target, Vector2 goalPos, float time)
         {
-            float   originTime = time;
-            Vector2 startPos   = target.position;
-            
+            Vector2 startPos    = target.position;
+            int     count       = (int)(time / fadeGap);
+            int     originCount = count;      
            
-            while (time > 0)
+            while (count > 0)
             {
-                target.position = Vector2.Lerp(goalPos, startPos, (time / originTime));
+                target.position = Vector2.Lerp(goalPos, startPos, (float)count / originCount);
                 
-                time -= 0.01f;
-                yield return new WaitForSeconds(0.01f);
+                count -= 1;
+                yield return new WaitForSeconds(fadeGap);
             }
+
+            target.position = goalPos;
         }
         
         // 알파 페이드 효과 ( 이미지 )
         public IEnumerator FadeAlpha(Image target, float goalAlpha, float time)
         {
-            float originTime  = time;
             Color originColor = target.color;
             float startAlpha  = target.color.a;
+            int   count       = (int)(time / fadeGap);
+            int   originCount = count;      
             
-            
-            while (time > 0)
+            while (count > 0)
             {
-                originColor.a = Mathf.Lerp(goalAlpha, startAlpha, (time / originTime));
+                originColor.a = Mathf.Lerp(goalAlpha, startAlpha, (float)count / originCount);
                 target.color  = originColor;
                 
-                time -= 0.01f;
-                yield return new WaitForSeconds(0.01f);
+                count -= 1;
+                yield return new WaitForSeconds(fadeGap);
             }
 
             originColor.a = goalAlpha;
@@ -131,18 +138,18 @@ namespace UI
         // 알파 페이드 효과 ( 텍스트 )
         public IEnumerator FadeAlpha(Text target, float goalAlpha, float time)
         {
-            float originTime  = time;
             Color originColor = target.color;
             float startAlpha  = target.color.a;
+            int   count       = (int)(time / fadeGap);
+            int   originCount = count;   
             
-            
-            while (time > 0)
+            while (count > 0)
             {
-                originColor.a = Mathf.Lerp(startAlpha, goalAlpha, (time / originTime));
+                originColor.a = Mathf.Lerp(startAlpha, goalAlpha, (float)count / originCount);
                 target.color  = originColor;
                 
-                time -= 0.01f;
-                yield return new WaitForSeconds(0.01f);
+                count -= 1;
+                yield return new WaitForSeconds(fadeGap);
             }
             
             originColor.a = goalAlpha;
@@ -153,15 +160,16 @@ namespace UI
         public IEnumerator FadeScale(RectTransform target, Vector2 goalScale, float time)
         {
             Vector2 originScale = target.localScale;
-            float   originTime  = time;
+            int     count = (int)(time / fadeGap);
+            int     originCount = count;
             
             
-            while (time > 0)
+            while (count > 0)
             {
-                target.localScale = Vector2.Lerp(goalScale, originScale, (time / originTime));
+                target.localScale = Vector2.Lerp(goalScale, originScale, (float)count / originCount);
                 
-                time -= 0.01f;
-                yield return new WaitForSeconds(0.01f);
+                count -= 1;
+                yield return new WaitForSeconds(fadeGap);
             }
             
             target.localScale = goalScale;

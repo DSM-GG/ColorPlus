@@ -861,6 +861,7 @@ MonoBehaviour:
   isStatCreate: 0
   startDelay: 0
   fadeTime: 0.05
+  isStartInit: 0
 --- !u!1 &509783125
 GameObject:
   m_ObjectHideFlags: 0
@@ -2567,6 +2568,7 @@ MonoBehaviour:
   - {fileID: 687182465}
   - {fileID: 1362470941}
   - {fileID: 479162050}
+  fadeGap: 0.01
 --- !u!1 &1714411064
 GameObject:
   m_ObjectHideFlags: 0

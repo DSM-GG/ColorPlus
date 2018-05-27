@@ -14,7 +14,7 @@ namespace UI
         
         // 인스펙터 비노출 변수
         // 수치
-        private float timer = 0.2f;                // 패널 움직임 속도
+        private float timer = 0.4f;                // 패널 움직임 속도
         
         
         // 클릭
@@ -30,7 +30,7 @@ namespace UI
         {
             yield return new WaitForSeconds(timer);
             
-            UIManager.instance.FadeAlphaFunc(0, 1, 0, 0.2f);
+            UIManager.instance.FadeAlphaFunc(0, 1, 0, 0.3f);
 
             coverImage.raycastTarget = false;
         }

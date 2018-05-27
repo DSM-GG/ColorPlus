@@ -58,6 +58,7 @@ MonoBehaviour:
   minDelay: 1
   maxDelay: 1.4
   scale: {x: 0, y: 0}
+  fadeGap: 0.01
   goalScale: {x: 1, y: 1}
   fadeTime: 0.1
 --- !u!114 &114637949325922584
@@ -113,7 +114,7 @@ MonoBehaviour:
   posX: 0
   posY: 0
   colorNum: 0
-  fadeTime: 0.1
+  fadeTime: 0.2
 --- !u!222 &222210034235451166
 CanvasRenderer:
   m_ObjectHideFlags: 1

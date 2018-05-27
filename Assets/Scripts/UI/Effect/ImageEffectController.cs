@@ -8,13 +8,21 @@ namespace UI.Effect
     {
         // 인스펙터 노출 변수
         // 일반
-        public List<ImageScaleFadeEffect> imageList;             // 이미지 모음
+        public  List<ImageScaleFadeEffect> imageList;             // 이미지 모음
         
         // 수치
-        public bool                       isStatCreate;          // 시작시 삭제 할거냐
-        public float                      startDelay;            // 시작시 삭제할때 초반 딜레이
-        public float                      fadeTime;              // 페이드 진행 시간
-        public bool                       isStartInit;           // 시작 초기화 사용?
+        [SerializeField]
+        private bool                       isStatFade;            // 시작시 페이드를 진행할지
+        [SerializeField]
+        private float                      startDelay;            // 시작시 페이드 전 딜레이
+        [SerializeField]
+        private float                      fadeTime;              // 페이드 진행 시간
+        [SerializeField]
+        private bool                       isStartInit;           // 시작 초기화 사용할지
+        [SerializeField]
+        private float                      minDelay;              // 최소 딜레이
+        [SerializeField] 
+        private float                      maxDelay;              // 최대 딜레이
         
         
         // 초기화
@@ -31,12 +39,12 @@ namespace UI.Effect
 
                     if (isStartInit)
                     {
-                        imageList[i].Initilize(0.1f, 0.3f);
+                        imageList[i].Initilize(minDelay, maxDelay);
                     }
                 }
             }
 
-            if (isStatCreate)
+            if (isStatFade)
             {
                 StartCoroutine(StartCreate());
             }

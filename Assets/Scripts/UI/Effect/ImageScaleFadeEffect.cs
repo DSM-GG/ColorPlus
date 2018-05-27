@@ -15,6 +15,8 @@ namespace UI.Effect
         private float         maxDelay = 0.2f;                      // 최대 딜레이
         [SerializeField]
         private Vector2       scale = Vector2.one;                  // 시작시 크기
+        [SerializeField]
+        private float         fadeGap = 0.01f;                      // 페이드 간격                   
         
         public  Vector2       goalScale = Vector2.zero;             // 목표 스케일
         public  float         fadeTime = 0.1f;                      // 페이드 시간
@@ -32,14 +34,15 @@ namespace UI.Effect
         {
             thisRectTrans = GetComponent<RectTransform>();
         }
-
+        
+        // 오브젝트 켜짐
         private void OnEnable()
         {
+            Initilize(minDelay, maxDelay);
             thisRectTrans.localScale = scale;
             
             if (isStartFade)
             {
-                Initilize(minDelay, maxDelay);
                 FadeScaleImage();
             }
         }
@@ -62,16 +65,18 @@ namespace UI.Effect
             yield return new WaitForSeconds(delay);
             
             Vector2 originScale = thisRectTrans.localScale;
-            float   originTime  = fadeTime;
-            float   time = fadeTime;
+            int     count       = (int)(fadeTime / fadeGap);
+            int     originCount = count;
             
             
-            while (time > 0)
+            Debug.Log(fadeTime);
+            Debug.Log(count);
+            while (count > 0)
             {
-                thisRectTrans.localScale = Vector2.Lerp(goalScale, originScale, (time / originTime));
+                thisRectTrans.localScale = Vector2.Lerp(goalScale, originScale, (float)count / originCount);
                 
-                time -= 0.01f;
-                yield return new WaitForSeconds(0.01f);
+                count -= 1;
+                yield return new WaitForSeconds(fadeGap);
             }
 
             thisRectTrans.localScale = goalScale;

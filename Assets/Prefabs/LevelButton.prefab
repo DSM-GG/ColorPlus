@@ -184,12 +184,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isStartFade: 0
-  startDelay: 0
   minDelay: 0
-  maxDelay: 0.2
+  maxDelay: 0.3
   scale: {x: 1, y: 1}
+  fadeGap: 0.01
   goalScale: {x: 0, y: 0}
-  fadeTime: 0.1
+  fadeTime: 0.5
 --- !u!222 &222280553258146312
 CanvasRenderer:
   m_ObjectHideFlags: 1
