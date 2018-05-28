@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Board;
 using Board.Tile;
 using UI;
@@ -25,7 +24,6 @@ namespace Design
 
 			
 			UIManager.instance.SetUI(0, true);
-			UIManager.instance.SetUI(1, true);
 			
 			for (int i = 0; i < size; i++)
 			{
@@ -35,17 +33,6 @@ namespace Design
 				}
 			}
 			
-			// 후처리 루틴 실행
-			StartCoroutine(FinalInit(size, resultData));
-			
-			UIManager.instance.SetUI(2, false);
-		}
-		
-		// 나중 프레임에 처리해야할 루틴
-		private IEnumerator FinalInit(int size, List<int> resultData)
-		{
-			yield return new WaitForSeconds(0.01f);
-			
 			// 보드 셋팅
 			BoardManager.instance.SetSize(size, size);
 			
@@ -53,10 +40,12 @@ namespace Design
 			BoardManager.instance.Initialize();
 			
 			// 파레트 셋팅
-			for (int i = 0; i < paletteArray.Length; i++)
+			for (int i = 1; i < paletteArray.Length; i++)
 			{
 				paletteArray[i].Initialize(-1, -1, i);
 			}
+			
+			UIManager.instance.SetUI(2, false);
 		}
 	}
 }

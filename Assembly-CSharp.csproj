@@ -84,6 +84,7 @@
     <None Include="Assets\Datas\2.txt" />
     <None Include="Assets\Datas\4.txt" />
     <None Include="Assets\Datas\1.txt" />
+    <None Include="Assets\Datas\NewTiles.txt" />
     <Reference Include="UnityEngine.UI">
       <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
     </Reference>

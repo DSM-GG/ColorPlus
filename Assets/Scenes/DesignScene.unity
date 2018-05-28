@@ -272,7 +272,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1072876594}
+      - m_Target: {fileID: 1958895227}
         m_MethodName: SetColor
         m_Mode: 3
         m_Arguments:
@@ -344,6 +344,7 @@ MonoBehaviour:
   posX: 0
   posY: 0
   colorNum: 0
+  fadeTime: 0
 --- !u!1 &183790005
 GameObject:
   m_ObjectHideFlags: 0
@@ -1230,6 +1231,7 @@ MonoBehaviour:
   posX: 0
   posY: 0
   colorNum: 0
+  fadeTime: 0
 --- !u!114 &816537567
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1269,7 +1271,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1072876594}
+      - m_Target: {fileID: 1958895227}
         m_MethodName: SetColor
         m_Mode: 3
         m_Arguments:
@@ -1379,6 +1381,7 @@ MonoBehaviour:
   posX: 0
   posY: 0
   colorNum: 0
+  fadeTime: 0
 --- !u!114 &1050804638
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1418,7 +1421,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1072876594}
+      - m_Target: {fileID: 1958895227}
         m_MethodName: SetColor
         m_Mode: 3
         m_Arguments:
@@ -1473,7 +1476,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1072876593}
   - component: {fileID: 1072876592}
-  - component: {fileID: 1072876594}
   m_Layer: 5
   m_Name: GameManager
   m_TagString: Untagged
@@ -1492,6 +1494,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ecd5f444e1e3344fb6e8b35d8d2352b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clickCover: {fileID: 0}
+  imageEffectController: {fileID: 0}
   originalTurnCount: 0
   canClick: 0
 --- !u!224 &1072876593
@@ -1512,18 +1516,6 @@ RectTransform:
   m_AnchoredPosition: {x: 720, y: 1280}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1072876594
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1072876591}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f0b237de11d3054b8232d76c9b9374d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  brushColor: 0
 --- !u!1 &1090983747
 GameObject:
   m_ObjectHideFlags: 0
@@ -1858,6 +1850,7 @@ MonoBehaviour:
   posX: 0
   posY: 0
   colorNum: 0
+  fadeTime: 0
 --- !u!114 &1588318219
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1897,7 +1890,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1072876594}
+      - m_Target: {fileID: 1958895227}
         m_MethodName: SetColor
         m_Mode: 3
         m_Arguments:
@@ -2074,6 +2067,7 @@ GameObject:
   - component: {fileID: 1958895224}
   - component: {fileID: 1958895223}
   - component: {fileID: 1958895222}
+  - component: {fileID: 1958895227}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2099,6 +2093,7 @@ MonoBehaviour:
   - {fileID: 223240763}
   - {fileID: 1072876591}
   - {fileID: 1876694826}
+  fadeGap: 0
 --- !u!114 &1958895223
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2176,6 +2171,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1958895227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1958895221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f0b237de11d3054b8232d76c9b9374d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  brushColor: 0
 --- !u!1 &2049314365
 GameObject:
   m_ObjectHideFlags: 0
@@ -2276,6 +2283,7 @@ MonoBehaviour:
   posX: 0
   posY: 0
   colorNum: 0
+  fadeTime: 0
 --- !u!114 &2141986453
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2315,7 +2323,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1072876594}
+      - m_Target: {fileID: 1958895227}
         m_MethodName: SetColor
         m_Mode: 3
         m_Arguments:
