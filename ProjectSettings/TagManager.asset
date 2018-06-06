@@ -13,7 +13,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Particle
   - 
   - 
   - 
@@ -38,6 +38,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Particle
+    uniqueID: 2942712315
+    locked: 0
+  - name: UI
+    uniqueID: 2512010957
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
