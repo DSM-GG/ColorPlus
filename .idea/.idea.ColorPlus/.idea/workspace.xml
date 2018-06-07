@@ -1,52 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7c50dd38-9edd-464c-a4ef-a7faf004226e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/BoomEffect.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/BoomEffect.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SelectScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SelectScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/ClickCover.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/ClickCover.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/CurrentLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/Library/CurrentLayout.dwlt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/InspectorExpandedItems.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Library/InspectorExpandedItems.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll.mdb" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll.mdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/assetDatabase3" beforeDir="false" afterPath="$PROJECT_DIR$/Library/assetDatabase3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/00/00000000000000003000000000000000" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/00/00000000000000003000000000000000" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/8c/8cba3ece91f215747b188c970b73934f" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/8c/8cba3ece91f215747b188c970b73934f.info" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
-    </list>
+    <list default="true" id="7c50dd38-9edd-464c-a4ef-a7faf004226e" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="DockManager">
-    <window id="1">
-      <content type="file-editors">
-        <state>
-          <leaf>
-            <file leaf-file-name="ZoomInOut.cs" pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/Assets/Scripts/UI/ZoomInOut.cs">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="225">
-                    <caret line="15" column="60" selection-start-line="15" selection-start-column="60" selection-end-line="15" selection-end-column="60" />
-                    <folding>
-                      <marker date="1528351075962" expanded="true" signature="32:674" ph="{...}" />
-                      <marker date="1528351075962" expanded="true" signature="74:672" ph="{...}" />
-                      <marker date="1528351075962" expanded="true" signature="112:669" ph="{...}" />
-                      <marker date="1528351075962" expanded="true" signature="146:665" ph="{...}" />
-                    </folding>
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
   </component>
   <component name="FavoritesManager">
     <favorites_list name="ColorPlus" />
@@ -353,7 +314,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="242" />
     <option name="y" value="82" />
     <option name="width" value="1480" />
@@ -570,7 +531,7 @@
       <workItem from="1527478190948" duration="902000" />
       <workItem from="1527592644769" duration="35000" />
       <workItem from="1528280623442" duration="52000" />
-      <workItem from="1528327916402" duration="3796000" />
+      <workItem from="1528327916402" duration="3901000" />
     </task>
     <task id="LOCAL-00001" summary="Modify LevelSelecter">
       <created>1525854632513</created>
@@ -810,11 +771,18 @@
       <option name="project" value="LOCAL" />
       <updated>1527386828519</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Create Zoom in out script">
+      <created>1528351283270</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1528351283270</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="145328000" />
+    <option name="totallyTimeSpent" value="145433000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -826,7 +794,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="194" y="66" width="1184" height="712" extended-state="1" />
+    <frame x="194" y="66" width="1184" height="712" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4986577" weight="0.32911393" />
@@ -864,7 +832,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add brush palette system in design scene" />
     <MESSAGE value="Delete brush size" />
     <MESSAGE value="Add level text and in select button and if select button's level is bigger than final level, disable it" />
     <MESSAGE value="Add last level save system with playerprefs" />
@@ -889,7 +856,8 @@
     <MESSAGE value="Add tile disable effect" />
     <MESSAGE value="Add click cover system because of tile animation issue" />
     <MESSAGE value="Refactor fade function" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor fade function" />
+    <MESSAGE value="Create Zoom in out script" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create Zoom in out script" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1253,6 +1221,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/UI/ZoomInOut.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="46" lean-forward="true" selection-start-line="22" selection-start-column="46" selection-end-line="22" selection-end-column="46" />
+          <folding>
+            <marker date="1528351075962" expanded="true" signature="32:674" ph="{...}" />
+            <marker date="1528351075962" expanded="true" signature="74:672" ph="{...}" />
+            <marker date="1528351075962" expanded="true" signature="112:669" ph="{...}" />
+            <marker date="1528351075962" expanded="true" signature="146:665" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Board/TileChecker.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="521">
@@ -1271,19 +1252,6 @@
             <marker date="1526195956769" expanded="true" signature="1789:2108" ph="{...}" />
             <marker date="1526195956769" expanded="true" signature="1894:2090" ph="{...}" />
             <marker date="1526195956769" expanded="true" signature="1974:2068" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/UI/ZoomInOut.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="60" selection-start-line="15" selection-start-column="60" selection-end-line="15" selection-end-column="60" />
-          <folding>
-            <marker date="1528351075962" expanded="true" signature="32:674" ph="{...}" />
-            <marker date="1528351075962" expanded="true" signature="74:672" ph="{...}" />
-            <marker date="1528351075962" expanded="true" signature="112:669" ph="{...}" />
-            <marker date="1528351075962" expanded="true" signature="146:665" ph="{...}" />
           </folding>
         </state>
       </provider>
