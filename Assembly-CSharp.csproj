@@ -77,6 +77,7 @@
     <Compile Include="Assets\Scripts\UI\OptionButton.cs" />
     <Compile Include="Assets\Scripts\UI\StartButton.cs" />
     <Compile Include="Assets\Scripts\UI\UIManager.cs" />
+    <Compile Include="Assets\Scripts\UI\ZoomInOut.cs" />
     <None Include="Assets\Datas\0.txt" />
     <None Include="Assets\Datas\3.txt" />
     <None Include="Assets\Datas\5.txt" />
