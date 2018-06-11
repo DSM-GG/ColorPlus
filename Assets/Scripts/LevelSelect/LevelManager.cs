@@ -1,4 +1,5 @@
-﻿using UI.Effect;
+﻿using Systems;
+using UI.Effect;
 using UnityEngine;
 
 namespace LevelSelect
@@ -12,7 +13,8 @@ namespace LevelSelect
 		
 		// 수치
 		public 	int 			level;					// 레벨
-		public  int 			lastLevel;				// 마지막 레벨
+		public  int 			lastLevel;              // 마지막 레벨
+		public	int				maxLevel = 3;			// 최종 레벨
 		
 		private int 			height = 20;			// 세로
 		private int 			width = 5;				// 가로
@@ -65,6 +67,11 @@ namespace LevelSelect
 			lastLevel = Mathf.Max(level, lastLevel);
 			
 			PlayerPrefs.SetInt("LastLevel", lastLevel);
+
+			if (lastLevel > maxLevel)
+			{
+				GameManager.instance.EndingCredit();
+			}
 		}
 	}
 }

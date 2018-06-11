@@ -97,11 +97,17 @@ namespace Systems
 			turnCount = originalTurnCount;
 			UIManager.instance.SetText(0, turnCount.ToString());
 		}
+
+		// 엔딩 크레딧
+		public void EndingCredit()
+		{
+			StartCoroutine(EndingCreditRoutine());
+		}
 		
 		// 다음 레벨 루틴
 		private IEnumerator GotoNextLevel()
 		{
-			yield return new WaitForSeconds(1.4f);
+			yield return new WaitForSeconds(2f);
 			
 			imageEffectController.Initilize();
 			imageEffectController.FadeAllImage(Vector2.zero);
@@ -110,6 +116,14 @@ namespace Systems
 			
 			
 			SceneManager.LoadScene("MainScene");
+		}
+
+		// 엔딩 크레딧 루틴
+		private IEnumerator EndingCreditRoutine()
+		{
+			yield return new WaitForSeconds(2f);
+
+			SceneManager.LoadScene("CreditScene");
 		}
 	}
 }
