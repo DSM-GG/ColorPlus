@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using Systems;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -20,6 +21,8 @@ namespace UI
         // 클릭
         public void OnPointerClick(PointerEventData eventData)
         {
+            AudioManager.instance.StartAudio(3);
+            
             UIManager.instance.FadePositionFunc(0, new Vector2(-1280, 1280), timer);
 
             StartCoroutine(SetSelectPanel());

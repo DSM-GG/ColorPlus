@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using Systems;
 using UI.Effect;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -33,6 +34,8 @@ namespace LevelSelect
         {
             if (levelButton.interactable)
             {
+                AudioManager.instance.StartAudio(2);
+                
                 LevelManager.instance.level = level;
 
                 StartCoroutine(ChangeScene());

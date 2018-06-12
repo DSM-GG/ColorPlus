@@ -22,7 +22,7 @@ namespace Systems
 		[HideInInspector]
 		public 	int 					originalTurnCount;				// 원래의 턴 카운트
 		[HideInInspector]
-		public 	bool 					canClick;						// 현재 클릭 가능한지
+		public string 					targetScene;					// 다음 넘어갈 씬
 		
 		private int 					turnCount; 						// 턴 카운트
 		private TileChecker 			tileChecker;					// 타일 체커
@@ -37,8 +37,8 @@ namespace Systems
 			}
 			
 			Parser.Init();
-
-			canClick = true;
+			
+			targetScene = "MainScene";
 			
 			tileChecker = GetComponent<TileChecker>();
 		}
@@ -63,6 +63,8 @@ namespace Systems
 		// 타일 체크
 		public void CheckTile()
 		{
+			AudioManager.instance.StartAudio(1);
+			
 			if (tileChecker.CheckPuzzle())
 			{
 				GameOver();
@@ -72,10 +74,12 @@ namespace Systems
 		// 게임 종료
 		private void GameOver()
 		{
-			canClick = false;
+			// 클릭 제어
+			clickCover.AddCoverCount(1);
+			
+			// 레벨 설정 및 다음 레벨 진행
 			LevelManager.instance.SetLastLevel();
 			StartCoroutine(GotoNextLevel());
-			Debug.Log("CLEAR");
 		}
 		
 		// 턴 조절
@@ -97,33 +101,21 @@ namespace Systems
 			turnCount = originalTurnCount;
 			UIManager.instance.SetText(0, turnCount.ToString());
 		}
-
-		// 엔딩 크레딧
-		public void EndingCredit()
-		{
-			StartCoroutine(EndingCreditRoutine());
-		}
 		
 		// 다음 레벨 루틴
 		private IEnumerator GotoNextLevel()
 		{
 			yield return new WaitForSeconds(2f);
 			
+			// 효과음
+			AudioManager.instance.StartAudio(2);
+			
 			imageEffectController.Initilize();
 			imageEffectController.FadeAllImage(Vector2.zero);
 			
-			yield return  new WaitForSeconds(1f);
+			yield return new WaitForSeconds(1f);
 			
-			
-			SceneManager.LoadScene("MainScene");
-		}
-
-		// 엔딩 크레딧 루틴
-		private IEnumerator EndingCreditRoutine()
-		{
-			yield return new WaitForSeconds(2f);
-
-			SceneManager.LoadScene("CreditScene");
+			SceneManager.LoadScene(targetScene);
 		}
 	}
 }

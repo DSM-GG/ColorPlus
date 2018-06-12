@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Systems;
+using UnityEngine;
 using UnityEngine.EventSystems;
 
 namespace UI
@@ -18,6 +19,8 @@ namespace UI
         // 클릭
         public void OnPointerClick(PointerEventData eventData)
         {
+            AudioManager.instance.StartAudio(0);
+            
             enalbed = !enalbed;
 
             UIManager.instance.SetUI(optionIndex, enalbed);

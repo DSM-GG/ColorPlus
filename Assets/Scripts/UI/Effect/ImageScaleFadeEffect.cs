@@ -75,8 +75,6 @@ namespace UI.Effect
             int     originCount = count;
             
             
-            Debug.Log(fadeTime);
-            Debug.Log(count);
             while (count > 0)
             {
                 thisRectTrans.localScale = Vector2.Lerp(goalScale, originScale, (float)count / originCount);

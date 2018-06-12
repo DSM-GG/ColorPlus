@@ -14,11 +14,16 @@ namespace LevelSelect
 		// 수치
 		public 	int 			level;					// 레벨
 		public  int 			lastLevel;              // 마지막 레벨
-		public	int				maxLevel = 3;			// 최종 레벨
+		public	int				maxLevel = 100;			// 최종 레벨
 		
 		private int 			height = 20;			// 세로
 		private int 			width = 5;				// 가로
 		
+		
+		// 생성자
+		private LevelManager()
+		{
+		}
 		
 		// 싱글톤 초기화
 		public static void Init()
@@ -27,11 +32,6 @@ namespace LevelSelect
 			{
 				instance = new LevelManager();
 			}
-		}
-		
-		// 생성자
-		private LevelManager()
-		{
 		}
 		
 		// 레벨 셀렉터 초기화
@@ -70,7 +70,7 @@ namespace LevelSelect
 
 			if (lastLevel > maxLevel)
 			{
-				GameManager.instance.EndingCredit();
+				GameManager.instance.targetScene = "CreditScene";
 			}
 		}
 	}
