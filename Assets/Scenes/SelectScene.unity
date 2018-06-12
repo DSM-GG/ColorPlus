@@ -535,8 +535,8 @@ RectTransform:
   - {fileID: 782826486}
   - {fileID: 1025702795}
   - {fileID: 1697194181}
-  - {fileID: 1641122476}
   - {fileID: 1397719370}
+  - {fileID: 1641122476}
   - {fileID: 529816499}
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -557,7 +557,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72d6810d92c4f2247952f1e4373c87a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  texts: []
+  texts:
+  - {fileID: 1031200724}
   panels:
   - {fileID: 1397719369}
   - {fileID: 1697194180}
@@ -1185,7 +1186,7 @@ RectTransform:
   - {fileID: 1517660858}
   - {fileID: 788994140}
   m_Father: {fileID: 731485707}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -1519,7 +1520,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 731485707}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.836, y: 0.92143744}
   m_AnchorMax: {x: 0.93250006, y: 0.9743907}
@@ -2296,7 +2297,29 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2109460431}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1135931997}
+        m_MethodName: StartAudio
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1135931997}
+        m_MethodName: OnOffAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &2109460431

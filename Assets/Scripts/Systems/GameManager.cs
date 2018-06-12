@@ -86,7 +86,7 @@ namespace Systems
 		public void AddTurn(int val)
 		{
 			turnCount += val;
-			UIManager.instance.SetText(0, turnCount.ToString());
+			UIManager.instance.SetText(2, turnCount.ToString());
 		}
 		
 		// 턴 확인
@@ -99,7 +99,7 @@ namespace Systems
 		public void ResetTurn()
 		{
 			turnCount = originalTurnCount;
-			UIManager.instance.SetText(0, turnCount.ToString());
+			UIManager.instance.SetText(2, turnCount.ToString());
 		}
 		
 		// 다음 레벨 루틴
