@@ -10,8 +10,14 @@
         <e p="10.txt" t="Include" />
         <e p="2.txt" t="Include" />
         <e p="3.txt" t="Include" />
-        <e p="40.txt" t="Include" />
+        <e p="30.txt" t="Include" />
+        <e p="4.txt" t="Include" />
         <e p="5.txt" t="Include" />
+        <e p="6.txt" t="Include" />
+        <e p="7.txt" t="Include" />
+        <e p="8.txt" t="Include" />
+        <e p="80.txt" t="Include" />
+        <e p="9.txt" t="Include" />
       </e>
       <e p="Assets\Scripts" t="Include">
         <e p="Board" t="Include">
