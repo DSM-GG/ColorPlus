@@ -7,12 +7,11 @@
       <e p="Assets\Datas" t="Include">
         <e p="0.txt" t="Include" />
         <e p="1.txt" t="Include" />
+        <e p="10.txt" t="Include" />
         <e p="2.txt" t="Include" />
         <e p="3.txt" t="Include" />
-        <e p="4.txt" t="Include" />
+        <e p="40.txt" t="Include" />
         <e p="5.txt" t="Include" />
-        <e p="6.txt" t="Include" />
-        <e p="NewTiles.txt" t="Include" />
       </e>
       <e p="Assets\Scripts" t="Include">
         <e p="Board" t="Include">

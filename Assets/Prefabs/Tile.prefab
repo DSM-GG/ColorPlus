@@ -111,7 +111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b82b7aa50563d644a4f9ffe8c2541f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isSampleTile: 0
+  desEffect: {fileID: 1393360709578332, guid: 96853ec02e4efd14488f0b02f7f3ab38, type: 2}
   isExist: 1
   posX: 0
   posY: 0

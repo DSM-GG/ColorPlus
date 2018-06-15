@@ -8,6 +8,9 @@ namespace Board.Tile
 	public class Tile : MonoBehaviour
 	{
 		// 인스펙터 노출 변수
+		// 일반
+		public GameObject 			desEffect;				// 파괴 이펙트
+		
 		// 수치
 		public	bool				isExist = true;			// 존재 하는 타일인지
 		public	int					posX;					// X좌표
@@ -79,13 +82,15 @@ namespace Board.Tile
 				}
 			}
 		}
-		
+
 		// 비활성화 이펙트
 		private IEnumerator DisableEffect(int time)
 		{
 			GameManager.instance.clickCover.AddCoverCount(1);
 			
 			yield return new WaitForSeconds(time * 0.1f);
+			
+			GameObject particle = Instantiate(desEffect, transform.position, Quaternion.identity);
 			StartCoroutine(UIManager.instance.FadeScale(thisRect, Vector2.zero, fadeTime));
 			
 			yield return new WaitForSeconds(fadeTime);
@@ -94,6 +99,10 @@ namespace Board.Tile
 			thisRect.localScale = Vector2.one;
 			
 			GameManager.instance.clickCover.AddCoverCount(-1);
+			
+			yield return new WaitForSeconds(1f);
+			
+			Destroy(particle);
 		}
 	}
 }

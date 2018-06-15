@@ -80,13 +80,12 @@
     <Compile Include="Assets\Scripts\UI\UIManager.cs" />
     <Compile Include="Assets\Scripts\UI\ZoomInOut.cs" />
     <None Include="Assets\Datas\0.txt" />
-    <None Include="Assets\Datas\3.txt" />
     <None Include="Assets\Datas\5.txt" />
-    <None Include="Assets\Datas\6.txt" />
-    <None Include="Assets\Datas\2.txt" />
-    <None Include="Assets\Datas\4.txt" />
+    <None Include="Assets\Datas\40.txt" />
     <None Include="Assets\Datas\1.txt" />
-    <None Include="Assets\Datas\NewTiles.txt" />
+    <None Include="Assets\Datas\3.txt" />
+    <None Include="Assets\Datas\10.txt" />
+    <None Include="Assets\Datas\2.txt" />
     <Reference Include="UnityEngine.UI">
       <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
     </Reference>
@@ -152,6 +151,9 @@
     </Reference>
     <Reference Include="UnityEditor.WindowsStandalone.Extensions">
       <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
+      <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/15.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
     <Reference Include="JetBrains.Rider.Unity.Editor.Plugin.Repacked">
       <HintPath>C:/Users/qkeh4/OneDrive/문서/Unity Projects/ColorPlus/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll</HintPath>

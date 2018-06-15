@@ -574,10 +574,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tileSprites:
   - {fileID: 21300000, guid: 7a65b409d99e71d4e867159a0c584b3a, type: 3}
-  - {fileID: 21300000, guid: 499a83d0e4fb7824da650aa622da7160, type: 3}
-  - {fileID: 21300000, guid: d07364d0cbf4d5c46812c38c20c92843, type: 3}
-  - {fileID: 21300000, guid: 61302abe16bfcd148b4ddf40711ee852, type: 3}
-  - {fileID: 21300000, guid: 07adb44c8d058b04cbaff1c067b3de30, type: 3}
+  - {fileID: 21300000, guid: 1cb5cde09f334eb4b8c08e2567283d18, type: 3}
+  - {fileID: 21300000, guid: 2b868182c2d4e074bbea2777c0c3a925, type: 3}
+  - {fileID: 21300000, guid: 3bd7cc42495c3154dab3d96152411c06, type: 3}
+  - {fileID: 21300000, guid: 68d9f9d4a5b146b4aab74bcdd622b348, type: 3}
   useStartInit: 0
   height: 5
   width: 5
@@ -1497,7 +1497,7 @@ MonoBehaviour:
   clickCover: {fileID: 0}
   imageEffectController: {fileID: 0}
   originalTurnCount: 0
-  canClick: 0
+  targetScene: 
 --- !u!224 &1072876593
 RectTransform:
   m_ObjectHideFlags: 0
