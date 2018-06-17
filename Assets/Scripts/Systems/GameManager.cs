@@ -57,7 +57,7 @@ namespace Systems
 			Parser.instance.Parse(LevelManager.instance.level);
 				
 			ResetTurn();
-			UIManager.instance.SetText(1, "#" + LevelManager.instance.level);
+			UIManager.instance.SetText(2, "#" + LevelManager.instance.level);
 		}
 		
 		// 타일 체크
@@ -86,7 +86,7 @@ namespace Systems
 		public void AddTurn(int val)
 		{
 			turnCount += val;
-			UIManager.instance.SetText(2, turnCount.ToString());
+			UIManager.instance.SetText(3, turnCount.ToString());
 		}
 		
 		// 턴 확인
@@ -99,7 +99,7 @@ namespace Systems
 		public void ResetTurn()
 		{
 			turnCount = originalTurnCount;
-			UIManager.instance.SetText(2, turnCount.ToString());
+			UIManager.instance.SetText(3, turnCount.ToString());
 		}
 		
 		// 다음 레벨 루틴

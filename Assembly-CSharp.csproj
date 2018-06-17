@@ -66,6 +66,7 @@
     <Compile Include="Assets\Scripts\LevelSelect\LevelSelecter.cs" />
     <Compile Include="Assets\Scripts\LevelSelect\LevelStarter.cs" />
     <Compile Include="Assets\Scripts\Systems\AudioManager.cs" />
+    <Compile Include="Assets\Scripts\Systems\BackAudioManager.cs" />
     <Compile Include="Assets\Scripts\Systems\GameManager.cs" />
     <Compile Include="Assets\Scripts\Systems\Parser.cs" />
     <Compile Include="Assets\Scripts\Systems\TestIO.cs" />
