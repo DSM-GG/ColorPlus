@@ -42,6 +42,7 @@
         </e>
         <e p="Systems" t="Include">
           <e p="AudioManager.cs" t="Include" />
+          <e p="BackAudioManager.cs" t="Include" />
           <e p="GameManager.cs" t="Include" />
           <e p="Parser.cs" t="Include" />
           <e p="TestIO.cs" t="Include" />

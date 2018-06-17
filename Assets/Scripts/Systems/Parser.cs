@@ -10,7 +10,7 @@ namespace Systems
 		public static Parser instance;
 
 		// 일반
-		private string DataPath = "Datas/";
+		private string DataPath = "/Assets/Datas/";
 		
 		
 		// 싱글톤 초기화
@@ -31,9 +31,9 @@ namespace Systems
 		public void Parse(int level)
 		{
 			// 경로 설정 및 데이터 불러오기
-			string			finalPath = DataPath + level.ToString() + ".txt";
+			string			finalPath = pathForDocumentsFile() + DataPath + level.ToString() + ".txt";
 			
-			FileStream		fs = new FileStream(pathForDocumentsFile(finalPath), FileMode.Open);
+			FileStream		fs = new FileStream(finalPath, FileMode.Open);
 			StreamReader	sr = new StreamReader(fs);
 
 
@@ -70,32 +70,28 @@ namespace Systems
 		}
 		
 		// 플랫폼 경로 변경
-		public string pathForDocumentsFile(string filename)
+		public string pathForDocumentsFile()
 		{
+			string path;
+			
 			if (Application.platform == RuntimePlatform.IPhonePlayer)
 			{
-				string path = Application.dataPath.Substring(0, Application.dataPath.Length - 5);
-				
+				path = Application.dataPath.Substring(0, Application.dataPath.Length - 5);
 				path = path.Substring(0, path.LastIndexOf('/'));
-				
-				return Path.Combine(Path.Combine(path, "Documents"), filename);
+				path = Path.Combine(path, "Documents");
 			}
-			else if(Application.platform == RuntimePlatform.Android)
+			else if (Application.platform == RuntimePlatform.Android)
 			{
-				string path = Application.persistentDataPath; 
-				
-				path = path.Substring(0, path.LastIndexOf('/')); 
-				
-				return Path.Combine(path, filename);
+				path = Application.persistentDataPath; 
+				path = path.Substring(0, path.LastIndexOf('/'));
 			} 
 			else 
 			{
-				string path = Application.dataPath;
-				
+				path = Application.dataPath;
 				path = path.Substring(0, path.LastIndexOf('/'));
-			
-				return Path.Combine(Path.Combine(path, "Assets/"), filename);
 			}
+			
+			return path;
 		}
 	}
 }
