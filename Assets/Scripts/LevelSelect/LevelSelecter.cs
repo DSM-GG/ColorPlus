@@ -48,10 +48,10 @@ namespace LevelSelect
             level = value;
             levelText.text = level.ToString();
 
-            if (LevelManager.instance.lastLevel < level)
-            {
-                levelButton.interactable = false;
-            }
+//            if (LevelManager.instance.lastLevel < level)
+//            {
+//                levelButton.interactable = false;
+//            }
         }
         
         // 이펙트 루틴
