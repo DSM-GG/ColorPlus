@@ -10,7 +10,7 @@ namespace Systems
 		public static Parser instance;
 
 		// 일반
-		private string DataPath = "/Assets/Datas/";
+		private string DataPath = "/Datas/";
 		
 		
 		// 싱글톤 초기화
@@ -77,18 +77,15 @@ namespace Systems
 			if (Application.platform == RuntimePlatform.IPhonePlayer)
 			{
 				path = Application.dataPath.Substring(0, Application.dataPath.Length - 5);
-				path = path.Substring(0, path.LastIndexOf('/'));
 				path = Path.Combine(path, "Documents");
 			}
 			else if (Application.platform == RuntimePlatform.Android)
 			{
 				path = Application.persistentDataPath; 
-				path = path.Substring(0, path.LastIndexOf('/'));
 			} 
 			else 
 			{
 				path = Application.dataPath;
-				path = path.Substring(0, path.LastIndexOf('/'));
 			}
 			
 			return path;
