@@ -47,6 +47,12 @@ namespace Systems
 				UIManager.instance.SetText(0, "OFF");
 			}
 		}
+		
+		// 배경음 온오프
+		public void OnOffBackAudio()
+		{
+			BackAudioManager.instance.OnOffBackAudio();
+		}
 
 		// 해당 인덱스의 소리 재생
 		public void StartAudio(int index)

@@ -5,6 +5,8 @@ namespace Systems
 {
     public class BackAudioManager : MonoBehaviour
     {
+        public static BackAudioManager instance;
+        
         // 인스펙터 노출 변수
         // 일반
         [SerializeField]
@@ -18,6 +20,13 @@ namespace Systems
         // 초기화
         private void Awake()
         {
+            DontDestroyOnLoad(transform);
+
+            if (instance == null)
+            {
+                instance = this;
+            }
+            
             if (audioSource == null)
             {
                 audioSource = GetComponent<AudioSource>();
