@@ -1,10 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using Board;
 using UnityEngine;
-using UI;
-using UnityEngine.XR.WSA.WebCam;
 
 namespace Systems
 {
@@ -43,12 +40,14 @@ namespace Systems
 			BoardManager.instance.SetSize(size, size);
 			
 			List<int> resultData = new List<int>();
-			for (int i = 1; i < levelTextLayer.Length; i++)
+			
+			Debug.Log(levelTextLayer.Length);
+			for (int i = 1; i < size + 1; i++)
 			{
 				string target = levelTextLayer[i];
 				string[] targetSplit = target.Split(' ');
 				
-				for (int j = 0; j < targetSplit.Length; j++)
+				for (int j = 0; j < size; j++)
 				{
 					resultData.Add(int.Parse(targetSplit[j]));	
 				}

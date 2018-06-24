@@ -4,43 +4,45 @@
     <e p="C:\Users\qkeh4\.Rider2018.1\System\resharper-host\local\Transient\ReSharperHost\v12\SolutionCaches\_ColorPlus.-1500627879.00" t="ExcludeRecursive" />
     <e p="C:\Users\qkeh4\OneDrive\문서\Unity Projects\ColorPlus" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
-      <e p="Assets\Datas" t="Include">
-        <e p="0.txt" t="Include" />
-        <e p="1.txt" t="Include" />
-        <e p="10.txt" t="Include" />
-        <e p="11.txt" t="Include" />
-        <e p="12.txt" t="Include" />
-        <e p="13.txt" t="Include" />
-        <e p="14.txt" t="Include" />
-        <e p="15.txt" t="Include" />
-        <e p="16.txt" t="Include" />
-        <e p="17.txt" t="Include" />
-        <e p="18.txt" t="Include" />
-        <e p="19.txt" t="Include" />
-        <e p="2.txt" t="Include" />
-        <e p="20.txt" t="Include" />
-        <e p="21.txt" t="Include" />
-        <e p="22.txt" t="Include" />
-        <e p="23.txt" t="Include" />
-        <e p="24.txt" t="Include" />
-        <e p="25.txt" t="Include" />
-        <e p="26.txt" t="Include" />
-        <e p="27.txt" t="Include" />
-        <e p="28.txt" t="Include" />
-        <e p="29.txt" t="Include" />
-        <e p="3.txt" t="Include" />
-        <e p="30.txt" t="Include" />
-        <e p="31.txt" t="Include" />
-        <e p="32.txt" t="Include" />
-        <e p="33.txt" t="Include" />
-        <e p="4.txt" t="Include" />
-        <e p="40.txt" t="Include" />
-        <e p="5.txt" t="Include" />
-        <e p="6.txt" t="Include" />
-        <e p="7.txt" t="Include" />
-        <e p="8.txt" t="Include" />
-        <e p="9.txt" t="Include" />
-        <e p="90.txt" t="Include" />
+      <e p="Assets\Resources" t="Include">
+        <e p="Datas" t="Include">
+          <e p="0.txt" t="Include" />
+          <e p="1.txt" t="Include" />
+          <e p="10.txt" t="Include" />
+          <e p="11.txt" t="Include" />
+          <e p="12.txt" t="Include" />
+          <e p="13.txt" t="Include" />
+          <e p="14.txt" t="Include" />
+          <e p="15.txt" t="Include" />
+          <e p="16.txt" t="Include" />
+          <e p="17.txt" t="Include" />
+          <e p="18.txt" t="Include" />
+          <e p="19.txt" t="Include" />
+          <e p="2.txt" t="Include" />
+          <e p="20.txt" t="Include" />
+          <e p="21.txt" t="Include" />
+          <e p="22.txt" t="Include" />
+          <e p="23.txt" t="Include" />
+          <e p="24.txt" t="Include" />
+          <e p="25.txt" t="Include" />
+          <e p="26.txt" t="Include" />
+          <e p="27.txt" t="Include" />
+          <e p="28.txt" t="Include" />
+          <e p="29.txt" t="Include" />
+          <e p="3.txt" t="Include" />
+          <e p="30.txt" t="Include" />
+          <e p="31.txt" t="Include" />
+          <e p="32.txt" t="Include" />
+          <e p="33.txt" t="Include" />
+          <e p="4.txt" t="Include" />
+          <e p="40.txt" t="Include" />
+          <e p="5.txt" t="Include" />
+          <e p="6.txt" t="Include" />
+          <e p="7.txt" t="Include" />
+          <e p="8.txt" t="Include" />
+          <e p="9.txt" t="Include" />
+          <e p="90.txt" t="Include" />
+        </e>
       </e>
       <e p="Assets\Scripts" t="Include">
         <e p="Board" t="Include">
