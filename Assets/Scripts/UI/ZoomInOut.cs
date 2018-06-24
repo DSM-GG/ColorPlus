@@ -4,6 +4,10 @@ namespace UI
 {
 	public class ZoomInOut : MonoBehaviour
 	{
+		// 인스펙터 비노출 변수
+		// 수치
+		private Vector3 scaleVector = new Vector3(1, 1, 0);
+
 		// 매 프레임
 		private void Update()
 		{
@@ -19,8 +23,12 @@ namespace UI
 				float 	touchDeltaMag 		= (touchZero.position - touchOne.position).magnitude;
 
 				float 	deltaMagnitudediff = prevTouchDeltaMag - touchDeltaMag;
-				
-				Debug.Log(deltaMagnitudediff);
+
+				Vector3 newScale		   = scaleVector * deltaMagnitudediff * 0.01f;
+				float	scaleConst		   = Mathf.Max(1f, Mathf.Min(newScale.x, 5));
+				Vector3 finalScale		   = new Vector3(scaleConst, scaleConst, 0);
+
+				transform.localScale = finalScale;
 			}
 		}
 	}

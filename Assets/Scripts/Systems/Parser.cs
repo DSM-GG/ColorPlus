@@ -1,7 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using Board;
 using UnityEngine;
+using UI;
+using UnityEngine.XR.WSA.WebCam;
 
 namespace Systems
 {
@@ -10,7 +13,7 @@ namespace Systems
 		public static Parser instance;
 
 		// 일반
-		private string DataPath = "/Datas/";
+		private string DataPath = "/Resources/Datas/";
 		
 		
 		// 싱글톤 초기화
@@ -30,43 +33,65 @@ namespace Systems
 		// 데이터 파싱
 		public void Parse(int level)
 		{
-			// 경로 설정 및 데이터 불러오기
-			string			finalPath = pathForDocumentsFile() + DataPath + level.ToString() + ".txt";
+			TextAsset 	levelTextAsset 	= Resources.Load<TextAsset>("Datas/" + level.ToString());
+			string 		levelText 		= levelTextAsset.text;
+			string[] 	levelTextLayer 	= levelText.Split('\n');
+			string[] 	levelTextFirst 	= levelTextLayer[0].Split(' ');
+			int 		size 			= int.Parse(levelTextFirst[1]);
 			
-			FileStream		fs = new FileStream(finalPath, FileMode.Open);
-			StreamReader	sr = new StreamReader(fs);
-
-
-			// 선행 데이터 초기화
-			string		source = sr.ReadLine();
-			string[]	firstData = source.Split();
-
-			int			size = int.Parse(firstData[1]);
-
-
-			GameManager.instance.originalTurnCount = int.Parse(firstData[0]);
+			GameManager.instance.originalTurnCount = int.Parse(levelTextFirst[0]);
 			BoardManager.instance.SetSize(size, size);
 			
-			// 타일 초기화
 			List<int> resultData = new List<int>();
-		
-
-			source = sr.ReadLine();
-			for (int i = 0; i < size; i++)
+			for (int i = 1; i < levelTextLayer.Length; i++)
 			{
-				string[] lineOfData = source.Split();
-
-				for (int j = 0; j < size; j++)
+				string target = levelTextLayer[i];
+				string[] targetSplit = target.Split(' ');
+				
+				for (int j = 0; j < targetSplit.Length; j++)
 				{
-					resultData.Add(int.Parse(lineOfData[j]));
+					resultData.Add(int.Parse(targetSplit[j]));	
 				}
-
-				source = sr.ReadLine();
 			}
+			
+			
+			// 경로 설정 및 데이터 불러오기
+//			string			finalPath = pathForDocumentsFile() + DataPath + level.ToString() + ".txt";
+//
+//			FileStream		fs = new FileStream(finalPath, FileMode.Open);
+//			StreamReader	sr = new StreamReader(fs);
+//
+//
+//			// 선행 데이터 초기화
+//			string		source = sr.ReadLine();
+//			string[]	firstData = source.Split();
+//
+//			int			size = int.Parse(firstData[1]);
+//
+//
+//			//GameManager.instance.originalTurnCount = int.Parse(firstData[0]);
+//			//BoardManager.instance.SetSize(size, size);
+//			
+//			// 타일 초기화
+//			List<int> resultData = new List<int>();
+//		
+//
+//			source = sr.ReadLine();
+//			for (int i = 0; i < size; i++)
+//			{
+//				string[] lineOfData = source.Split();
+//
+//				for (int j = 0; j < size; j++)
+//				{
+//					resultData.Add(int.Parse(lineOfData[j]));
+//				}
+//
+//				source = sr.ReadLine();
+//			}
 
 			BoardManager.instance.tileSpriteIndArr = resultData.ToArray();
 			
-			fs.Close();
+//			fs.Close();
 		}
 		
 		// 플랫폼 경로 변경
@@ -81,7 +106,7 @@ namespace Systems
 			}
 			else if (Application.platform == RuntimePlatform.Android)
 			{
-				path = Application.persistentDataPath; 
+				path = Application.persistentDataPath;
 			} 
 			else 
 			{
