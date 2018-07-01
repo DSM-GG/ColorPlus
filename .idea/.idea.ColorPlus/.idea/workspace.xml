@@ -1,29 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7c50dd38-9edd-464c-a4ef-a7faf004226e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ColorPlus/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ColorPlus/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Datas/30.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Datas/30.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Design/DesignSaveManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Design/DesignSaveManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Systems/BackAudioManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Systems/BackAudioManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Systems/Parser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Systems/Parser.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/ZoomInOut.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/ZoomInOut.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/CurrentLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/Library/CurrentLayout.dwlt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/Library/CurrentMaximizeLayout.dwlt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/LastSceneManagerSetup.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Library/LastSceneManagerSetup.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll.mdb" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll.mdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/assetDatabase3" beforeDir="false" afterPath="$PROJECT_DIR$/Library/assetDatabase3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/26/26c7d8a0c3f17e24dbf5e5097b93f9ab" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/26/26c7d8a0c3f17e24dbf5e5097b93f9ab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/26/26c7d8a0c3f17e24dbf5e5097b93f9ab.info" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/26/26c7d8a0c3f17e24dbf5e5097b93f9ab.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/8e/8e24035cd4edbe94bacee72baf42f13c" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/8e/8e24035cd4edbe94bacee72baf42f13c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/aa/aa70ec82f028c334fb21c096b68279ee" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/aa/aa70ec82f028c334fb21c096b68279ee.info" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/b6/b6db8106491b38f47956faa64f6aff50" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/b6/b6db8106491b38f47956faa64f6aff50" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/d8/d8e9336c26a08a04f87a44a80944a34d" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/d8/d8e9336c26a08a04f87a44a80944a34d" afterDir="false" />
-    </list>
+    <list default="true" id="7c50dd38-9edd-464c-a4ef-a7faf004226e" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -92,8 +70,8 @@
       <file leaf-file-name="BackAudioManager.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Systems/BackAudioManager.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="29" column="13" lean-forward="true" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+            <state relative-caret-position="345">
+              <caret line="24" column="33" lean-forward="true" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
               <folding>
                 <marker date="1530432181092" expanded="false" signature="6:28" ph="..." />
                 <marker date="1530432181092" expanded="true" signature="47:1254" ph="{...}" />
@@ -305,11 +283,11 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
-    <option name="width" value="1938" />
-    <option name="height" value="1098" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="240" />
+    <option name="y" value="135" />
+    <option name="width" value="1440" />
+    <option name="height" value="810" />
   </component>
   <component name="ProjectView">
     <navigator currentView="SolutionExplorer" proportions="" version="1">
@@ -533,7 +511,7 @@
       <workItem from="1529368991046" duration="3207000" />
       <workItem from="1529815249172" duration="4025000" />
       <workItem from="1529829527623" duration="407000" />
-      <workItem from="1530430880851" duration="1278000" />
+      <workItem from="1530430880851" duration="1321000" />
     </task>
     <task id="LOCAL-00001" summary="Modify LevelSelecter">
       <created>1525854632513</created>
@@ -808,11 +786,18 @@
       <option name="project" value="LOCAL" />
       <updated>1529829804275</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="Fix backuground music duplicate issue">
+      <created>1530432265470</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1530432265470</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="177906000" />
+    <option name="totallyTimeSpent" value="177949000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -824,7 +809,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
+    <frame x="192" y="108" width="1152" height="648" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4986577" weight="0.32911393" />
@@ -835,7 +820,7 @@
       <window_info anchor="bottom" id="Version Control" order="12" sideWeight="0.4986577" weight="0.32911393" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49925372" weight="0.32872504" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4955277" visible="true" weight="0.25704697" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4955277" visible="true" weight="0.3507326" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Unity" order="13" sideWeight="0.4986577" weight="0.2722513" />
       <window_info anchor="right" id="Database" order="3" />
@@ -862,7 +847,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Refactoring some code" />
     <MESSAGE value="Create scroller script" />
     <MESSAGE value="Fix empty tile enable issue" />
     <MESSAGE value="Add scrolling inertia" />
@@ -887,7 +871,8 @@
     <MESSAGE value="Add EndingCredit system" />
     <MESSAGE value="Modify data path function" />
     <MESSAGE value="Fix file path bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix file path bug" />
+    <MESSAGE value="Fix backuground music duplicate issue" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix backuground music duplicate issue" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1173,8 +1158,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Systems/BackAudioManager.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="29" column="13" lean-forward="true" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+        <state relative-caret-position="345">
+          <caret line="24" column="33" lean-forward="true" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
           <folding>
             <marker date="1530432181092" expanded="false" signature="6:28" ph="..." />
             <marker date="1530432181092" expanded="true" signature="47:1254" ph="{...}" />
