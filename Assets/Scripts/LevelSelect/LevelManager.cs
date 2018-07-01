@@ -14,9 +14,9 @@ namespace LevelSelect
 		// 수치
 		public 	int 			level;					// 레벨
 		public  int 			lastLevel;              // 마지막 레벨
-		public	int				maxLevel = 100;			// 최종 레벨
+		public	int				maxLevel = 50;			// 최종 레벨
 		
-		private int 			height = 20;			// 세로
+		private int 			height = 10;			// 세로
 		private int 			width = 5;				// 가로
 		
 		
@@ -68,9 +68,9 @@ namespace LevelSelect
 			
 			PlayerPrefs.SetInt("LastLevel", lastLevel);
 
-			if (lastLevel > maxLevel)
+			if (level > maxLevel)
 			{
-				GameManager.instance.targetScene = "CreditScene";
+				GameManager.instance.targetScene = "SelectScene";
 			}
 		}
 	}
