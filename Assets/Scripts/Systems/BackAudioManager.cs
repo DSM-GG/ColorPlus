@@ -26,6 +26,10 @@ namespace Systems
             {
                 instance = this;
             }
+            else
+            {
+                Destroy(gameObject);
+            }
             
             if (audioSource == null)
             {

@@ -41,7 +41,6 @@ namespace Systems
 			
 			List<int> resultData = new List<int>();
 			
-			Debug.Log(levelTextLayer.Length);
 			for (int i = 1; i < size + 1; i++)
 			{
 				string target = levelTextLayer[i];

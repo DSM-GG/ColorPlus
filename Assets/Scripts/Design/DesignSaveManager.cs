@@ -23,7 +23,7 @@ namespace Design
 				}
 			}
 			
-			File.WriteAllLines(@"Assets/Datas/NewTiles.txt", stringDatas);
+			File.WriteAllLines(@"Assets/Resources/Datas/NewTiles.txt", stringDatas);
 		}
 	}
 }

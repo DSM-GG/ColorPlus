@@ -34,8 +34,15 @@
           <e p="31.txt" t="Include" />
           <e p="32.txt" t="Include" />
           <e p="33.txt" t="Include" />
+          <e p="34.txt" t="Include" />
+          <e p="35.txt" t="Include" />
+          <e p="36.txt" t="Include" />
+          <e p="37.txt" t="Include" />
+          <e p="38.txt" t="Include" />
+          <e p="39.txt" t="Include" />
           <e p="4.txt" t="Include" />
           <e p="40.txt" t="Include" />
+          <e p="45.txt" t="Include" />
           <e p="5.txt" t="Include" />
           <e p="6.txt" t="Include" />
           <e p="7.txt" t="Include" />
@@ -84,7 +91,6 @@
           <e p="OptionButton.cs" t="Include" />
           <e p="StartButton.cs" t="Include" />
           <e p="UIManager.cs" t="Include" />
-          <e p="ZoomInOut.cs" t="Include" />
         </e>
       </e>
       <e p="ColorPlus.sln" t="IncludeFlat" />
